@@ -1,0 +1,23 @@
+
+1. Open CMD as administrator 
+2. Create the following symbolic llinks in the directory where the presentation files are
+3. Modify the presentation with HTML-JavaScript-Reveal
+
+
+C:\Users\mda\Documents\GitHub\reveal.js>mklink /J C:\Users\mda\Desktop\digitwin\WORKSPACE\presentation\css css
+Junction created for C:\Users\mda\Desktop\digitwin\WORKSPACE\presentation\css <<===>> css
+
+C:\Users\mda\Documents\GitHub\reveal.js>mklink /J C:\Users\mda\Desktop\digitwin\WORKSPACE\presentation\js js
+Junction created for C:\Users\mda\Desktop\digitwin\WORKSPACE\presentation\js <<===>> js
+
+C:\Users\mda\Documents\GitHub\reveal.js>mklink /J C:\Users\mda\Desktop\digitwin\WORKSPACE\presentation\lib lib
+Junction created for C:\Users\mda\Desktop\digitwin\WORKSPACE\presentation\lib <<===>> lib
+
+C:\Users\mda\Documents\GitHub\reveal.js>mklink /J C:\Users\mda\Desktop\digitwin\WORKSPACE\presentation\node_modules node_modules
+Junction created for C:\Users\mda\Desktop\digitwin\WORKSPACE\presentation\node_modules <<===>> node_modules
+
+C:\Users\mda\Documents\GitHub\reveal.js>mklink /J C:\Users\mda\Desktop\digitwin\WORKSPACE\presentation\plugin plugin
+Junction created for C:\Users\mda\Desktop\digitwin\WORKSPACE\presentation\plugin <<===>> plugin
+
+C:\Users\mda\Documents\GitHub\reveal.js>mklink /J C:\Users\mda\Desktop\digitwin\WORKSPACE\presentation\test test
+Junction created for C:\Users\mda\Desktop\digitwin\WORKSPACE\presentation\test <<===>> test

@@ -1,0 +1,600 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>digitwin update</title>
+
+		<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="http://getbootstrap.com/examples/justified-nav/justified-nav.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/serif.css" id="theme">
+		<link rel="stylesheet" href="oxford/theme/oxford.css" id="template">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+<!--<footer class="top">
+<a href="http://digitwin.ac.uk"><p>Go to summary</p></a>
+</footer>-->
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- ################################################################################################################################### -->
+				<!-- #######################################################   FOOTER   ################################################################ -->
+				<!-- ################################################################################################################################### -->
+				<footer class="marco">
+						<div class="threefooterleft"><font style="position:fixed; bottom:3px; left:80px">Institute for Risk and Uncertainty</font></div>
+						<div class="threefootercentre"><font id="oggi" style="position:fixed; bottom:3px; left:440px"></font></div>
+						<div class="threefooterright"><font style="position:fixed; bottom:3px; right:100px">University of Liverpool</font></div>
+				</footer>
+				<!-- ################################################################################################################################### -->
+				<a href="http://riskinstitute.uk"><img class="topleft" src="oxford/pics/logos/UoL_Color.svg" alt="UoL logo"></a>
+				<a href="http://riskinstitute.uk"><img class="topright" src="oxford/pics/logos/Balliol-logo.png" alt="Balliol-logo"></a>
+				<a href="http://digitwin.ac.uk"><img class="bottomleft" src="oxford/pics/logos/logoDT1.svg" alt="DigiTwin logo"></a>
+				<a href="http://digitwin.ac.uk"><img class="bottomright" src="oxford/pics/logos/epsrc.svg" alt="EPSRC logo"></a>
+				<!-- ################################################################################################################################### -->
+				<!-- #######################################################   FRONT SLIDE  ############################################################ -->
+				<!-- ################################################################################################################################### -->
+				<section>
+					<!--<a href="http://riskinstitute.uk"><img class="logoUoL" src="pics/logos/UoL_Color.svg" alt="UoL logo"></a>
+					<a href="http://digitwin.ac.uk"><img class="logoDT" src="pics/logos/logoDT1.svg" alt="DigiTwin logo"></a>
+					<img class="logoEPSRC" src="pics/logos/epsrc.svg" alt="EPSRC logo">-->
+
+					<!--<p class="themes">-->
+						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+						<!--<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/black.css'); return false;">Black </a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/white.css'); return false;">White</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/league.css'); return false;">League</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/sky.css'); return false;">Sky</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/beige.css'); return false;">Beige</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/simple.css'); return false;">Simple</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/serif.css'); return false;">Serif</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/blood.css'); return false;">Blood</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/night.css'); return false;">Night</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/moon.css'); return false;">Moon</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/solarized.css'); return false;">Solarized</a>
+					</p>-->
+
+					<h2>Digital simulation with uncertain numbers</h2>
+
+					<h4>Feeding models with intervals and p-boxes</h4>
+
+					<p>
+						<small>Created by <a href="https://www.liverpool.ac.uk/risk-and-uncertainty/staff/marcodeangelis/">Marco De Angelis</a></small>
+					</p>
+				</section>
+
+				<!--<a href="http://riskinstitute.uk"><img class="logoUoL_s" src="pics/logos/UoL_Color.svg" alt="UoL logo"></a>
+				<a href="http://digitwin.ac.uk"><img class="logoDT_s" src="pics/logos/logoDT1.svg" alt="DigiTwin logo"></a>
+				<img class="logoEPSRC_s" src="pics/logos/epsrc.svg" alt="EPSRC logo">-->
+
+				<!-- ################################################################################################################################### -->
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!--A paragraph with some text and a [link](http://hakim.se).-->
+				<!--
+					<section data-markdown>
+						<textarea data-template>
+						### Summary
+
+						* [Sharing][1]
+							* Literatur[e][2]
+							* Cod[e][3]
+							* Templates
+
+						[1]: #/2
+						[2]: #/2/1
+						[3]: #/2/2
+
+						</textarea>
+					</section>
+				-->
+				</section>
+				<!-- ################################################################################################################################### -->
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<section>
+
+					<div class="fragment" data-fragment-index="0">
+					<div class="arrow_H">
+						<div class="line_H"></div>
+						<div class="point_L"></div>
+						<div class="point_R"></div>
+					</div>
+						<font style="position:fixed;left:100px;bottom:50%; font-size: 22px;">Wishful <br> thinking</font>
+						<font style="position:fixed;right:100px;bottom:50%; font-size: 22px;">Prudent <br> analysis</font>
+					</div>
+
+					<div class="fragment" data-fragment-index="1">
+						<div class="arrow_H_T">
+							<div class="line_H_T"></div>
+							<div class="point_L_T"></div>
+							<div class="point_R_T"></div>
+						</div>
+						<font style="position:fixed;top:80px;left:440px; font-size: 22px;">Success</font>
+						<font style="position:fixed;bottom:100px;left:440px; font-size: 22px;">Failure</font>
+					<div class="fragment" data-fragment-index="2">
+							<font style="position:fixed;top:180px;right:260px; font-size: 26px; font-weight: bold"> Good <br> engineering</font>
+					</div>
+					<div class="fragment" data-fragment-index="3">
+						<font style="position:fixed;bottom:220px;right:260px; font-size: 26px; font-weight: bold"> Honorable <br> failure</font>
+					</div>
+					<div class="fragment" data-fragment-index="4">
+						<font style="position:fixed;bottom:230px;left:260px; font-size: 26px; font-weight: bold"> Negligence</font>
+					</div>
+					<div class="fragment" data-fragment-index="5">
+						<font style="position:fixed;top:200px;left:260px; font-size: 26px; font-weight: bold"> Dumb luck</font>
+					</div>
+
+					</div>
+				</section>
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<section>
+					<h4>Code's universe</h4>
+					<div class="fragment" data-fragment-index="0">
+						<div class="blackboxoval">	</div>
+						<font style="position:fixed;top:180px;right:260px; font-size: 26px; font-weight: bold; color:white"> Black box</font>
+					</div>
+					<div class="fragment" data-fragment-index="1">
+						<div class="crystalboxoval">	</div>
+						<font style="position:fixed;top:310px;left:320px; font-size: 26px; font-weight: bold; color:green"> Open source </font>
+					</div>
+						<div class="fragment" data-fragment-index="2">
+						<font style="position:fixed;top:280px;left:490px; font-size: 26px; color:blue"> Python </font>
+						<font style="position:fixed;top:400px;left:240px; font-size: 26px; color:red"> Fortran </font>
+					</div>
+					<div class="fragment" data-fragment-index="3">
+						<div class="analyticoval">	</div>
+					<div class="fragment" data-fragment-index="4">
+						<font style="position:fixed;top:400px;left:440px; font-size: 26px; font-weight: bold; color:white"> Analytical </font>
+					</div>
+					<div class="fragment" data-fragment-index="5">
+						<font style="position:fixed;top:460px;left:380px; font-size: 26px; color:green"> mx^2 + cx + k = 0  </font>
+					</div>
+					</div>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<section>
+					<h6>Random slicing</h6>
+					<img class="slicing" src="pics/slicing.png" alt="RandomSlicing">
+					<div class="fragment" data-fragment-index="1">
+					<pre><code class="python" style="background: #191970" data-trim contenteditable>
+						i = 1, 2, ..., D#  Dimension
+						k = 1, 2, ..., N# Number of samples (slices)
+
+						X = (Xi)# ind. Probability Boxes
+
+						for  k in range(0, N)
+							rk = random([D])# Random number in [0,1)D
+
+							for i in range(0,D)
+								Ei = slice.pbox(Xi; rk)# Slice the P-Box
+								E{K} = (Ei)# Cartesian composition (copulas)
+								G{K} = blackboxprop(E{K})# Push the focal element through
+								GN = (G{K})# DS Structure of the output
+
+						Mh(GN) = 1/N * sum(Gk**h)# Compute moments / quantiles
+
+					</code></pre>
+				</div>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<section>
+					<h6>Line sampling</h6>
+					<!--<img class="slicing" src="pics/slicing.png" alt="RandomSlicing">
+					<div class="fragment" data-fragment-index="1">-->
+					<pre><code class="python" style="background: #191970" data-trim contenteditable>
+						i = 1, 2, ..., D# Dimension
+						l = 1,2, ..., L# Number of lines
+						m = 1,2, ..., M# Number of samples per line
+						x = (xi)# Vector of random variables
+						a = (ai)# Important direction
+
+						n = Tx # Map marginals into D standard normal variables
+						for l in range(0,L):
+							n{l} = n[ : , l ]# extract sample for the each line
+							n{l}_c = lambda c: + n{l} - (n{l}・a) a + c a# parametrize the space down to one dimension
+							gl = runBlackbox(n{l}) 		# run the black-box on each sample
+							find c* such that g(n{l}_c*) = 0 	# find the limit state surface on each line
+							p{l} = Φ(-c*)				# compute probability on each line
+
+						p = E[p{l=1,..,L}]
+
+					</code></pre>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<section>
+					<h6>Cauchy deviates</h6>
+					<!--<img class="slicing" src="pics/slicing.png" alt="RandomSlicing">
+					<div class="fragment" data-fragment-index="1">-->
+					<pre><code class="python" style="background: #191970" data-trim contenteditable>
+						i = 1, 2, ..., D# Dimension of the function
+						k = 1, 2, ..., N# Number of samples
+						X = (Xi)	# Vector of intervals
+
+						xm = (xl + xh)/2
+						gm = runBlackbox(xm)
+						for  k in range(0, N):
+							rk = random([D])# Random number in [0,1)D
+							ck = tan(π*(rk-½))# Sample the Cauchy dist
+							zk = ck/||ck||# Normalise samples
+							xk = xm + zk# Map to physical space
+							gk = runBlackbox(xk)# run the black box for e.g. a single output
+							δk = ||ck||*(gk - gm)# Compute the error
+
+							solve @d N/2 - sumk(1/(1+δk/d))# Maximum likelihood estimator for scale parameter
+							G = [gm-d, gm+d]# Compute approximate interval of the output
+					</code></pre>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<section>
+						<!--<button onclick="go();" style="position: fixed; top:100px">Go</button>-->
+					<button class="button" onclick="pause2();" style="position: fixed; top:75px; right:0px; background-color: orange">Pause</button>
+					<button class="button" onclick="unpause();" style="position: fixed; top:75px; right:40px; background-color: green">Unpause</button>
+					<button class="button" onclick="clear2();" style="position: fixed; top:75px; right:90px; background-color: blue">Restart</button>
+
+
+				<svg id="svg2" height="700" width="960" version="1.1" viewBox="0 0 960 700">
+
+					<g id="layer1" transform="matrix(0.6193394,0,0,0.6193394,29.11421,-240.21509)"
+						 style="fill:none;stroke:#000000;stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none">
+						<path
+							 id="path4136"
+							 d="M 199.47,899.63 C 344.22437,891.58857 246.77357,490.63443 757.05,486.95 550.41,558.36 494.75,899.79 199.47,899.63 Z"
+							 inkscape:connector-curvature="0"
+							 style="stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none"
+							 sodipodi:nodetypes="ccc" />
+						<path
+							 id="path4138"
+							 d="m 200.24,483.86 0,414.85 556.44,0"
+							 inkscape:connector-curvature="0"
+							 style="stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#TriangleInL);marker-end:url(#TriangleOutL)" />
+					</g>
+
+					<text id="a2" x="100" y="95" fill="white" style="font-size:16px">
+						<animate attributeName="fill" dur="2s" fill="freeze" begin="0s" from="white" to="black"/>
+						0.83</text>
+
+					<ellipse
+	      		style="opacity:1;fill:#009079;fill-opacity:0.50485439;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+	      		id="path4354" cx="153.01422" cy="95.20787" ry="5">
+						<animate attributeName="rx" dur="1s" repeatCount=1 fill="freeze" begin="0s"
+							values="0; 5" />
+					</ellipse>
+
+					<path
+ 				     style="fill:none;fill-rule:evenodd;stroke:#6c6c6c;stroke-width:0.55408031;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.33009709"
+ 				     id="path4235"
+ 				     inkscape:connector-curvature="0">
+						 <animate attributeName="d" dur="1s" repeatCount=1 fill="freeze" begin="1s"
+	 						values="m 142.78433,95.466335 20.49051,0;
+	         						m 137.84026,95.471303 356.01502,0" />
+					</path>
+
+					<g style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.21632123;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+					<path id="path4233">
+					<animate attributeName="d" dur="2s" repeatCount=1 fill="freeze" begin="2s"
+						values="m 142.78433,95.466335 20.49051,0;
+        						m 335.04646,95.134611 106.20344,0" /> </path> </g>
+
+					<g id="layer1-7" transform="matrix(0.6193394,0,0,0.6193394,26.679159,75.937934)"
+				     style="fill:none;stroke:#000000;stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none">
+				    <path
+				       id="path4136-3"
+				       d="M 199.47,899.63 C 630.02358,899.03124 326.8,487.3 757.05,486.95 422.71522,511.01745 835.33328,897.9552 199.47,899.63 Z"
+				       inkscape:connector-curvature="0"
+				       sodipodi:nodetypes="ccc"
+				       style="stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none" />
+				    <path
+				       id="path4138-0"
+				       d="m 200.24,483.86 0,414.85 556.44,0"
+				       inkscape:connector-curvature="0"
+				       style="stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#TriangleInL);marker-end:url(#TriangleOutL)" />
+				  </g>
+
+					<text id="a1" x="100" y="556" fill="white" style="font-size:16px">
+						<animate attributeName="fill" dur="2s" fill="freeze" begin="4s" from="white" to="black"/>
+						0.28</text>
+					<ellipse
+	      		style="opacity:1;fill:#009079;fill-opacity:0.50485439;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+	      		id="path4354" cx="150" cy="556" ry="5">
+						<animate attributeName="rx" dur="1s" repeatCount=1 fill="freeze" begin="4s"
+							values="0;
+	        						5" />
+					</ellipse>
+					<path
+ 				     style="fill:none;fill-rule:evenodd;stroke:#6c6c6c;stroke-width:0.55408031;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.33009709"
+ 				     id="path4235"
+ 				     inkscape:connector-curvature="0">
+						 <animate attributeName="d" dur="1s" repeatCount=1 fill="freeze" begin="5s"
+	 						values="m 140.07027,556.59975 20.49053,0;
+	         						m 135.7704,556.60723 356.01502,0" />
+					</path>
+					<g style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.21632123;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+					<path id="path4233">
+					<animate attributeName="d" dur="2s" repeatCount=1 fill="freeze" begin="6s"
+						values="m 140.07027,556.59975 20.49053,0;
+        						m 303.75891,556.27052 73.93482,0" /> </path> </g>
+					<g style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.21632123;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+					<path id="path4233">
+					<animate attributeName="d" dur="2s" repeatCount=1 fill="freeze" begin="8s"
+						values="m 335.04646,95.134611 106.20344,0;
+										m 693.52243,317.30486 106.20344,0" /> </path> </g>
+					<g style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.21632123;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+					<path id="path4233">
+					<animate attributeName="d" dur="2s" repeatCount=1 fill="freeze" begin="8s"
+						values="m 303.75891,556.27052 73.93482,0;
+        						m 693.76514,391.15218 0,-73.93482" /> </path> </g>
+					<rect style="opacity:1;fill:#009079;fill-opacity:0.50485438;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+				     id="rect4352"
+				     x="694.63409" y="318.24664">
+						 <animate attributeName="width" attributeType="XML"
+    		 			from="0" to="104.16928" begin="10s" dur="1s" fill="freeze"/>
+  					 <animate attributeName="height" attributeType="XML"
+    		 			from="0" to="71.389412" begin="10s" dur="1s" fill="freeze"/>
+					</rect>
+					<path style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.20751476;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+				     id="path4237-0"
+				     inkscape:connector-curvature="0"
+				     sodipodi:nodetypes="cc">
+						 <animate attributeName="d" attributeType="XML"
+    		 			from="m 693.49631,390.74085 1,0" to="m 693.49631,390.74085 106.20344,0" begin="10s" dur="1s" fill="freeze"/>
+					</path>
+					<path style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.20751476;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+				     id="path4237-0"
+				     inkscape:connector-curvature="0"
+				     sodipodi:nodetypes="cc">
+						 <animate attributeName="d" attributeType="XML"
+    		 			from="m 799.66493,390.9761 0,1.93482" to="m 799.66493,390.9761 0,-73.93482" begin="10s" dur="1s" fill="freeze"/>
+					</path>
+				</svg>
+
+				<script>
+				function go () {
+				  var elements = document.getElementsByTagName("animate");
+					var begins = [0,0,0,0,1,2,2,2,4,4,6,6,6,6];
+				  for (var i = 0; i < elements.length; i++) {
+				    //elements[i].beginElementAt(begins[i].valueOf());
+						elements[i].beginElementAt(begins[i])
+				  }
+				}
+				function unpause () {
+					document.getElementById("svg2").unpauseAnimations();
+				}
+
+				function pause2 () {
+					document.getElementById("svg2").pauseAnimations();
+				}
+
+				function clear2 () {
+					document.getElementById("svg2").setCurrentTime(0);
+				}
+					</script>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+						<!-- #########################################################  SLIDE  ################################################################# -->
+							<section>
+								<h6> Natural frequencies -v- Conditional probabilities </h6>
+								<h6> Monty hall example </h6>
+								<!--<img class="slicing" src="pics/slicing.png" alt="RandomSlicing">
+								<div class="fragment" data-fragment-index="1">-->
+							</section>
+							<!-- ################################################################################################################################### -->
+
+							<!-- #########################################################  SLIDE  ################################################################# -->
+							<section>
+								<h6> BAD DATA </h6>
+								<!--<img class="slicing" src="pics/slicing.png" alt="RandomSlicing">
+								<div class="fragment" data-fragment-index="1">-->
+							</section>
+							<!-- ################################################################################################################################### -->
+
+
+									<!--<footer class="top">
+										<a href="#/1">Go to summary</a>
+									</footer>-->
+							<!-- #########################################################  SLIDE  ################################################################# -->
+							<section class="fig-container"
+											data-fig-id="fig-line-series"
+											data-file="line-chart.html"
+											data-transitions="1">
+									<h2 style="color: white">d3.js plugin for reveal.js</h2>
+							</section>
+							<!-- ################################################################################################################################### -->
+
+							<!-- #########################################################  SLIDE  ################################################################# -->
+								<section>
+									<section data-markdown>
+										<textarea data-template>
+											### Sharing
+
+											* Google Site:
+												* https://sites.google.com/site/digitwindesign/
+												* SAY: announcement page
+												* FILES: file cabinet
+											* Regular (weekly) meetings
+											* Questionnaires
+											* Calendar invites
+											* Data ![Alt](pics/Warning_low.png "Warning")
+
+											> marcodeangelis09@gmail.com
+										</textarea>
+									</section>
+									<!--A paragraph with some text and a [link](http://hakim.se).-->
+									<!-- #########################################################  SLIDE  ################################################################# -->
+									<section>
+											<h3>Literature</h3>
+											<iframe class="stretch" src="https://docs.google.com/forms/d/e/1FAIpQLSd-w8B8vCIJx4dvh4eNKpM55xDrR3M1qUVlzb0OldCiI0gcBw/viewform?embedded=true" width="640" height="2827" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+									</section>
+									<!-- #########################################################  SLIDE  ################################################################# -->
+									<section>
+										<!--<iframe width="100%" height="100%" src="https://www.youtube.com/embed/4BVpzY6prJ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+											<h3>Code</h3>
+											<ul>
+												<li>Jupyter (off-line)</li>
+												<li>Colaboratory</li>
+												<ul>
+													<li>Use Google GPU and TPU</li>
+													<li>Share your code instantaneously</li>
+											</ul>
+												<li>Git</li>
+											</ul>
+									</section>
+								</section>
+							<!-- ################################################################################################################################### -->
+
+							<!-- #########################################################  SLIDE  ################################################################# -->
+							<section>
+								<h3>Incertitude</h3>
+								<h2 class="marco">Forward propagation</h2>
+								<ul class="left" style="font-size: 20px">
+									<li class="fragment" data-fragment-index="0">
+										Black box models
+										<ul>
+			      							<li class="fragment" data-fragment-index="1">Sampling</li>
+			      							<li class="fragment" data-fragment-index="2">Accelerating strategies</li>
+			    						</ul>
+									</li>
+									<li class="fragment" data-fragment-index="3">
+										Crystal box
+									</li>
+									<li class="fragment" data-fragment-index="4">
+										Uncertainty compiler
+									</li>
+									<li class="fragment" data-fragment-index="0">
+										Black box models
+										<ul>
+			      							<li class="fragment" data-fragment-index="1">Sampling</li>
+			      							<li class="fragment" data-fragment-index="2">Accelerating strategies</li>
+			    						</ul>
+									</li>
+									<li class="fragment" data-fragment-index="3">
+										Crystal box
+									</li>
+									<li class="fragment" data-fragment-index="4">
+										Uncertainty compiler
+									</li>
+								</ul>
+								<img class="flushLeft" src="pics/intVarFig.png" alt="img:intvar">
+							</section>
+							<!-- ################################################################################################################################### -->
+
+							<!-- #########################################################  SLIDE  ################################################################# -->
+							<section>
+								<section data-markdown>
+									<textarea data-template>
+										#### Literature 1/2
+										* Ferson at al. Sandia reports
+										* Jon Helton on sampling with accelerating strategies
+										* Work on rigorous ODEs (VSPODE, COSY)
+										* Mullen and Muhanna on FEM
+										* Proceedings of REC
+										* Book of abstracts SWIM
+										* PhD theses on propagation
+										* Matthias Faes on importance sampling
+										<!--A paragraph with some text and a [link](http://hakim.se).-->
+									</textarea>
+							<!-- ################################################################################################################################### -->
+							</section>
+								<section data-markdown>
+									<textarea data-template>
+										#### Literature 2/2
+										* De Angelis et al. on Line Sampling
+										* Kreinovich et al. on Interval Statistics
+										* Work on Cauchy Deviates
+										* Work on Rump on IntLab and rigorous computing
+										* Eigenvalues, linear systems, etc.
+										* More abstract stuff: pre-conditioning, nesting, etc.
+										* Anything on uncertainty compilers? Scott?
+										<!--A paragraph with some text and a [link](http://hakim.se).-->
+									</textarea>
+								</section>
+							</section>
+
+							<!--<section>
+								<p> The variance of the interval dataset is shown below </p>
+								<img src="pics/intVarFig.png" alt="variance interval dataset">
+							</section>-->
+
+							<!--<section data-background-iframe="https://riskinstitute.uk" data-background-interactive>
+							<h2>wOw</h2>
+							</section>-->
+					</div>
+				</div>
+
+					<script src="reveal/lib/js/head.min.js"></script>
+					<script src="reveal/js/reveal.js"></script>
+					<script src="https://d3js.org/d3.v4.min.js"></script>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+					<script>
+						// More info about config & dependencies:
+						// - https://github.com/hakimel/reveal.js#configuration
+						// - https://github.com/hakimel/reveal.js#dependencies
+						Reveal.initialize({
+							dependencies: [
+								{ src: 'https://d3js.org/d3.v4.min.js' },
+								{ src: 'reveal/node_modules/reveal.js-d3js/d3js.js' },
+								{ src: 'reveal/plugin/markdown/marked.js' },
+								{ src: 'reveal/plugin/notes/notes.js', async: true },
+								{ src: 'reveal/plugin/markdown/markdown.js' },
+								{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+							],
+							keyboard: {
+								49: function() {Reveal.slide( 0 )}, // go to the next slide when the ENTER key is pressed
+								50: function() {Reveal.slide( 1 )},
+								51: function() {Reveal.slide( 2 )},
+								52: function() {Reveal.slide( 3 )},
+								53: function() {Reveal.slide( 4 )},
+								54: function() {Reveal.slide( 5 )},
+								55: function() {Reveal.slide( 6 )},
+								56: function() {Reveal.slide( 7 )},
+								57: function() {Reveal.slide( 8 )},
+								58: function() {Reveal.slide( 9 )},
+								59: function() {Reveal.slide( 10 )},
+								//27: function() {}, // do something custom when ESC is pressed
+								//32: null // don't do anything when SPACE is pressed (i.e. disable a reveal.js default binding)
+								},
+							history: true,
+						});
+
+						Reveal.configure({
+							slideNumber: 'c/t',
+							logo: true,
+						});
+					</script>
+
+				<script type="text/javascript">
+					var d = new Date();
+					var displayDate = d.toDateString();
+					document.getElementById("oggi").innerHTML = displayDate;
+				</script>
+
+				</body>
+</html>
