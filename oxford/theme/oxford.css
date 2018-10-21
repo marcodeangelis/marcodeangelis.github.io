@@ -36,7 +36,7 @@
 	background: none;
 }
 .reveal img.topleft{
-	width: 22%;
+	width: 25%;
 	position: fixed;
   left: 0px;
 	top: 0px;
@@ -97,7 +97,15 @@
     float:left;
 }
 
+.reveal table.left{
+	width: 60%;
+	float:left;
+}
 
+.reveal table.right{
+	width: 50%;
+	float:right;
+}
 
 
 .reveal div.arrow_H {
@@ -190,7 +198,7 @@ div.blackboxoval {
 	left: 150px;
 	width: 700px;
 	height: 500px;
-	background: black;
+	background: #C0C0C0;
 	border-radius: 700px / 500px; }
 
 div.crystalboxoval {
@@ -206,8 +214,8 @@ div.analyticoval {
 	position: fixed;
 	bottom: 160px;
 	left: 350px;
-	width: 260px;
-	height: 200px;
+	width: 120px;
+	height: 100px;
 	background: purple;
 	border-radius: 260px / 200px; }
 
@@ -287,3 +295,5 @@ reveal.canvas{
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+.biblio { padding-left:20px; text-indent: -20px; }

@@ -11,8 +11,8 @@
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
 		<link rel="stylesheet" href="reveal/css/theme/serif.css" id="theme">
-		<link rel="stylesheet" href="oxford/theme/oxford.css" id="template">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+		<link rel="stylesheet" href="theme/oxford.css" id="template">
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.0/build/styles/default.min.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
@@ -34,23 +34,27 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
+
+
 				<!-- ################################################################################################################################### -->
 				<!-- #######################################################   FOOTER   ################################################################ -->
 				<!-- ################################################################################################################################### -->
 				<footer class="marco">
-						<div class="threefooterleft"><font style="position:fixed; bottom:3px; left:80px">Institute for Risk and Uncertainty</font></div>
-						<div class="threefootercentre"><font id="oggi" style="position:fixed; bottom:3px; left:440px"></font></div>
-						<div class="threefooterright"><font style="position:fixed; bottom:3px; right:100px">University of Liverpool</font></div>
+						<div class="threefooterleft"><font style="position:fixed; bottom:2px; left:80px">Institute for Risk and Uncertainty</font></div>
+						<div class="threefootercentre"><font id="oggi" style="position:fixed; bottom:2px; left:440px"></font> </div>
+						<div class="threefooterright"><font style="position:fixed; bottom:2px; right:100px">University of Liverpool</font></div>
 				</footer>
 				<!-- ################################################################################################################################### -->
-				<a href="http://riskinstitute.uk"><img class="topleft" src="oxford/pics/logos/UoL_Color.svg" alt="UoL logo"></a>
-				<a href="http://riskinstitute.uk"><img class="topright" src="oxford/pics/logos/Balliol-logo.png" alt="Balliol-logo"></a>
-				<a href="http://digitwin.ac.uk"><img class="bottomleft" src="oxford/pics/logos/logoDT1.svg" alt="DigiTwin logo"></a>
-				<a href="http://digitwin.ac.uk"><img class="bottomright" src="oxford/pics/logos/epsrc.svg" alt="EPSRC logo"></a>
+				<a href="http://riskinstitute.uk"><img class="topleft" src="pics/logos/UoL_Color.svg" alt="UoL logo"></a>
+				<a href="http://riskinstitute.uk"><img class="topright" src="pics/logos/Balliol-logo.png" alt="Balliol-logo"></a>
+
+
 				<!-- ################################################################################################################################### -->
 				<!-- #######################################################   FRONT SLIDE  ############################################################ -->
 				<!-- ################################################################################################################################### -->
 				<section>
+					<a href="http://digitwin.ac.uk"><img class="bottomleft" src="pics/logos/logoDT1.svg" alt="DigiTwin logo"></a>
+					<a href="http://digitwin.ac.uk"><img class="bottomright" src="pics/logos/epsrc.svg" alt="EPSRC logo"></a>
 					<!--<a href="http://riskinstitute.uk"><img class="logoUoL" src="pics/logos/UoL_Color.svg" alt="UoL logo"></a>
 					<a href="http://digitwin.ac.uk"><img class="logoDT" src="pics/logos/logoDT1.svg" alt="DigiTwin logo"></a>
 					<img class="logoEPSRC" src="pics/logos/epsrc.svg" alt="EPSRC logo">-->
@@ -75,7 +79,9 @@
 					<h4>Feeding models with intervals and p-boxes</h4>
 
 					<p>
-						<small>Created by <a href="https://www.liverpool.ac.uk/risk-and-uncertainty/staff/marcodeangelis/">Marco De Angelis</a></small>
+						<font style="font-size:24px">Marco De Angelis, Scott Ferson</font>
+						<br>
+						<font style="font-size:16px">Created by <a href="https://www.liverpool.ac.uk/risk-and-uncertainty/staff/marcodeangelis/">Marco De Angelis</a></font>
 					</p>
 				</section>
 
@@ -86,6 +92,7 @@
 				<!-- ################################################################################################################################### -->
 
 				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ######################################################### SUMMARY ################################################################# -->
 				<!--A paragraph with some text and a [link](http://hakim.se).-->
 				<!--
 					<section data-markdown>
@@ -108,6 +115,7 @@
 				<!-- ################################################################################################################################### -->
 
 				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- #####################################################ENGINEERING PLANE############################################################# -->
 				<section>
 
 					<div class="fragment" data-fragment-index="0">
@@ -143,10 +151,447 @@
 
 					</div>
 				</section>
+				<!-- ################################################################################################################################### -->
 
 				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- #####################################################UNCERTAINTY QUOTES############################################################ -->
 				<section>
-					<h4>Code's universe</h4>
+
+				<div style="font-size: 32px; text-align: right">
+					<blockquote  cite="https://sites.google.com/site/uncertaintysayings/">
+						&ldquo;Uncertainties appear everywhere! … When using a mathematical model, careful attention must be given to uncertainties in the model.&rdquo;
+					</blockquote> <font style="font-size: 26px;">Richard Feynman</font>
+				</div>
+
+				<div style="font-size: 32px; text-align: right">
+					<blockquote cite="https://sites.google.com/site/uncertaintysayings/">
+						&ldquo;Uncertainty quantification is the missing piece of the puzzle in large scale computations.&rdquo;
+					</blockquote> <font style="font-size: 26px;">Tim Barth</font>
+				</div>
+
+				<div style="font-size: 32px; text-align: right">
+					<blockquote cite="https://sites.google.com/site/uncertaintysayings/">
+						&ldquo;We have to make the best model we possibly can, and then not trust it.&rdquo;
+					</blockquote> <font style="font-size: 26px;">Robert Costanza</font>
+				</div>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ####################################################### UNCERTAINTY DEFINITIONS ################################################### -->
+				<section>
+				<!-- #########################################################EPISTEMIC UNCERTAINTY##################################################### -->
+				<section>
+					<h2>Epistemic uncertainty</h2>
+					<ul>
+						<li> Arises from incomplete knowledge
+						<li> Incertitude arises from
+							<ul style="color:green">
+								<li> limited sample size
+								<li> measurement error
+								<li> use of surragate data
+							</ul>
+							<li> Reducible with empirical effort
+					</ul>
+				</section>
+				<!-- ######################################################## ALEATORY UNCERTAINTY #################################################### -->
+				<section>
+					<h2>Aleatory uncertainty</h2>
+					<ul>
+						<li> Arises from natural stochasticity
+						<li> Variability arises from
+							<ul style="color:green">
+								<li> spatial variation
+								<li> temporal fluctuations
+								<li> manufactoring/material differences
+							</ul>
+							<li> Not reducible by empirical effort
+					</ul>
+				</section>
+				<!-- ################################################### UNCERTAINTY TREATMENT ######################################################### -->
+				<section>
+					<h3>They must be treated differently</h3>
+					<ul>
+						<li style="margin: 35px;"> <i>Variability</i> should be modeled as randomness with the methods of probability theory
+						<li style="margin: 35px;"> <i>Incertitude</i> should be modeled as ignorance with constraint or interval analysis
+					</ul>
+				</section>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ######################################################## EXAMPLES ################################################################# -->
+				<section>
+				<!-- #################################################### EXAMPLE UNIFORM ############################################################## -->
+				<section>
+					<h3>Propagating incertitude</h3>
+					<div style="width:40%; float: left">
+						<p style="text-align: left">Suppose</p>						
+						
+						<p style="text-align: left">A is in [2, 4]</p>
+
+						<p style="text-align: left">B is in [3, 5]</p>
+
+						<p style="text-align: left">What can be said about A + B?</p>
+					</div>
+
+					<img class="fragment current-visible" data-fragment-index="1" style="width:50%; float:right; position:fixed; right:0px;bottom:120px;" src="pics/indifference.svg">
+					<img class="fragment current-visible" data-fragment-index="2" style="width:50%; float:right;position:fixed; right:0px;bottom:120px;" src="pics/indifference_1.svg">
+
+				</section>
+				<!-- ################################################## EXAMPLE DIPENDENCE ############################################################# -->
+				<section>
+					<div style="position:fixed; left: 320px; top:220px; font-size: 22px;">
+					\[ a \sim N(2,4) \]
+					</div>
+					<div style="position:fixed; left: 675px; top:220px; font-size: 22px;">
+					\[ b \sim N(7,3) \]
+					</div>
+					<div class="fragment current-visible" data-fragment-index="1" style="position:relative; top:500px; font-size: 36px;">
+					\[ a + b = ? \]
+					</div>
+
+					<img style="position:relative; top:-100px;" src="pics/example_dependence_1.svg" alt="ex_dep_1">
+
+					<img style="position:fixed; left:50px; bottom:90px;" class="fragment current-visible"  data-fragment-index="4" src="pics/example_dependence_4.svg" alt="ex_dep_4"/>
+					<img style="position:fixed; left:50px; bottom:90px;" class="fragment " data-fragment-index="5" src="pics/example_dependence_5.svg" alt="ex_dep_5"/>
+
+					<div class="fragment current-visible" data-fragment-index="6" style="position:relative; bottom:200px; font-size:26px">
+						\[ [ max \left \{ F(x)+G(y)-1, 0 \right \},\ min \left \{F(x), G(y) \right \}] \]
+					</div>
+						<!--# P-box:  ~ ( range=[-12.63163,30.63163], mean=9, var=[25,27.59831]) 
+						# P-box:  ~ ( range=[-12.63163,30.63163], mean=9, var=[0.07253322,94.80621]) -->
+					</section>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ################################################### UNCERTAINTY ANALYSIS ######################################################### -->
+				<section>
+				<section>
+					<h2>Credible uncertainty analysis</h2>
+					<ul>
+						<li style="margin: 35px;"> <i>Variability</i> Designers are likelier to use modeling results if they know the outputs are good enough
+						<li style="margin: 35px;"> <i>Variability</i> Program managers could focus research on areas where uncertainty is intolerable
+					</ul>
+				</section>
+				<!-- ####################################################### UNCERTAINTY ############################################################### -->
+				<section>
+				<h2>Uncertainty</h2>
+				<ul>
+					<li> Artifactual uncertainty
+					<li> Variability arises from
+						<ul style="color:green; font-size:30px">
+							<li> too few polynomial terms
+							<li> numerical instability
+							<li> can be reduced by a better analysis
+						</ul>
+					<li> Artifactual uncertainty
+						<ul style="color:green; font-size:30px">
+							<li> genuine unpredictability due to input uncertainty
+							<li> cannot be reduced by a better analysis
+								<ul style="color:green">
+									<li style="font-size:24px; color:blue"> only by more information, data or assumptions
+							</ul>
+						</ul>
+				</ul>
+				</section>
+				<!-- ####################################################### PROPAGATION ############################################################### -->
+				<section>
+				<h2>Uncertainty propagation</h2>
+				<ul>
+					<li style="margin: 35px;"> We <i>want</i> the prediction to 'break down' if that's what should happen
+					<li style="margin: 35px;"> But we don't want artifactual uncertainty
+						<ul style="color:green">
+							<li> Numerical instabilities
+							<li> Wrapping effect
+							<li> Dependence problem
+							<li> Repeated parameters
+						</ul>
+				</ul>
+				</section>
+				<!-- #################################################### REPEATED PARAMETERS ########################################################### -->
+				<section>
+				<h2 style="position: relative; top:-70px">Repeated parameters</h2>
+				<div style="color:black; position: fixed; top:220px; left:50px; font-size: 35px">
+					\[ a = \left[ 1,\ 2 \right] \]
+					\[ b = \left[ 2,\ 3 \right] \]
+					\[ c = \left[ -2,\ 5 \right] \]
+				</div>
+				<div style="color:green; position: fixed; bottom:160px; left:50px; font-size: 35px">
+					\[ z = a \times \left( b + c \right) \]
+					\[ b + c = \left[ 0,\ 8 \right] \]
+					\[ z = \left[ 0,\ 16 \right] \]
+				</div>
+				<div style="color:red; position: fixed; bottom:200px; right:200px; font-size: 35px">
+					\[ z = a \times b + a \times c \]
+					\[ a \times b = \left[ 2,\ 6 \right] \]
+					\[ a \times c = \left[ -4,\ 10 \right] \]
+					\[ z = \left[ -2,\ 16 \right] \]
+				</div>
+				<br>
+				<p class="fragment" data-fragment-index="1" style="position: relative; bottom:-200px; left:100px; color:red;"> Inflated uncertainty</p>
+				</section>
+				<!-- ######################################################## TOPOLOGY PROBLEM ############################################################### -->
+				<section>
+				<h2 style="position: relative; top:0px">Topology delusion</h2>
+					<ul>
+						<li style="margin: 20px;">  Recursive expressions with > 1 variables 
+						<li style="margin: 20px;">  Chained models with > 1 variables
+						<li style="margin: 20px;">  Inverse problems
+					</ul>
+				<svg id="svg1" height="200" width="960" version="1.1" viewBox="0 390 960 200">
+					<g>
+					  <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.6">
+					   <rect id="rect4152" height="120" width="129.29" stroke="#000" y="430.71" x="58" fill="#82a0be"/>
+					   <rect id="rect4154" height="104.2" width="112.01" stroke="#00f" y="436.22" x="293.55" fill="none"/>
+					   <rect id="rect4156" height="152.86" width="163.57" stroke="#f00" y="412.14" x="487.86" fill="none"/>
+					   <rect id="rect4158" height="77.143" width="102.86" stroke="#f00" y="453.57" x="519.29"  fill="none"/>
+					  </g>
+					  <path id="path4160" d="m296 498.84c15.152-21.718 16.638-11.517 24.085-27.805 6.0302-8.4947-3.2981-14.894-1.7344-19.61 4.705-14.19 21.312-21.032 30.289-4.4248 8.4833 10.784 12.052 22.536 14.03 26.585 4.3557 8.9161 32.945 2.4267 39.58 3.8927 15.783 12.983-59.451 49.99-77.46 63.282 3.9507-21.017-7.0342-44.948-28.789-41.921z" fill-rule="evenodd" stroke="#000" stroke-width="2" fill="#82a0be"/>
+					  
+					  <g>
+					   <path id="path4162" d="m546.43 455.18c10.398 25.487-29.31 27.738-25.357 41.607 3.9286 11.429 38.75 32.857 38.75 32.857s54.868-30.604 58.036-35.357c3.5871-5.3823 5.7143-15 1.4286-13.929-4.2857 1.0714-22.048 9.5785-32.143 10.714-16.681 1.8768-30.652-41.245-40.714-35.893z" fill-rule="evenodd" stroke="#000" stroke-width="2" fill="#82a0be"/>
+					   <g stroke-width="5">
+					    <path id="path4164" d="m733 496.79 129.29-0.35714" stroke="#f00" fill="none"/>
+					    <path id="path4166" d="m754.07 487.5 89.286-0.35715" fill-rule="evenodd" stroke="#00f" fill="#82a0be"/>
+					    <path id="path4168" d="m773 477.5 54.286 0.35714" stroke="#000" fill="none"/>
+					   </g>
+					  </g>
+					 </g>
+					 <g>
+					  <text id="text4172" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="506.51526" x="209.80093" font-family="sans-serif" line-height="125%" fill="#000000"><tspan id="tspan4174" font-size="27.5px" font-style="italic" y="506.51526" x="209.80093" font-family="sans-serif">h(.)</tspan></text>
+					  <text id="text4172-9" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="506.25211" x="421.59326" font-family="sans-serif" line-height="125%" fill="#000000"><tspan id="tspan4174-5" font-size="27.5px" font-style="italic" y="506.25211" x="421.59326" font-family="sans-serif">f(.)</tspan></text>
+					  
+					  <rect id="rect4196" stroke-linejoin="round" height="" width="4.8214" stroke="#000" stroke-linecap="round" y="521.43" x="376" fill="#f0f">
+							<animate attributeName="height" dur="1.5s" repeatCount=1 fill="freeze" begin="1s" from="0" to="5" />
+					  </rect>
+					  
+					 </g>
+					 <g stroke-linejoin="round" stroke="#000" stroke-linecap="round" fill="#f0f">
+					  <rect id="rect4196-0" height="" width="5" y="545.98" x="583.01">
+					  	<animate attributeName="height" dur="1.5s" repeatCount=1 fill="freeze" begin="5s" from="0" to="5" />
+					  </rect>
+					  <rect id="rect4196-9" height="" width="5" y="476.78" x="551.19">
+					  	<animate attributeName="height" dur="1.5s" repeatCount=1 fill="freeze" begin="7s" from="0" to="5" />
+					  </rect>
+					  <rect id="rect4196-3" height="" width="5" y="465.67" x="599.68">
+					  	<animate attributeName="height" dur="1.5s" repeatCount=1 fill="freeze" begin="9.5s" from="0" to="5" />
+					  </rect>					  
+					 </g>
+					 <g stroke-linejoin="round" stroke="#000" stroke-linecap="round" fill="#fff935">
+					  <circle id="path4198"  cx="506.88"  cy="547.72" r="">
+						<animate attributeName="r" dur="1.5s" repeatCount=1 fill="freeze" begin="3s" from="0" to="3.283" />
+					  </circle>
+					  <circle id="path4198-8" cx="742.28" cy="497.46" r="">
+					  	<animate attributeName="r" dur="1.5s" repeatCount=1 fill="freeze" begin="6s" from="0" to="3.283" />
+					  </circle>
+					  <circle id="path4198-2" cx="767.03" cy="486.86" r="">
+					  	<animate attributeName="r" dur="1.5s" repeatCount=1 fill="freeze" begin="11s" from="0" to="3.283" />
+					  </circle>
+					  <circle id="path4198-1" cx="818.55" cy="477.26" r="">
+					  	<animate attributeName="r" dur="1.5s" repeatCount=1 fill="freeze" begin="8.5s" from="0" to="3.283" />
+					  </circle>
+
+					 </g>
+					 <text id="text4172-9-6" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="503.19193" x="660.33435" font-family="sans-serif" line-height="125%" fill="#000000"><tspan id="tspan4174-5-6" font-size="27.5px" font-style="italic" y="503.19193" x="660.33435" font-family="sans-serif">g(.)</tspan></text>
+
+					  <g stroke="#444649" fill="none" stroke-width="1px">
+					  	<path id="path4272" d="">
+					  		<animate attributeName="d" dur="1.5s" repeatCount=1 fill="freeze" begin="2.5s"
+							 values="m380 530c50 60 120 0 0 0; m380 530c50 60 120 20 120 20" />
+					  	</path>
+					   <path id="path4274" d="">
+					   <animate attributeName="d" dur="1.5s" repeatCount=1 fill="freeze" begin="5.5s"
+					   		values="m590.71 552.14c70.5 21 0-0 0-0; m590.71 552.14c70.5 21 153.77-42.464 150-50" />
+						</path>
+						<path id="path4278" d="">
+							<animate attributeName="d" dur="1.5s" repeatCount=1 fill="freeze" begin="7.5s"
+					   		values="m551.04 477.26c101.99-156.25 0-0 0-0; m551.04 477.26c101.99-156.25 273.55-28.547 265.17-4.5457" />
+					   </path>
+					   <path id="path4276" d="">
+					   	<animate attributeName="d" dur="1.5s" repeatCount=1 fill="freeze" begin="10s"
+					   		values="m604.58 466.15c75.005-50.218 0 0 0 0; m604.58 466.15c75.005-50.218 164.83 8.6638 159.1 16.162" />
+					   </path>
+
+					  </g>
+					  <script>
+							window.setInterval(function(){
+								var e = document.getElementById("svg1");
+								document.getElementById("svg1").setCurrentTime(0)
+							}, 18000);
+						</script>
+				</svg>
+				<p class="fragment" data-fragment-index="1" style="position: relative; bottom:-200px; left:100px; color:red;"> Inflated uncertainty</p>
+				</section>
+			</section>
+				<!-- ################################################################################################################################### -->
+
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- #################################################### UNCERTAIN NUMBERS ############################################################ -->
+				<section>
+				<section>
+					<h2>Uncertain numbers</h2>
+					<img src="pics/drawing_2.svg" alt="pdpboxint">
+					<div class="fragment" data-fragment-index="0">
+						<font style="position:fixed;bottom:100px;right:130px; font-size: 26px; font-weight: bold; color:green">Not uniform!</font>
+					</div>
+				</section>
+				<!-- ####################################################MATH WITH U-NUMBERS############################################################ -->
+				<section>
+					<h3>Math with uncertain numbers</h2>
+						<ul>
+							<li> All standard mathematical operations
+								<ul style="color:blue; font-size: 24px;">
+									<li> 	Arithmetic (+, -, &#0215;, ^, min, max)
+									<li>	Logical operations (and, or, not, if, etc.)
+									<li>	Transformations (exp, ln, sin, tan, abs, sqrt, etc.)
+									<li>	Magnitude comparisons (<, ≤, >, ≥, etc.)
+									<li>	Other operations (nonlinear ODEs, finite-element methods)
+								</ul>
+								<li> 	Faster than Monte Carlo
+								<li>	Guaranteed to bound answer
+								<li>	Optimal solutions often easy to compute
+						</ul>
+				</section>
+				<!-- ################################################### CARTESIAN PRODUCT CARTOON ######################################################### -->
+				<section>
+
+					<h3>Probability bounds arithmetic</h3>
+
+					<svg id="svg0" height="400" width="960" version="1.1" viewBox="0 300 960 300">
+						<g id="layer1" transform="translate(0 -352.36)">
+					   <path id="path4163" d="m92.263 675.71 0.92743 183.63h354.28" stroke="#000" stroke-width="2.5968" fill="none"/>
+					   <g id="g4411" transform="matrix(1.2984 0 0 1.2984 -148.87 -232.71)" stroke="#000" stroke-width="2" fill="none">
+					    <path id="path4165" d="m534.29 699.51v143.93"/>
+					    <path id="path4167" d="m532.14 842.36h277.14"/>
+					   </g>
+					   <g id="g4403" transform="matrix(1.2984 0 0 1.2984 -148.87 -232.71)" stroke="#0000c8" stroke-width="4" fill="none">
+					    <path id="path4169" d="m231.43 839.86v-43.393l45.179 0.00001-0.17857-46.25h46.429v-45l135.71 0.37509"/>
+					    <path id="path4171" d="m322.14 840.4v-44.464h46.071l-0.35714-45h47.143l0.17857-45"/>
+					   </g>
+					   <g font-size="51.936px" font-family="sans-serif" fill="#000000">
+					    <text id="text4173" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="893.6496" x="89.183975" line-height="125%"><tspan id="tspan4175" font-size="22.722px" y="893.6496" x="89.183975">0</tspan></text>
+					    <text id="text4173-6" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="895.36279" x="148.85178" line-height="125%"><tspan id="tspan4175-1" font-size="22.722px" y="895.36279" x="148.85178">1</tspan></text>
+					    <text id="text4173-5" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="894.70697" x="208.52856" line-height="125%"><tspan id="tspan4175-9" font-size="22.722px" y="894.70697" x="208.52856">2</tspan></text>
+					    <text id="text4173-4" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="893.39539" x="266.89374" line-height="125%"><tspan id="tspan4175-93" font-size="22.722px" y="893.39539" x="266.89374">3</tspan></text>
+					    <text id="text4173-1" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="894.70697" x="325.25888" line-height="125%"><tspan id="tspan4175-5" font-size="22.722px" y="894.70697" x="325.25888">4</tspan></text>
+					    <text id="text4173-9" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="894.70697" x="386.24728" line-height="125%"><tspan id="tspan4175-0" font-size="22.722px" y="894.70697" x="386.24728">5</tspan></text>
+					    <text id="text4173-54" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="894.05121" x="443.30087" line-height="125%"><tspan id="tspan4175-8" font-size="22.722px" y="894.05121" x="443.30087">6</tspan></text>
+					    <text id="text4173-18" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="892.73962" x="541.66913" line-height="125%"><tspan id="tspan4175-6" font-size="22.722px" y="892.73962" x="541.66913">0</tspan></text>
+					    <text id="text4173-540" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="894.05121" x="591.50897" line-height="125%"><tspan id="tspan4175-4" font-size="22.722px" y="894.05121" x="591.50897">2</tspan></text>
+					    <text id="text4173-62" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="894.05121" x="643.31641" line-height="125%"><tspan id="tspan4175-63" font-size="22.722px" y="894.05121" x="643.31641">4</tspan></text>
+					    <text id="text4173-7" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="893.39539" x="691.1889" line-height="125%"><tspan id="tspan4175-98" font-size="22.722px" y="893.39539" x="691.1889">6</tspan></text>
+					    <text id="text4173-76" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="892.73962" x="741.68463" line-height="125%"><tspan id="tspan4175-86" font-size="22.722px" y="892.73962" x="741.68463">8</tspan></text>
+					    <text id="text4173-8" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="892.08386" x="786.93408" line-height="125%"><tspan id="tspan4175-931" font-size="22.722px" y="892.08386" x="786.93408">10</tspan></text>
+					    <text id="text4173-88" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="893.39539" x="838.74133" line-height="125%"><tspan id="tspan4175-99" font-size="22.722px" y="893.39539" x="838.74133">12</tspan></text>
+					    <text id="text4173-75" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="892.73962" x="886.61389" line-height="125%"><tspan id="tspan4175-2" font-size="22.722px" y="892.73962" x="886.61389">14</tspan></text>
+					    <text id="text4173-2" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="867.85266" x="70.733383" line-height="125%"><tspan id="tspan4175-42" font-size="22.722px" y="867.85266" x="70.733383">0</tspan></text>
+					    <text id="text4173-51" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="690.75677" x="70.81295" line-height="125%"><tspan id="tspan4175-66" font-size="22.722px" y="690.75677" x="70.81295">1</tspan></text>
+					    <text id="text4173-91" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="870.44275" x="523.30707" line-height="125%"><tspan id="tspan4175-05" font-size="22.722px" y="870.44275" x="523.30707">0</tspan></text>
+					    <text id="text4173-56" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" y="692.72406" x="521.3396" line-height="125%"><tspan id="tspan4175-60" font-size="22.722px" y="692.72406" x="521.3396">1</tspan></text>
+					   </g>
+					   <g id="g4407" transform="matrix(1.2984 0 0 1.2984 -148.87 -232.71)" stroke="#00a000" stroke-width="4" fill="none">
+					    <path id="path4341" d="m573.26 841.12v-44.834h77.277v-44.952h38.386v-44.952h115.66"/>
+					    <path id="path4343" d="m688.78 842.05 0.14793-45.253h38.891v-45.457h38.386l0.50508-44.447"/>
+					   </g>
+					   <text id="text4345" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="51.936px" y="784.78857" x="261.00061" font-family="sans-serif" line-height="125%" fill="#0000c8"><tspan id="tspan4347" font-style="italic" y="784.78857" x="261.00061" font-family="Arial" fill="#0000c8">A</tspan></text>
+					   <text id="text4345-6" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="51.936px" y="789.60553" x="730.37811" font-family="sans-serif" line-height="125%" fill="#00a000"><tspan id="tspan4347-8" font-style="italic" y="789.60553" x="730.37811" font-family="Arial" fill="#00a000">B</tspan></text>
+					   <g font-family="sans-serif" fill="#000000">
+					    <text id="text4377" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="17.5px" y="908.92053" x="78.791901" line-height="125%"><tspan id="tspan4379" x="78.791901" y="908.92053"/></text>
+					    <text id="text4381" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-90)" font-size="51.936px" y="57.395088" x="-860.90704" line-height="125%"><tspan id="tspan4383" font-size="16.23px" y="57.395088" x="-860.90704">Comulative probability</tspan></text>
+					    <text id="text4381-4" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" transform="rotate(-90)" font-size="51.936px" y="508.77567" x="-868.53162" line-height="125%"><tspan id="tspan4383-3" font-size="16.23px" y="508.77567" x="-868.53162">Comulative probability</tspan></text>
+					   </g>
+					   <g stroke="#a4a2a2" stroke-width="1.2984px" fill="none">
+					    <path id="path4415" d="">
+								<animate attributeName="d" dur="1.5s" repeatCount=1 fill="freeze" begin="2s"
+							 values="m92.031 682.48 0 0;
+											 m92.031 682.48 355.16 0.033" /> </path>
+					    <path id="path4415-7" d="">
+								<animate attributeName="d" dur="1.5s" repeatCount=1 fill="freeze" begin="2s"
+							 values="m92.747 741.81 0 0;
+											 m92.747 741.81 355.16 0.0329" /> </path>
+					    <path id="path4415-4" d="">
+								<animate attributeName="d" dur="1.5s" repeatCount=1 fill="freeze" begin="2s"
+							 values="m94.602 800.71 0 0;
+											 m94.602 800.71 355.17 0.03" /> </path>
+					    <path id="path4415-76" d="">
+								<animate attributeName="d" dur="1.5s" repeatCount=1 fill="freeze" begin="4s"
+							 values="m544.4 683.85 0 0;
+											 m544.4 683.85 355.16 0.0329" /> </path>
+					    <path id="path4415-42" d="">
+								<animate attributeName="d" dur="1.5s" repeatCount=1 fill="freeze" begin="4s"
+							 values="m543.48 742.28 0 0;
+											 m543.48 742.28 355.16 0.033" /> </path>
+					    <path id="path4415-2" d="">
+								<animate attributeName="d" dur="1.5s" repeatCount=1 fill="freeze" begin="4s"
+							 values="m542.55 800.71 0 0;
+											 m542.55 800.71 355.16 0.0329" /> </path>
+					   </g>
+					  </g>
+						<script>
+							window.setInterval(function(){
+								var e = document.getElementById("svg0");
+								document.getElementById("svg0").setCurrentTime(0)
+							}, 9000);
+						</script>
+				</svg>
+
+				<p style="text-align:center; font-size:40px;"> What's the sum of A + B?</p>
+
+				</section>
+				<!-- #################################################### CARTESIAN PRODUCT TABLE ########################################################## -->
+				<section>
+					<h3>Cartesian product</h3>
+					<table style="font-size:34px; text-align: center; padding:15px">
+						<tbody>
+							<tr style="border-style: none none solid none; border-width: 2px;">
+								<td style="border-style: none solid none none; border-width: 2px;"> <font style="font-size:36px">A + B</font> <br> <font style="font-size:24px"> independence </font> </th>
+								<td align="center" style="color:blue;">A ∈ [1,3] <br> p3 = 1/3</th>
+								<td align="center" style="color:blue;">A ∈ [2,4] <br> p3 = 1/3</th>
+								<td align="center" style="color:blue;">A ∈ [3,5] <br> p3 = 1/3</th>
+							</tr>
+							<tr style="border-style: none none none none; border-width: 0px;">
+								<td style="border-style: none solid none none; border-width: 2px;"> <font style="color:green;">B ∈ [2,8]</font> <br> <font style="color:green;">q3 = 1/3</font></td>
+								<td align="center">A+B ∈ [3,11] <br> prob = 1/9</td>
+								<td align="center">A+B ∈ [4,12] <br> prob = 1/9</td>
+								<td align="center">A+B ∈ [5,13] <br> prob = 1/9</td>
+							</tr>
+							<tr style="border-style: none none none none; border-width: 0px;">
+								<td style="border-style: none solid none none; border-width: 2px;"><font style="color:green;">B ∈ [6,10]</font> <br> <font style="color:green;">q3 = 1/3</font></td>
+								<td>A+B ∈ [7,13] <br> prob = 1/9</td>
+								<td>A+B ∈ [8,14] <br> prob = 1/9</td>
+								<td>A+B ∈ [9,15] <br> prob = 1/9</td>
+							</tr>
+							<tr style="border-style: none none none none; border-width: 0px;">
+								<td style="border-style: none solid none none; border-width: 2px;"><font style="color:green;">B ∈ [8,12]</font> <br> <font style="color:green;">q3 = 1/3</font> </td>
+								<td align="center">A+B ∈ [9,15] <br> prob = 1/9</td>
+								<td align="center">A+B ∈ [10,16] <br> prob = 1/9</td>
+								<td align="center">A+B ∈ [11,17] <br> prob = 1/9 </td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section>
+					<img src="pics/A-plus-B.svg">
+					<ul style="position:fixed; right:0px; bottom:160px; color:green; list-style-type:none">
+						<li class="fragment" data-fragment-index="1"> Rigorous
+						<li class="fragment" data-fragment-index="2">  Best possible
+					</ul>
+				</section>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ####################################################  CODES UNIVERSE  ############################################################# -->
+				<section>
+				<section>
+					<h4>Codes' universe</h4>
 					<div class="fragment" data-fragment-index="0">
 						<div class="blackboxoval">	</div>
 						<font style="position:fixed;top:180px;right:260px; font-size: 26px; font-weight: bold; color:white"> Black box</font>
@@ -169,64 +614,523 @@
 					</div>
 					</div>
 				</section>
+					<section>
+						<h3>Hard special case: black-box function</h3>
+						<ul>
+							<li> Some models or functions can’t be decomposed into simple arithmetic operations
+								<ul style="color:blue; font-size: 24px;">
+									<li> 	Secrecy
+									<li>	Legacy codes
+									<li>	Just too complex
+								</ul>
+								<li>  If we can only query the function by evaluating it for particular (scalar) inputs, it’s called a black box
+								<li> How can we propagate interval uncertainty through a black-box model?
+						</ul>
+					</section>
+				</section>
 				<!-- ################################################################################################################################### -->
 
+
 				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- #####################################################FAILURE SKETCH CIVIL########################################################## -->
+				<section>
+					<img src="pics/probStatement.svg" alt="p1">
+					<!--<div style="position: fixed; left: 190px; top:250px">
+					\[ V = \frac{F L^{3}}{6EI} h(L,e) \]
+					</div>-->
+					<div style="position: fixed; right: 120px; top:280px">
+					\[ P [V>v_t] = p_F \]
+					</div>
+					<div style="position: fixed; left: 750px; bottom:100px">
+					\[ v_t \]
+					</div>
+					<div style="position: fixed; left: 510px; bottom:440px">
+					\[ v \]
+					</div>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ######################################################  RND SLICING ############################################################### -->
+				<section>
+
+				<!-- ##################################################### SLICING ANIME ############################################################### -->
+				<section>
+						<!--<button onclick="go();" style="position: fixed; top:100px">Go</button>-->
+					<button class="button" onclick="pause2();" style="position: fixed; top:75px; right:0px; background-color: orange">Pause</button>
+					<button class="button" onclick="clear2();" style="position: fixed; top:75px; right:95px; background-color: blue">Restart</button>
+					<button class="button" onclick="unpause();" style="position: fixed; top:75px; right:42px; background-color: green">Unpause</button>
+
+					<svg id="svg2" height="700" width="960" version="1.1" viewBox="0 0 960 700">
+
+						<g id="layer1" transform="matrix(0.6193394,0,0,0.6193394,29.11421,-240.21509)"
+							 style="fill:none;stroke:#000000;stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none">
+							<path
+								 id="path4136"
+								 d="M 199.47,899.63 C 344.22437,891.58857 246.77357,490.63443 757.05,486.95 550.41,558.36 494.75,899.79 199.47,899.63 Z"
+								 inkscape:connector-curvature="0"
+								 style="stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none"
+								 sodipodi:nodetypes="ccc" />
+							<path
+								 id="path4138"
+								 d="m 200.24,483.86 0,414.85 556.44,0"
+								 inkscape:connector-curvature="0"
+								 style="stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#TriangleInL);marker-end:url(#TriangleOutL)" />
+						</g>
+
+						<text id="a2" x="100" y="95" fill="white" style="font-size:16px">
+							<animate attributeName="fill" dur="2s" fill="freeze" begin="0s" from="white" to="black"/>
+							0.83</text>
+
+						<ellipse
+		      		style="opacity:1;fill:#009079;fill-opacity:0.50485439;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+		      		id="path4354" cx="153.01422" cy="95.20787" ry="5">
+							<animate attributeName="rx" dur="1s" repeatCount=1 fill="freeze" begin="0s"
+								values="0; 5" />
+						</ellipse>
+
+						<path
+	 				     style="fill:none;fill-rule:evenodd;stroke:#6c6c6c;stroke-width:0.55408031;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.33009709"
+	 				     id="path4235"
+	 				     inkscape:connector-curvature="0">
+							 <animate attributeName="d" dur="1s" repeatCount=1 fill="freeze" begin="1s"
+		 						values="m 142.78433,95.466335 20.49051,0;
+		         						m 137.84026,95.471303 356.01502,0" />
+						</path>
+
+						<g style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.21632123;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+						<path id="path4233">
+						<animate attributeName="d" dur="2s" repeatCount=1 fill="freeze" begin="2s"
+							values="m 142.78433,95.466335 20.49051,0;
+	        						m 335.04646,95.134611 106.20344,0" /> </path> </g>
+
+						<g id="layer1-7" transform="matrix(0.6193394,0,0,0.6193394,26.679159,75.937934)"
+					     style="fill:none;stroke:#000000;stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none">
+					    <path
+					       id="path4136-3"
+					       d="M 199.47,899.63 C 630.02358,899.03124 326.8,487.3 757.05,486.95 422.71522,511.01745 835.33328,897.9552 199.47,899.63 Z"
+					       inkscape:connector-curvature="0"
+					       sodipodi:nodetypes="ccc"
+					       style="stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none" />
+					    <path
+					       id="path4138-0"
+					       d="m 200.24,483.86 0,414.85 556.44,0"
+					       inkscape:connector-curvature="0"
+					       style="stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#TriangleInL);marker-end:url(#TriangleOutL)" />
+					  </g>
+
+						<text id="a1" x="100" y="556" fill="white" style="font-size:16px">
+							<animate attributeName="fill" dur="2s" fill="freeze" begin="4s" from="white" to="black"/>
+							0.28</text>
+						<ellipse
+		      		style="opacity:1;fill:#009079;fill-opacity:0.50485439;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+		      		id="path4354" cx="150" cy="556" ry="5">
+							<animate attributeName="rx" dur="1s" repeatCount=1 fill="freeze" begin="4s"
+								values="0;
+		        						5" />
+						</ellipse>
+						<path
+	 				     style="fill:none;fill-rule:evenodd;stroke:#6c6c6c;stroke-width:0.55408031;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.33009709"
+	 				     id="path4235"
+	 				     inkscape:connector-curvature="0">
+							 <animate attributeName="d" dur="1s" repeatCount=1 fill="freeze" begin="5s"
+		 						values="m 140.07027,556.59975 20.49053,0;
+		         						m 135.7704,556.60723 356.01502,0" />
+						</path>
+						<g style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.21632123;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+						<path id="path4233">
+						<animate attributeName="d" dur="2s" repeatCount=1 fill="freeze" begin="6s"
+							values="m 140.07027,556.59975 20.49053,0;
+	        						m 303.75891,556.27052 73.93482,0" /> </path> </g>
+						<g style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.21632123;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+						<path id="path4233">
+						<animate attributeName="d" dur="2s" repeatCount=1 fill="freeze" begin="8s"
+							values="m 335.04646,95.134611 106.20344,0;
+											m 693.52243,317.30486 106.20344,0" /> </path> </g>
+						<g style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.21632123;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+						<path id="path4233">
+						<animate attributeName="d" dur="2s" repeatCount=1 fill="freeze" begin="8s"
+							values="m 303.75891,556.27052 73.93482,0;
+	        						m 693.76514,391.15218 0,-73.93482" /> </path> </g>
+						<rect style="opacity:1;fill:#009079;fill-opacity:0.50485438;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+					     id="rect4352"
+					     x="694.63409" y="318.24664">
+							 <animate attributeName="width" attributeType="XML"
+	    		 			from="0" to="104.16928" begin="10s" dur="1s" fill="freeze"/>
+	  					 <animate attributeName="height" attributeType="XML"
+	    		 			from="0" to="71.389412" begin="10s" dur="1s" fill="freeze"/>
+						</rect>
+						<path style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.20751476;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+					     id="path4237-0"
+					     inkscape:connector-curvature="0"
+					     sodipodi:nodetypes="cc">
+							 <animate attributeName="d" attributeType="XML"
+	    		 			from="m 693.49631,390.74085 1,0" to="m 693.49631,390.74085 106.20344,0" begin="10s" dur="1s" fill="freeze"/>
+						</path>
+						<path style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.20751476;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+					     id="path4237-0"
+					     inkscape:connector-curvature="0"
+					     sodipodi:nodetypes="cc">
+							 <animate attributeName="d" attributeType="XML"
+	    		 			from="m 799.66493,390.9761 0,1.93482" to="m 799.66493,390.9761 0,-73.93482" begin="10s" dur="1s" fill="freeze"/>
+						</path>
+					</svg>
+
+					<script>
+						function go () {
+						  var elements = document.getElementsByTagName("animate");
+							var begins = [0,0,0,0,1,2,2,2,4,4,6,6,6,6];
+						  for (var i = 0; i < elements.length; i++) {
+						    //elements[i].beginElementAt(begins[i].valueOf());
+								elements[i].beginElementAt(begins[i])
+						  }
+						}
+						function unpause () {
+							document.getElementById("svg2").unpauseAnimations();
+						}
+
+						function pause2 () {
+							document.getElementById("svg2").pauseAnimations();
+						}
+
+						function clear2 () {
+							document.getElementById("svg2").setCurrentTime(0);
+						}
+
+						window.setInterval(function(){
+							var e = document.getElementById("svg2");
+							document.getElementById("svg2").setCurrentTime(0)
+						}, 20000);
+					</script>
+				</section>
+				<!-- #####################################################  SLICING CODE  ############################################################## -->
 				<section>
 					<h6>Random slicing</h6>
-					<img class="slicing" src="pics/slicing.png" alt="RandomSlicing">
-					<div class="fragment" data-fragment-index="1">
-					<pre><code class="python" style="background: #191970" data-trim contenteditable>
-						i = 1, 2, ..., D#  Dimension
-						k = 1, 2, ..., N# Number of samples (slices)
+					<img class="slicing" src="pics/sfp_1.svg" alt="RandomSlicing">
+						<div class="fragment" data-fragment-index="1">
+							<pre><code class="python" style="background: #191970" data-trim contenteditable>
+								i = 1, 2, ..., D#  Dimension
+								k = 1, 2, ..., N# Number of samples (slices)
 
-						X = (Xi)# ind. Probability Boxes
+								X = (Xi)# ind. Probability Boxes
 
-						for  k in range(0, N)
-							rk = random([D])# Random number in [0,1)D
+								for  k in range(0, N)
+									rk = random([D])# Random number in [0,1)D
 
-							for i in range(0,D)
-								Ei = slice.pbox(Xi; rk)# Slice the P-Box
-								E{K} = (Ei)# Cartesian composition (copulas)
-								G{K} = blackboxprop(E{K})# Push the focal element through
-								GN = (G{K})# DS Structure of the output
+									for i in range(0,D)
+										Ei = slice.pbox(Xi; rk)# Slice the P-Box
+										E{K} = (Ei)# Cartesian composition (copulas)
+										G{K} = blackboxprop(E{K})# Push the focal element through
+										GN = (G{K})# DS Structure of the output
 
-						Mh(GN) = 1/N * sum(Gk**h)# Compute moments / quantiles
-
-					</code></pre>
-				</div>
+								Mh(GN) = 1/N * sum(Gk**h)# Compute moments / quantiles
+							</code></pre>
+						</div>
+					</section>
 				</section>
 				<!-- ################################################################################################################################### -->
 
 				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ###################################################### LINE SAMPLING ############################################################## -->
 				<section>
-					<h6>Line sampling</h6>
-					<!--<img class="slicing" src="pics/slicing.png" alt="RandomSlicing">
-					<div class="fragment" data-fragment-index="1">-->
-					<pre><code class="python" style="background: #191970" data-trim contenteditable>
-						i = 1, 2, ..., D# Dimension
-						l = 1,2, ..., L# Number of lines
-						m = 1,2, ..., M# Number of samples per line
-						x = (xi)# Vector of random variables
-						a = (ai)# Important direction
+					<!-- ############################################### LINE SAMPLING METHOD ############################################################## -->
+					<section>
+							<h3>Line sampling method</h3>
+							<ul>
+								<li style="margin: 35px; font-size:37px"> Propagates small probabilities through black-boxes
+									<ul>
+										<li style="color:green; font-size:28px"> Don’t need to know model, but have to query it
+									</ul>
+								\[ P [V>v_t] = p_F \]
+								<li style="margin: 35px;">"Sample" along a principal direction
+								<li style="margin: 35px;"> Strategies exist for good "guesses" of the direction
+										<ul>
+											<li style="color:green; font-size:28px"> E.g.: sacrifice first batch
+										</ul>
+							</ul>
+						</section>
+						<!-- ################################################ LINE SAMPLING CARTOON ############################################################ -->
+						<section>
+							<h6>Line sampling</h6>
 
-						n = Tx # Map marginals into D standard normal variables
-						for l in range(0,L):
-							n{l} = n[ : , l ]# extract sample for the each line
-							n{l}_c = lambda c: + n{l} - (n{l}・a) a + c a# parametrize the space down to one dimension
-							gl = runBlackbox(n{l}) 		# run the black-box on each sample
-							find c* such that g(n{l}_c*) = 0 	# find the limit state surface on each line
-							p{l} = Φ(-c*)				# compute probability on each line
+							<button class="button" onclick="pause2();" style="position: fixed; top:75px; right:0px; background-color: orange">Pause</button>
+							<button class="button" onclick="clear2();" style="position: fixed; top:75px; right:95px; background-color: blue">Restart</button>
+							<button class="button" onclick="unpause();" style="position: fixed; top:75px; right:42px; background-color: green">Unpause</button>
 
-						p = E[p{l=1,..,L}]
+							<svg id="svg3" height="700" width="960" version="1.1" viewBox="0 0 960 700">
 
-					</code></pre>
+								<defs id="defs4">
+							   <marker id="TriangleOutL" refY="0.0" refX="0.0" orient="auto" overflow="visible">
+							    <path id="path4555" d="m5.77 0l-8.65 5v-10l8.65 5z" fill-rule="evenodd" transform="scale(.8)" stroke="#00f" stroke-width="1pt" fill="#00f"/>
+							   </marker>
+							   <marker id="Arrow1Lstart" refY="0.0" refX="0.0" orient="auto" overflow="visible">
+							    <path id="path4413" d="m0 0l5-5-17.5 5 17.5 5-5-5z" fill-rule="evenodd" transform="scale(.8) translate(12.5)" stroke="#000" stroke-width="1pt"/>
+							   </marker>
+							   <marker id="marker4689" refY="0.0" refX="0.0" overflow="visible" orient="auto">
+							    <path id="path4691" stroke-linejoin="round" d="m8.7186 4.0337l-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7355 5.6174 0 8.0354z" fill-rule="evenodd" transform="scale(1.1) rotate(180) translate(1)" stroke="#000" stroke-width=".625"/>
+							   </marker>
+							  </defs>
+
+								<g id="layer1" transform="translate(0 -450)">
+								<g fill="none">
+							   <path id="path5243" stroke="#a0a4a6" stroke-width="1px">
+									 <animate attributeName="d" dur="1s" repeatCount=1 fill="freeze" begin="3s"
+				 						values="m293.21 902.54 0-0;
+				         						m293.21 902.54 236.79-195.18" />
+								 </path>
+								 <path id="path4961" marker-end="url(#TriangleOutL)" stroke="#00f" stroke-width="1px">
+									 <animate attributeName="d" dur="1s" repeatCount=1 fill="freeze" begin="3s"
+										values="m292.86 902.36 0-0;
+														m292.86 902.36 54.286-44.286" />
+								 </path>
+							   <g stroke="#000">
+							    <path id="path4405" marker-end="" d="m292.94 569.51v359.61" marker-start="url(#Arrow1Lstart)" stroke-width="1.5"/>
+							    <path id="path4407" marker-end="url(#marker4689)" d="m250.52 902.86h434.37" marker-start="" stroke-width="1.5"/>
+							    <path id="path4959" stroke-width="1.9" d="m371.74 504.86c131.32 0 127.28 30.305 143.44 119.2 16.162 88.893 4.0406 117.18 94.954 137.38 90.914 20.203 127.28 6.0609 157.58 50.508">
+										<animateTransform attributeName="transform"
+												type="scale"
+												from="0 0"
+												to="1 1"
+												begin="0s"
+												dur="2s"
+												repeatCount="1"
+												fill="freeze" />
+									</path>
+							   </g>
+							  </g>
+								<path id="path4959-8" d="m372.35 505.07c131.32 0 127.28 30.305 143.44 119.2 16.162 88.893 4.0406 117.18 94.954 137.38 90.914 20.203 127.28 6.3135 157.58 50.76 190.42 21.19 185.74-215.08 121.06-427.54-216.58-16.27-600.39-100.41-517.03 120.2z"
+								fill-opacity=".16783" fill-rule="evenodd" fill="#b1b4b8">
+								<animateTransform attributeName="transform"
+										type="scale"
+										from="0 0"
+										to="1 1"
+										begin="0s"
+										dur="2s"
+										repeatCount="1"
+										fill="freeze" />
+								</path>
+								<g fill="#00b4b8">
+							   <circle id="path5504" fill-opacity=".16783" cx="295" transform="scale(1,-1)" cy="-905" r="75"/>
+							   <circle id="path5504-1" fill-opacity=".16783" cx="295" transform="scale(1,-1)" cy="-905" r="100"/>
+							   <circle id="path5504-1-6" fill-opacity=".16783" cx="295" transform="scale(1,-1)" cy="-905" r="30"/>
+								 <animateTransform attributeName="transform"
+ 										type="scale"
+ 										from="0 0"
+ 										to="1 1"
+ 										begin="1s"
+ 										dur="2s"
+ 										repeatCount="1"
+ 										fill="freeze" />
+							  </g>
+								# lines
+								<g fill="none" stroke-width="1px">
+							   <path id="path5247" d="" stroke="#adadad">
+									 <animate attributeName="d" dur="1s" repeatCount=1 fill="freeze" begin="4s"
+										values="m143.41 736.29 0 0;
+														m143.41 736.29 287.03 316.41" />
+								 </path>
+							   <g stroke="#a0a4a6">
+
+							    <path id="path5243-2-1" d="">
+										<animate attributeName="d" dur="1s" repeatCount=1 fill="freeze" begin="5s"
+ 										values="m360.42 976.21 0-0;
+ 														m360.42 976.21 309.25-258.37" />
+									</path>
+
+									<path id="path5243-2-11" d="">
+										<animate attributeName="d" dur="1s" repeatCount=1 fill="freeze" begin="7.5s"
+ 										values="m172.53 768.11 0-0;
+ 														m172.53 768.11 400.43-327.5" />
+									</path>
+
+									<path id="path5243-2" d="">
+										<animate attributeName="d" dur="1s" repeatCount=1 fill="freeze" begin="10s"
+ 										values="m266.48 872.16 0-0;
+ 														m266.48 872.16 369.11-306.3" />
+									</path>
+							   </g>
+							  </g>
+
+								<circle id="path5245" fill-opacity=".43357" cx="529.29" stroke="#a0a4a6" cy="707.36" r="" stroke-width="1.9" fill="#00f">
+									<animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="4.5s" from="0" to="6.5" />
+								</circle>
+
+								<g fill-opacity=".43357" stroke="#00adad" stroke-width="1.9" fill="#0f0">
+
+
+									<circle id="path5294-8" cx="405.62" cy="938.45" r=" " stroke="#00adad">
+										<animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="5.5s" from="0" to="7.0711" />
+										</circle>
+									<circle id="path5294-24-8" cx="531.43" stroke="#00adad" cy="834.5" r=" ">
+										<animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="6s" from="0" to="7.0711" />
+										</circle>
+									<circle id="path5294-24-89" cx="599.29" stroke="#00adad" cy="776.65" r=" ">
+										<animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="6.5s" from="0" to="7.0711" />
+										</circle>
+									<circle id="path5294-2-7-9-1-3" cx="638.57" stroke="#f00" cy="744.5" r=" " fill="#ebff00">
+										<animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="7s" from="0" to="7.0711" />
+										</circle>
+
+
+								<circle id="path5294-2" cx="232.34" cy="719.01" r=" ">
+									<animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="8s" from="0" to="7.0711" />
+									</circle>
+								<circle id="path5294-2-2" cx="304.06" cy="661.43" r=" ">
+									<animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="8.5s" from="0" to="7.0711" />
+									</circle>
+								<circle id="path5294-2-7" cx="419.21" cy="565.47" r=" ">
+									<animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="9s" from="0" to="7.0711" />
+									</circle>
+								<circle id="path5294-2-7-9" fill-opacity=".43357" cx="531.34" stroke="#f00" cy="474.55" r=" " fill="#ebff00">
+									<animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="9.5s" from="0" to="7.0711" />
+									</circle>
+
+
+
+									<circle id="path5294" cx="324.26" cy="823.06" r="">
+ 									 <animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="10.5s" from="0" to="7.0711" />
+ 								 </circle>
+ 								 <circle id="path5294-87" cx="401.03" cy="761.44" r="">
+ 									 <animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="11s" from="0" to="7.0711" />
+ 									 </circle>
+ 								 <circle id="path5294-24" cx="478.81" cy="694.77" r=" ">
+ 									 <animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="11.5s" from="0" to="7.0711" />
+ 									 </circle>
+ 								 <circle id="path5294-2-7-9-6" cx="558.61" cy="630.12" r=" " fill="#ebff00" stroke="#f00">
+ 									 <animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="12.5s" from="0" to="7.0711" />
+ 									 </circle>
+ 								<circle id="path5294-2-7-9-1" cx="617.2" cy="581.63" r=" " fill="#ebff00" stroke="#f00">
+ 									<animate attributeName="r" dur="0.5s" repeatCount=1 fill="freeze" begin="12s" from="0" to="7.0711" />
+ 									</circle>
+
+
+							  </g>
+								<g fill-opacity="0" stroke="#00f" stroke-width="1.9">
+
+									<rect id="rect5395-2-3" height="" width="13.132" y="755.8" x="609.15">
+										<animate attributeName="height" dur="0.5s" repeatCount=1 fill="freeze" begin="7.5s" from="0" to="13.132" />
+										</rect>
+
+								<rect id="rect5395" height="" width="13.132" y="514.67" x="467.34">
+										 <animate attributeName="height" dur="0.5s" repeatCount=1 fill="freeze" begin="9.9s" from="0" to="13.132" />
+								</rect>
+
+								<rect id="rect5395-2" height="" width="13.132" y="654.55" x="514.68">
+									<animate attributeName="height" dur="0.5s" repeatCount=1 fill="freeze" begin="12.9s" from="0" to="13.132" />
+									</rect>
+							  </g>
+
+
+								</g>
+							</svg>
+
+							<script>
+								function go () {
+								  var elements = document.getElementsByTagName("animate");
+									var begins = [0,0,0,0,1,2,2,2,4,4,6,6,6,6];
+								  for (var i = 0; i < elements.length; i++) {
+								    //elements[i].beginElementAt(begins[i].valueOf());
+										elements[i].beginElementAt(begins[i])
+								  }
+								}
+								function unpause () {
+									document.getElementById("svg3").unpauseAnimations();
+								}
+
+								function pause2 () {
+									document.getElementById("svg3").pauseAnimations();
+								}
+
+								function clear2 () {
+									document.getElementById("svg3").setCurrentTime(0);
+								}
+
+								window.setInterval(function(){
+									var e = document.getElementById("svg3");
+									document.getElementById("svg3").setCurrentTime(0)
+								}, 20000);
+							</script>
+
+
+						</section>
+						<!-- #################################################  LINE SAMPLING CODE  ############################################################# -->
+						<section>
+							<h6>Line sampling</h6>
+							<!--<img class="slicing" src="pics/slicing.png" alt="RandomSlicing">
+							<div class="fragment" data-fragment-index="1">-->
+							<pre><code class="python" style="background: #191970" data-trim contenteditable>
+								i = 1, 2, ..., D# Dimension
+								l = 1,2, ..., L# Number of lines
+								m = 1,2, ..., M# Number of samples per line
+								x = (xi)# Vector of random variables
+								a = (ai)# Important direction
+
+								n = Tx # Map marginals into D standard normal variables
+								for l in range(0,L):
+									n{l} = n[ : , l ]# extract sample for the each line
+									n{l}_c = lambda c: + n{l} - (n{l}・a) a + c a# parametrize the space down to one dimension
+									gl = runBlackbox(n{l}) 		# run the black-box on each sample
+									find c* such that g(n{l}_c*) = 0 	# find the limit state surface on each line
+									p{l} = Φ(-c*)				# compute probability on each line
+
+								p = E[p{l=1,..,L}]
+
+							</code></pre>
+						</section>
+						<!-- ############################################### ADAPTIVE ALGORITHM ############################################################## -->
+						<section>
+								<h3>Adaptive algorithm</h3>
+								<h6> Line sampling </h6>
+								<ul style="font-size:35px">
+									<li style="margin: 35px;"> Number of evaluation on each line varies
+									<li style="margin: 35px;"> Line index is not necessarily sequential
+									<li style="margin: 35px;"> Direction can change during loop execution
+									<li style="margin: 35px;"> If limit state surface is not met during root search
+									<li style="margin: 35px;"> Dynamic allocation of line indexes for flat surfaces
+								</ul>
+							</section>
+							<!-- ########################################## ADAPTIVE ALGORITHM CARTOON ########################################################## -->
+							<section>
+								<div style="position:relative; width:960px; height:700px; margin:0 auto;">
+									<img class="fragment current-visible" data-fragment-index="0" data-transition="fade-in" src="pics/direction_update_1.svg" alt="aa1" style="position:absolute; top:0; left:0;">
+								<img class="fragment current-visible" data-fragment-index="1" data-transition="fade-in" src="pics/direction_update_2.svg" alt="aa1" style="position:absolute; top:0; left:0;">
+								<img class="fragment current-visible" data-fragment-index="3" data-transition="fade-in" src="pics/direction_update_3.svg" alt="aa1" style="position:absolute; top:0; left:0;">
+								<img class="fragment" data-fragment-index="4" data-transition="fade-in" src="pics/direction_update_4.svg" alt="aa1" style="position:absolute; top:0; left:0;">
+							</div>
+
+								</section>
+
 				</section>
 				<!-- ################################################################################################################################### -->
 
 				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ###################################################  CAUCHY DEVIATES  ############################################################# -->
 				<section>
-					<h6>Cauchy deviates</h6>
+
+					<section>
+						<h3>Cauchy-deviate method</h3>
+						<ul>
+							<li style="margin: 35px;"> Propagates intervals through black-box model
+								<ul>
+									<li style="color:green; font-size:28px"> Don’t need to know model, but have to query it
+								</ul>
+								\[ E[V] = \tilde v_m; V[V] = \tilde v_{var} \]
+								<li style="margin: 35px;"> "Sample" from around interval
+									<ul>
+										<li style="color:green; font-size:28px"> Points not necessarily inside the interval!
+									</ul>
+									<li style="margin: 35px;"> Scale results to get an asymptotically correct estimate of the interval uncertainty of the output
+						</ul>
+					</section>
+					<!-- ###################################################  CAUCHY CARTOON  ############################################################## -->
+					<section>
+						<h6>Cauchy deviate</h6>
+						<h6>CARTOON</h6>
+					</section>
+					<!-- #####################################################  CAUCHY CODE  ############################################################### -->
+					<section>
+					<h6>Cauchy deviate</h6>
 					<!--<img class="slicing" src="pics/slicing.png" alt="RandomSlicing">
 					<div class="fragment" data-fragment-index="1">-->
 					<pre><code class="python" style="background: #191970" data-trim contenteditable>
@@ -246,230 +1150,344 @@
 
 							solve @d N/2 - sumk(1/(1+δk/d))# Maximum likelihood estimator for scale parameter
 							G = [gm-d, gm+d]# Compute approximate interval of the output
-					</code></pre>
+						</code></pre>
+					</section>
+					<!-- ##################################################### LIMITATIONS ############################################################### -->
+					<section>
+						<h3>Limitations of the method</h3>
+						<ul>
+							<li> Intervals narrow relative to the nonlinearity
+								<ul style="color:green; font-size: 24px;">
+									<li> 	Based on a linearization approximation
+									<li>	Function almost linear  OR  uncertainties small
+									<li>	Could combine with subinterval reconstitution
+								</ul>
+								<li>  Most efficient when dimensionality is high
+								<li> Asymptotically correct, but not rigorous
+								<li> Only handles interval uncertainty 
+						</ul>
+					</section>
+					<!-- ##################################################### PERFORMANCE ############################################################### -->
+					<section>
+						<h3>Performance</h3>
+						<ul>
+							<li style="margin: 35px;"> Depends on the number of samples, not inputs
+								<ul style="color:green; font-size: 24px;">
+									<li> 	Works just as well for 1000 input variables as 10
+									<li>	Similar in performance to Monte Carlo
+								</ul>
+								<li style="margin: 35px;">  Need about 200 samples to obtain 20% relative accuracy of half-width of output range
+									<ul style="color:green; font-size: 24px;">
+									<li> 	With fewer samples, we’d get lower accuracy, but we can compensate for this by scaling by sqr(N), which works under the linearity assumption
+
+								</ul>
+						</ul>
+					</section>
 				</section>
 				<!-- ################################################################################################################################### -->
 
 				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ################################################# UNCERTAINTY COMPILER ############################################################ -->
 				<section>
-						<!--<button onclick="go();" style="position: fixed; top:100px">Go</button>-->
-					<button class="button" onclick="pause2();" style="position: fixed; top:75px; right:0px; background-color: orange">Pause</button>
-					<button class="button" onclick="unpause();" style="position: fixed; top:75px; right:40px; background-color: green">Unpause</button>
-					<button class="button" onclick="clear2();" style="position: fixed; top:75px; right:90px; background-color: blue">Restart</button>
+					<h6>Uncertainty compiler</h6>
+						<div class="fragment" data-fragment-index="1">
 
-
-				<svg id="svg2" height="700" width="960" version="1.1" viewBox="0 0 960 700">
-
-					<g id="layer1" transform="matrix(0.6193394,0,0,0.6193394,29.11421,-240.21509)"
-						 style="fill:none;stroke:#000000;stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none">
-						<path
-							 id="path4136"
-							 d="M 199.47,899.63 C 344.22437,891.58857 246.77357,490.63443 757.05,486.95 550.41,558.36 494.75,899.79 199.47,899.63 Z"
-							 inkscape:connector-curvature="0"
-							 style="stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none"
-							 sodipodi:nodetypes="ccc" />
-						<path
-							 id="path4138"
-							 d="m 200.24,483.86 0,414.85 556.44,0"
-							 inkscape:connector-curvature="0"
-							 style="stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#TriangleInL);marker-end:url(#TriangleOutL)" />
-					</g>
-
-					<text id="a2" x="100" y="95" fill="white" style="font-size:16px">
-						<animate attributeName="fill" dur="2s" fill="freeze" begin="0s" from="white" to="black"/>
-						0.83</text>
-
-					<ellipse
-	      		style="opacity:1;fill:#009079;fill-opacity:0.50485439;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-	      		id="path4354" cx="153.01422" cy="95.20787" ry="5">
-						<animate attributeName="rx" dur="1s" repeatCount=1 fill="freeze" begin="0s"
-							values="0; 5" />
-					</ellipse>
-
-					<path
- 				     style="fill:none;fill-rule:evenodd;stroke:#6c6c6c;stroke-width:0.55408031;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.33009709"
- 				     id="path4235"
- 				     inkscape:connector-curvature="0">
-						 <animate attributeName="d" dur="1s" repeatCount=1 fill="freeze" begin="1s"
-	 						values="m 142.78433,95.466335 20.49051,0;
-	         						m 137.84026,95.471303 356.01502,0" />
-					</path>
-
-					<g style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.21632123;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
-					<path id="path4233">
-					<animate attributeName="d" dur="2s" repeatCount=1 fill="freeze" begin="2s"
-						values="m 142.78433,95.466335 20.49051,0;
-        						m 335.04646,95.134611 106.20344,0" /> </path> </g>
-
-					<g id="layer1-7" transform="matrix(0.6193394,0,0,0.6193394,26.679159,75.937934)"
-				     style="fill:none;stroke:#000000;stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none">
-				    <path
-				       id="path4136-3"
-				       d="M 199.47,899.63 C 630.02358,899.03124 326.8,487.3 757.05,486.95 422.71522,511.01745 835.33328,897.9552 199.47,899.63 Z"
-				       inkscape:connector-curvature="0"
-				       sodipodi:nodetypes="ccc"
-				       style="stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none" />
-				    <path
-				       id="path4138-0"
-				       d="m 200.24,483.86 0,414.85 556.44,0"
-				       inkscape:connector-curvature="0"
-				       style="stroke-width:2.68389344;stroke-miterlimit:4;stroke-dasharray:none;marker-start:url(#TriangleInL);marker-end:url(#TriangleOutL)" />
-				  </g>
-
-					<text id="a1" x="100" y="556" fill="white" style="font-size:16px">
-						<animate attributeName="fill" dur="2s" fill="freeze" begin="4s" from="white" to="black"/>
-						0.28</text>
-					<ellipse
-	      		style="opacity:1;fill:#009079;fill-opacity:0.50485439;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-	      		id="path4354" cx="150" cy="556" ry="5">
-						<animate attributeName="rx" dur="1s" repeatCount=1 fill="freeze" begin="4s"
-							values="0;
-	        						5" />
-					</ellipse>
-					<path
- 				     style="fill:none;fill-rule:evenodd;stroke:#6c6c6c;stroke-width:0.55408031;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.33009709"
- 				     id="path4235"
- 				     inkscape:connector-curvature="0">
-						 <animate attributeName="d" dur="1s" repeatCount=1 fill="freeze" begin="5s"
-	 						values="m 140.07027,556.59975 20.49053,0;
-	         						m 135.7704,556.60723 356.01502,0" />
-					</path>
-					<g style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.21632123;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
-					<path id="path4233">
-					<animate attributeName="d" dur="2s" repeatCount=1 fill="freeze" begin="6s"
-						values="m 140.07027,556.59975 20.49053,0;
-        						m 303.75891,556.27052 73.93482,0" /> </path> </g>
-					<g style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.21632123;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
-					<path id="path4233">
-					<animate attributeName="d" dur="2s" repeatCount=1 fill="freeze" begin="8s"
-						values="m 335.04646,95.134611 106.20344,0;
-										m 693.52243,317.30486 106.20344,0" /> </path> </g>
-					<g style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.21632123;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
-					<path id="path4233">
-					<animate attributeName="d" dur="2s" repeatCount=1 fill="freeze" begin="8s"
-						values="m 303.75891,556.27052 73.93482,0;
-        						m 693.76514,391.15218 0,-73.93482" /> </path> </g>
-					<rect style="opacity:1;fill:#009079;fill-opacity:0.50485438;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-				     id="rect4352"
-				     x="694.63409" y="318.24664">
-						 <animate attributeName="width" attributeType="XML"
-    		 			from="0" to="104.16928" begin="10s" dur="1s" fill="freeze"/>
-  					 <animate attributeName="height" attributeType="XML"
-    		 			from="0" to="71.389412" begin="10s" dur="1s" fill="freeze"/>
-					</rect>
-					<path style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.20751476;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-				     id="path4237-0"
-				     inkscape:connector-curvature="0"
-				     sodipodi:nodetypes="cc">
-						 <animate attributeName="d" attributeType="XML"
-    		 			from="m 693.49631,390.74085 1,0" to="m 693.49631,390.74085 106.20344,0" begin="10s" dur="1s" fill="freeze"/>
-					</path>
-					<path style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.20751476;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-				     id="path4237-0"
-				     inkscape:connector-curvature="0"
-				     sodipodi:nodetypes="cc">
-						 <animate attributeName="d" attributeType="XML"
-    		 			from="m 799.66493,390.9761 0,1.93482" to="m 799.66493,390.9761 0,-73.93482" begin="10s" dur="1s" fill="freeze"/>
-					</path>
-				</svg>
-
-				<script>
-				function go () {
-				  var elements = document.getElementsByTagName("animate");
-					var begins = [0,0,0,0,1,2,2,2,4,4,6,6,6,6];
-				  for (var i = 0; i < elements.length; i++) {
-				    //elements[i].beginElementAt(begins[i].valueOf());
-						elements[i].beginElementAt(begins[i])
-				  }
-				}
-				function unpause () {
-					document.getElementById("svg2").unpauseAnimations();
-				}
-
-				function pause2 () {
-					document.getElementById("svg2").pauseAnimations();
-				}
-
-				function clear2 () {
-					document.getElementById("svg2").setCurrentTime(0);
-				}
-					</script>
+						</div>
+					</section>
 				</section>
 				<!-- ################################################################################################################################### -->
 
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ########################################################## V & V ################################################################## -->
+				<section>
+					<!-- ########################################################## TITLE ################################################################## -->
+					<section>
+						<h3>V&V</h3>
+						<ul>
+							<li style="margin: 35px;"> Verification (checking the math and code)
+								<ul style="color:green; font-size: 24px;">
+									<li> 	Code testing
+									<li>	Interval analysis, probability bounds analysis
+									<li>	Units/dimension checking
+								</ul>
+								<li style="margin: 35px;">  Validation (checking against data)
+									<ul style="color:green; font-size: 24px;">
+									<li> 	Rarely actually have much data 
+								</ul>
+						</ul>
+					</section>
+					<section>
+						<h3>Goals</h3>
+						<ul>
+							<li style="margin: 35px;"> Objectively measure the conformance of predictions with empirical data
+							<li style="margin: 35px;">  Use this measure to characterize the reliability of other predictions
+						</ul>
+					</section>
+					<section>
+					<h3>Validation metric</h3>
+						<ul>
+							<li style="margin: 35px;"> A measure of the mismatch between the observed data and the model’s predictions
+								<ul style="color:green; font-size: 24px;">
+									<li> 	Low value means a good match
+									<li>	High value means they disagree
+								</ul>
+								<li style="margin: 35px;">  Distance between prediction and data
+						</ul>
+					</section>
+					<section>
+					<h3>Desirable properties of such metric</h3>
+						<ul>
+							<li style="margin: 30px;"> Expressed in physical units
+							<li style="margin: 30px;"> Generalizes deterministic comparisons
+							<li style="margin: 30px;"> Reflects full distribution
+							<li style="margin: 30px;"> Not too sensitive to long tails
+							<li style="margin: 30px;"> Mathematical metric
+							<li style="margin: 30px;"> Unbounded (you can be really off)
+
+						</ul>
+					</section>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ############################################## Predictive capabilities ############################################################ -->
+				<section>
+					<section>
+						<h6>Predictive capabilities</h6>
+					</section>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ######################################################### EXAMPLE 1 ############################################################### -->
+				<section>
+
+					<section>
+						<h3> Large FEM </h3>
+						<h6>Example #1</h6>
+					</section>
+
+					<section>
+
+						<table class="left" style="font-size:18px; text-align: center">
+							<thead>
+								<tr style="border-style: none none solid none; border-width: 2px;">
+									<th style="text-align: center"> Uncertain <br> parameters </th>
+									<th style="text-align: center">Distribution</th>
+									<th style="text-align: center">Quantity</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="center">1</td>
+									<td align="center">N(0.1, 0.001)</td>
+									<td align="center">Column’s strength (GPa)</td>
+								</tr>
+								<tr>
+									<td align="center">2-193</td>
+									<td align="center">Unif(0.36, 0.44)</td>
+									<td align="center">Cross-section (m)</td>
+								</tr>
+								<tr>
+									<td align="center"> 194-212 </td>
+									<td align="center">LN(35.0, 12.25)</td>
+									<td align="center"> Young’s modulus (GPa)</td>
+								</tr>
+								<tr>
+									<td align="center">213 - 231 </td>
+									<td align="center">LN(2.5, 0.0625)</td>
+									<td align="center">Material’s density (kg/dm3	)</td>
+								</tr>
+								<tr>
+									<td align="center">232 - 244 </td>
+									<td align="center">LN(0.25, 0.000625)</td>
+									<td align="center">Poisson’s ratio</td>
+								</tr>
+							</tbody>
+						</table>
+						<img src="pics/largefem.svg" alt="largefem" style="width: 40%;float:right;">
+						<div style="position:fixed; bottom:80px; left:80px">
+							<p class="biblio" style="font-size: 16px; text-align:left;">De Angelis, M., et al., 2015. <br> Advanced line sampling for efficient robust reliability analysis. <i>Structural safety</i>;
+							<a href="https://doi.org/10.1016/j.strusafe.2014.10.002"> doi.org/10.1016/j.strusafe.2014.10.002 </a></p>
+						</div>
+					</section>
+
+					<section>
+
+					</section>
+
+				</section>
+				<!-- ################################################################################################################################### -->
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ######################################################### EXAMPLE 2 ############################################################### -->
+				<section>
+
+					<section>
+						<h3> Maintenance scheduling </h3>
+						<h6>Example #2</h6>
+					</section>
+					<section>
+						<img src="pics/maintenance_1.svg" alt="largefem" style="position:fixed; top:0px; left:0px">
+						<div style="position:fixed; bottom:150px; right:200px; font-size:22px">
+							\[ \frac{\text{d} a}{\text{d}N}=C \left( \Delta K \right)^m; \]
+							<br>
+							\[ \Delta K = Y(a)\ M(a)\ \Delta S\ \sqrt{\pi a}; \]
+						</div>
+							<p class="biblio" style="font-size: 16px; text-align:left; position:fixed; bottom:10px; left:80px">De Angelis, M., et al., 2016. <br> Forced Monte Carlo simulation strategy for the design of maintenance plans with multiple inspections <i>ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering</i>;
+								<a href="https://doi.org/10.1061/AJRUA6.0000868"> doi.org/10.1061/AJRUA6.0000868 </a></p>
+					</section>
+
+					<section>
+						<div style="width:40%; float:right; font-size:22px">
+							\[ \frac{\text{d} a}{\text{d}N}=C \left( \Delta K \right)^m; \]
+							<br>
+							\[ \Delta K = Y(a)\ M(a)\ \Delta S\ \sqrt{\pi a}; \]
+							<br>
+							\[ T_M = 50\ \text{years} \]
+							<br>
+							<br>
+
+						<!--<table style="font-size:16px; text-align: center;">
+							<thead>
+								<tr style="border-style: none none solid none; border-width: 2px;">
+									<th style="text-align: center">  </th>
+									<th style="text-align: center"> Unit </th>
+									<th style="text-align: center"> Description </th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td align="left">\[ E[\nu] \]</td>
+								<td align="center">\[ \left[10^{6} \text{cycles/year} \right] \]</td>
+								<td align="center">Annual number of cycles</td>
+							</tr>
+							<tbody>
+							</table>-->
+
+						</div>
+						<table class="left" style="font-size:18px; text-align: center">
+							<thead>
+								<tr style="border-style: none none solid none; border-width: 2px;">
+									<th style="text-align: center"> \[ \theta_i \] </th>
+									<th style="text-align: center">Distribution</th>
+									<th style="text-align: center">\[ E [\theta_i] \]</th>
+									<th style="text-align: center">\[Std [\theta_i] \]</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="left">\[ \nu \left[ 10^{6} \text{cycles/year} \right] \]</td>
+									<td align="center">Lognormal</td>
+									<td align="center">[7.125, 7.875]	</td>
+									<td align="center">[0.475, 0.525] </td>
+								</tr>
+								<tr>
+									<td align="left">\[ a_0\ \left[ \text{mm} \right] \]</td>
+									<td align="center">Lognormal</td>
+									<td align="center">[0.119, 0.131]</td>
+									<td align="center">[0.043, 0.047] </td>
+								</tr>
+								<tr>
+										<td align="left">\[ \Delta S\ \left[ \text{MPa} \right] \]</td>
+									<td align="center">Gamma</td>
+									<td align="center">[7.410, 8.190] </td>
+									<td align="center">[0.095, 0.105] </td>
+								</tr>
+								<tr>
+									<td align="left">\[ C^{*}\ \left[10^{-13} \text{ mm/cycles} \right] \]</td>
+									<td align="center">Lognormal</td>
+									<td align="center">[2.375, 2.625]</td>
+									<td align="center">[0.877, 0.969]</td>
+								</tr>
+								<tr>
+									<td align="left">\[ m^{*} \]</td>
+									<td align="center">Normal</td>
+									<td align="center">[2.850, 3.150]</td>
+									<td align="center">[0.038, 0.042]</td>
+								</tr>
+								<tr>
+									<td align="left">\[ a_f\ \left[ \text{mm} \right] \]</td>
+									<td align="center">Gumbel</td>
+									<td align="center">[0.950, 1.050]</td>
+									<td align="center">[0.019, 0.021]</td>
+								</tr>
+								<tr>
+									<td align="left">\[ a/c \]</td>
+									<td align="center">Lognormal</td>
+									<td align="center">[0.380, 0.420]</td>
+									<td align="center">[0.152, 0.168]</td>
+								</tr>
+								<tr>
+									<td align="center">\[ d\ \left[ \text{mm} \right] \]</td>
+									<td align="center">Gamma</td>
+									<td align="center">[771.4, 852.6]</td>
+									<td align="center">[7.695, 8.505]</td>
+								</tr>
+								<tr>
+									<td align="left">\[ b\ \left[ \text{mm} \right] \]</td>
+									<td align="center">Gamma</td>
+									<td align="center">[30.02, 33.18] </td>
+									<td align="center">[3.040, 3.360]</td>
+								</tr>
+								<tr>
+									<td align="left">\[ h\ \left[ \text{mm} \right] \]</td>
+									<td align="center">&Gamma</td>
+									<td align="center">[7.980, 8.820] </td>
+									<td align="center">[0.665, 0.735]</td>
+								</tr>
+								<tr>
+									<td align="leftx">\[ \phi\ \left[ \text{deg} \right] \]</td>
+									<td align="center">Gamma	</td>
+									<td align="center">[33.25, 36.75] </td>
+									<td align="center">[1.900, 2.100]</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<section>
+						<img src="pics/maintenance_3.svg" alt="maintenance3">
+					</section>
+
+				</section>
+				<!-- ################################################################################################################################### -->
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ######################################################### EXAMPLE 3 ############################################################### -->
+				<!--<section>
+
+					<section>
+						<h3> NASA UQ challenge </h3>
+						<h6>Example #3</h6>
+					</section>-->
+
+				<!--	<section>
+						<p class="biblio" style="font-size: 16px; text-align:left;">Patelli, E., et al., 201. <br> Uncertainty Management in Multidisciplinary Design of Critical Safety Systems <i>Journal of Aerospace Information Systems</i>;
+							<a href="https://doi.org/10.2514/1.I010273"> doi.org/10.2514/1.I010273 </a></p>
+					</section>
+				</section>-->
+				<!-- ################################################################################################################################### -->
+
+
 						<!-- #########################################################  SLIDE  ################################################################# -->
-							<section>
+							<!--<section>
 								<h6> Natural frequencies -v- Conditional probabilities </h6>
 								<h6> Monty hall example </h6>
-								<!--<img class="slicing" src="pics/slicing.png" alt="RandomSlicing">
-								<div class="fragment" data-fragment-index="1">-->
-							</section>
+							</section>-->
 							<!-- ################################################################################################################################### -->
 
 							<!-- #########################################################  SLIDE  ################################################################# -->
-							<section>
+							<!--<section>
 								<h6> BAD DATA </h6>
-								<!--<img class="slicing" src="pics/slicing.png" alt="RandomSlicing">
-								<div class="fragment" data-fragment-index="1">-->
-							</section>
-							<!-- ################################################################################################################################### -->
-
-
-									<!--<footer class="top">
-										<a href="#/1">Go to summary</a>
-									</footer>-->
-							<!-- #########################################################  SLIDE  ################################################################# -->
-							<section class="fig-container"
-											data-fig-id="fig-line-series"
-											data-file="line-chart.html"
-											data-transitions="1">
-									<h2 style="color: white">d3.js plugin for reveal.js</h2>
-							</section>
+							</section>-->
 							<!-- ################################################################################################################################### -->
 
 							<!-- #########################################################  SLIDE  ################################################################# -->
-								<section>
-									<section data-markdown>
-										<textarea data-template>
-											### Sharing
-
-											* Google Site:
-												* https://sites.google.com/site/digitwindesign/
-												* SAY: announcement page
-												* FILES: file cabinet
-											* Regular (weekly) meetings
-											* Questionnaires
-											* Calendar invites
-											* Data ![Alt](pics/Warning_low.png "Warning")
-
-											> marcodeangelis09@gmail.com
-										</textarea>
-									</section>
-									<!--A paragraph with some text and a [link](http://hakim.se).-->
-									<!-- #########################################################  SLIDE  ################################################################# -->
-									<section>
-											<h3>Literature</h3>
-											<iframe class="stretch" src="https://docs.google.com/forms/d/e/1FAIpQLSd-w8B8vCIJx4dvh4eNKpM55xDrR3M1qUVlzb0OldCiI0gcBw/viewform?embedded=true" width="640" height="2827" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-									</section>
-									<!-- #########################################################  SLIDE  ################################################################# -->
-									<section>
-										<!--<iframe width="100%" height="100%" src="https://www.youtube.com/embed/4BVpzY6prJ0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
-											<h3>Code</h3>
-											<ul>
-												<li>Jupyter (off-line)</li>
-												<li>Colaboratory</li>
-												<ul>
-													<li>Use Google GPU and TPU</li>
-													<li>Share your code instantaneously</li>
-											</ul>
-												<li>Git</li>
-											</ul>
-									</section>
-								</section>
-							<!-- ################################################################################################################################### -->
-
-							<!-- #########################################################  SLIDE  ################################################################# -->
-							<section>
+							<!-- ######################################################  left list  ################################################################# -->
+							<!--<section>
 								<h3>Incertitude</h3>
 								<h2 class="marco">Forward propagation</h2>
 								<ul class="left" style="font-size: 20px">
@@ -501,51 +1519,14 @@
 									</li>
 								</ul>
 								<img class="flushLeft" src="pics/intVarFig.png" alt="img:intvar">
-							</section>
-							<!-- ################################################################################################################################### -->
-
-							<!-- #########################################################  SLIDE  ################################################################# -->
-							<section>
-								<section data-markdown>
-									<textarea data-template>
-										#### Literature 1/2
-										* Ferson at al. Sandia reports
-										* Jon Helton on sampling with accelerating strategies
-										* Work on rigorous ODEs (VSPODE, COSY)
-										* Mullen and Muhanna on FEM
-										* Proceedings of REC
-										* Book of abstracts SWIM
-										* PhD theses on propagation
-										* Matthias Faes on importance sampling
-										<!--A paragraph with some text and a [link](http://hakim.se).-->
-									</textarea>
-							<!-- ################################################################################################################################### -->
-							</section>
-								<section data-markdown>
-									<textarea data-template>
-										#### Literature 2/2
-										* De Angelis et al. on Line Sampling
-										* Kreinovich et al. on Interval Statistics
-										* Work on Cauchy Deviates
-										* Work on Rump on IntLab and rigorous computing
-										* Eigenvalues, linear systems, etc.
-										* More abstract stuff: pre-conditioning, nesting, etc.
-										* Anything on uncertainty compilers? Scott?
-										<!--A paragraph with some text and a [link](http://hakim.se).-->
-									</textarea>
-								</section>
-							</section>
-
-							<!--<section>
-								<p> The variance of the interval dataset is shown below </p>
-								<img src="pics/intVarFig.png" alt="variance interval dataset">
 							</section>-->
+							<!-- ################################################################################################################################### -->
 
 							<!--<section data-background-iframe="https://riskinstitute.uk" data-background-interactive>
 							<h2>wOw</h2>
 							</section>-->
-					</div>
-				</div>
+					</div> <!--End of slides-->
+				</div><!--End of reveal container-->
 
 					<script src="reveal/lib/js/head.min.js"></script>
 					<script src="reveal/js/reveal.js"></script>
@@ -564,6 +1545,7 @@
 								{ src: 'reveal/plugin/markdown/marked.js' },
 								{ src: 'reveal/plugin/notes/notes.js', async: true },
 								{ src: 'reveal/plugin/markdown/markdown.js' },
+								{ src: 'reveal//plugin/math/math.js', async: true },
 								{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 							],
 							keyboard: {
@@ -598,3 +1580,15 @@
 
 				</body>
 </html>
+
+<!--<footer class="top">
+	<a href="#/1">Go to summary</a>
+</footer>-->
+<!-- #########################################################  SLIDE  ################################################################# -->
+<!--	<section class="fig-container"
+		data-fig-id="fig-line-series"
+		data-file="line-chart.html"
+		data-transitions="1">
+<h2 style="color: white">d3.js plugin for reveal.js</h2>
+</section>-->
+<!-- ################################################################################################################################### -->
