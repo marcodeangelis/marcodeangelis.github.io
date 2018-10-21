@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="reveal/css/reveal.css">
 		<link rel="stylesheet" href="reveal/css/theme/serif.css" id="theme">
 		<link rel="stylesheet" href="oxford/theme/oxford.css" id="template">
-		<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.0/build/styles/default.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.0/build/styles/default.min.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
@@ -225,8 +225,10 @@
 				<section>
 				<!-- #################################################### EXAMPLE UNIFORM ############################################################## -->
 				<section>
+
 					<h3>Propagating incertitude</h3>
-					<div style="width:40%; float: left">
+
+					<div style="width:60%; float: left">
 						<p style="text-align: left">Suppose</p>
 
 						<p style="text-align: left">A is in [2, 4]</p>
@@ -236,8 +238,10 @@
 						<p style="text-align: left">What can be said about A + B?</p>
 					</div>
 
-					<img class="fragment current-visible" data-fragment-index="1" style="width:50%; float:right; position:fixed; right:0px;bottom:120px;" src="oxford/pics/indifference.svg">
-					<img class="fragment current-visible" data-fragment-index="2" style="width:50%; float:right;position:fixed; right:0px;bottom:120px;" src="oxford/pics/indifference_1.svg">
+					<img class="fragment" data-fragment-index="1" style="position:absolute; right:30px; bottom:0px;" src="oxford/pics/indifference_1.svg">
+					<p class="fragment" data-fragment-index="1"  style="position:absolute; right:100px;bottom:100px; color:red; font-size: 100px"> ! </p>
+					<!--<img style="position:fixed; right:30px; bottom:500px;" src="pics/indifference_1.svg">-->
+					<p class="fragment" data-fragment-index="2"  style="position:absolute; right:100px;bottom:20px; color:green;"> [5,9] </p>
 
 				</section>
 				<!-- ################################################## EXAMPLE DIPENDENCE ############################################################# -->
@@ -617,13 +621,13 @@
 					<section>
 						<h3>Hard special case: black-box function</h3>
 						<ul>
-							<li> Some models or functions can’t be decomposed into simple arithmetic operations
+							<li> Some models or functions can't be decomposed into simple arithmetic operations
 								<ul style="color:blue; font-size: 24px;">
 									<li> 	Secrecy
 									<li>	Legacy codes
 									<li>	Just too complex
 								</ul>
-								<li>  If we can only query the function by evaluating it for particular (scalar) inputs, it’s called a black box
+								<li>  If we can only query the function by evaluating it for particular (scalar) inputs, it's called a black box
 								<li> How can we propagate interval uncertainty through a black-box model?
 						</ul>
 					</section>
@@ -654,6 +658,21 @@
 				<!-- #########################################################  SLIDE  ################################################################# -->
 				<!-- ######################################################  RND SLICING ############################################################### -->
 				<section>
+
+					<section>
+						<h3>Random slicing</h3>
+						<ul>
+							<li style="margin: 25px;"> Can be used for black-boxes to make imprecise estimations
+							<li style="margin: 25px;"> Produces "samples" for the P-box
+							<li style="margin: 25px;"> Propagation of incertitude still needed
+								<ul style="color:green; font-size: 28px;">
+									<li> 	Accelerating strategies
+									<li>	Low discrepancy sampling
+									<li>	Importance sampling
+								</ul>
+							<li style="margin: 25px;"> Dependency among Pboxes can be included
+						</ul>
+					</section>
 
 				<!-- ##################################################### SLICING ANIME ############################################################### -->
 				<section>
@@ -1113,9 +1132,9 @@
 						<ul>
 							<li style="margin: 35px;"> Propagates intervals through black-box model
 								<ul>
-									<li style="color:green; font-size:28px"> Don’t need to know model, but have to query it
+									<li style="color:green; font-size:28px"> Don't need to know model, but have to query it
 								</ul>
-								\[ E[V] = \tilde v_m; V[V] = \tilde v_{var} \]
+								\[ E[V] = {\tilde v}_m; V[V] = {\tilde v}_{var} \]
 								<li style="margin: 35px;"> "Sample" from around interval
 									<ul>
 										<li style="color:green; font-size:28px"> Points not necessarily inside the interval!
@@ -1133,7 +1152,7 @@
 					<h6>Cauchy deviate</h6>
 					<!--<img class="slicing" src="pics/slicing.png" alt="RandomSlicing">
 					<div class="fragment" data-fragment-index="1">-->
-					<pre><code class="python" style="background: #191970" data-trim contenteditable>
+					<pre class="stretch"><code class="python" style="background: #191970" data-trim contenteditable>
 						i = 1, 2, ..., D# Dimension of the function
 						k = 1, 2, ..., N# Number of samples
 						X = (Xi)	# Vector of intervals
@@ -1189,11 +1208,42 @@
 				<!-- #########################################################  SLIDE  ################################################################# -->
 				<!-- ################################################# UNCERTAINTY COMPILER ############################################################ -->
 				<section>
-					<h6>Uncertainty compiler</h6>
-						<div class="fragment" data-fragment-index="1">
+				<section>
+					<h3>Uncertainty pre-compiler</h3>
+						<ul>
+							<li style="margin: 25px;"> Intrusive UQ cannot be used on black-box codes
+							<li style="margin: 25px;"> But many codes and simulations are not “black”
+							<li style="margin: 25px;"> We know all the computations inside, <font style="color: cyan">CRYSTAL</font>
+							<li style="margin: 25px;"> A compiler that translates C/Fortran code to insinuate appropriate (intrusive) UQ code
 
-						</div>
+						</ul>
 					</section>
+					<section>
+					<h3>Strategy</h3>
+						<ul>
+							<li style="margin: 25px;"> Parse the formula into a binary expression tree
+
+							<li style="margin: 25px;"> Apply each reducing template against every subexpression of the tree
+
+							<li style="margin: 25px;"> Count the remaining repeated uncertain parameters
+
+							<li style="margin: 25px;"> Repeat until the number is zero or no longer decreases
+
+						</ul>
+					</section>
+
+					<section>
+					<h3>Application</h3>
+						<ul>
+							<li style="margin: 45px;"> The quantity <font style="color: red">(a + b)^2 + c + b + a</font>  can be reduced to its optimal form  <font style="color: green">(a + b + ½)^2 + c – ¼</font>
+
+							<li style="margin: 45px;"> Use the reducing template  \[u + u^2 = (u + ½)^2 – ¼ \]  but first rearrange the order of the summed terms and let u be the quantity (a + b)
+
+						</ul>
+					</section>
+
+				</section>
+
 				</section>
 				<!-- ################################################################################################################################### -->
 
@@ -1247,15 +1297,28 @@
 
 						</ul>
 					</section>
-				</section>
-				<!-- ################################################################################################################################### -->
-
-
-				<!-- #########################################################  SLIDE  ################################################################# -->
-				<!-- ############################################## Predictive capabilities ############################################################ -->
-				<section>
 					<section>
-						<h6>Predictive capabilities</h6>
+						<h3>Area metric</h3>
+						<ul style="font-size: 32px;">
+							<li style="margin: 10px;"> "Distance" between two distributions
+							<li style="margin: 10px;"> Physical units
+							<li style="margin: 10px;"> Smallest mean absolute difference of deviates
+						</ul>
+						<p style="position: absolute; right:0px; top:250px; color:grey"> \[ min\ E \left| X_F - Y_n \right| \]</p>
+
+						<img src="oxford/pics/area_metric.svg", alt="areametric">
+					</section>
+					<section>
+						<h3>How should we compare intervals?</h3>
+						<img src="oxford/pics/epistemic_validation.svg", alt="validateintervals">
+					</section>
+					<section>
+						<h3>Validation for intervals </h3>
+						<ul style="font-size: 32px;">
+							<li style="margin: 10px;"> Validation measure is the <i>smallest</i> difference
+							<li style="margin: 10px;"> Overlapping intervals match perfectly
+							<li style="margin: 10px;"> Validity is distinct from precision
+						</ul>
 					</section>
 				</section>
 				<!-- ################################################################################################################################### -->
@@ -1315,7 +1378,11 @@
 					</section>
 
 					<section>
+						<img src="oxford/pics/largefem_results_1.svg" alt="largefem_res_1">
+					</section>
 
+					<section>
+						<img src="oxford/pics/largefem_results_2.svg" alt="largefem_res_2">
 					</section>
 
 				</section>
@@ -1331,7 +1398,7 @@
 					</section>
 					<section>
 						<img src="oxford/pics/maintenance_1.svg" alt="largefem" style="position:fixed; top:0px; left:0px">
-						<div style="position:fixed; bottom:150px; right:200px; font-size:22px">
+						<div style="position:fixed; bottom:150px; right:210px; font-size:22px">
 							\[ \frac{\text{d} a}{\text{d}N}=C \left( \Delta K \right)^m; \]
 							<br>
 							\[ \Delta K = Y(a)\ M(a)\ \Delta S\ \sqrt{\pi a}; \]
@@ -1451,10 +1518,22 @@
 					<section>
 						<img src="oxford/pics/maintenance_3.svg" alt="maintenance3">
 					</section>
+					<section>
+						<img src="oxford/pics/maintenance_4.svg" alt="maintenance4">
+					</section>
+					<section>
+						<img src="oxford/pics/maintenance_5.svg" alt="maintenance5">
+					</section>
 
 				</section>
 				<!-- ################################################################################################################################### -->
 
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ######################################################### BRITISH COMMENTS ############################################################### -->
+				<section>
+						<h1 style="position: fixed; right:0px; bottom: 0px;">END</h1>
+						<img class="stretch" src="oxford/pics/English-explained-to-foreigners.jpg" alt="british-comments">
+				</section>
 				<!-- #########################################################  SLIDE  ################################################################# -->
 				<!-- ######################################################### EXAMPLE 3 ############################################################### -->
 				<!--<section>
@@ -1545,7 +1624,8 @@
 								{ src: 'reveal/plugin/markdown/marked.js' },
 								{ src: 'reveal/plugin/notes/notes.js', async: true },
 								{ src: 'reveal/plugin/markdown/markdown.js' },
-								{ src: 'reveal//plugin/math/math.js', async: true },
+								{ src: 'reveal/plugin/math/math.js', async: true },
+								{ src: 'reveal/plugin/zoom-js/zoom.js', async: true },
 								{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 							],
 							keyboard: {
@@ -1569,6 +1649,7 @@
 						Reveal.configure({
 							slideNumber: 'c/t',
 							logo: true,
+							transition: 'convex',
 						});
 					</script>
 
