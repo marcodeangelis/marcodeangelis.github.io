@@ -1,0 +1,185 @@
+<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ######################################################### EXAMPLE 2 ############################################################### -->
+				<section>
+
+					<section>
+						<h3> Maintenance scheduling </h3>
+						<h6>Example #2</h6>
+					</section>
+					<section>
+
+						<img src="pics/maintenance_1.svg" alt="maintenance_1">
+
+						<div style="position:absolute; bottom:150px; right:210px; font-size:22px">
+							\[ \frac{\text{d} a}{\text{d}N}=C \left( \Delta K \right)^m; \]
+							<br>
+							\[ \Delta K = Y(a)\ M(a)\ \Delta S\ \sqrt{\pi a}; \]
+						</div>
+					</section>
+
+					<section>
+						<div style="width:40%; float:right; font-size:22px">
+							\[ \frac{\text{d} a}{\text{d}N}=C \left( \Delta K \right)^m; \]
+							<br>
+							\[ \Delta K = Y(a)\ M(a)\ \Delta S\ \sqrt{\pi a}; \]
+							<br>
+							\[ T_M = 50\ \text{years} \]
+							<br>
+							<br>
+
+						<!--<table style="font-size:16px; text-align: center;">
+							<thead>
+								<tr style="border-style: none none solid none; border-width: 2px;">
+									<th style="text-align: center">  </th>
+									<th style="text-align: center"> Unit </th>
+									<th style="text-align: center"> Description </th>
+								</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td align="left">\[ E[\nu] \]</td>
+								<td align="center">\[ \left[10^{6} \text{cycles/year} \right] \]</td>
+								<td align="center">Annual number of cycles</td>
+							</tr>
+							<tbody>
+							</table>-->
+
+						</div>
+						<table class="left" style="font-size:18px; text-align: center">
+							<thead>
+								<tr style="border-style: none none solid none; border-width: 2px;">
+									<th style="text-align: center"> \[ \theta_i \] </th>
+									<th style="text-align: center">Distribution</th>
+									<th style="text-align: center">\[ E [\theta_i] \]</th>
+									<th style="text-align: center">\[Std [\theta_i] \]</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="left">\[ \nu \left[ 10^{6} \text{cycles/year} \right] \]</td>
+									<td align="center">Lognormal</td>
+									<td align="center">[7.125, 7.875]	</td>
+									<td align="center">[0.475, 0.525] </td>
+								</tr>
+								<tr>
+									<td align="left">\[ a_0\ \left[ \text{mm} \right] \]</td>
+									<td align="center">Lognormal</td>
+									<td align="center">[0.119, 0.131]</td>
+									<td align="center">[0.043, 0.047] </td>
+								</tr>
+								<tr>
+										<td align="left">\[ \Delta S\ \left[ \text{MPa} \right] \]</td>
+									<td align="center">Gamma</td>
+									<td align="center">[7.410, 8.190] </td>
+									<td align="center">[0.095, 0.105] </td>
+								</tr>
+								<tr>
+									<td align="left">\[ C^{*}\ \left[10^{-13} \text{ mm/cycles} \right] \]</td>
+									<td align="center">Lognormal</td>
+									<td align="center">[2.375, 2.625]</td>
+									<td align="center">[0.877, 0.969]</td>
+								</tr>
+								<tr>
+									<td align="left">\[ m^{*} \]</td>
+									<td align="center">Normal</td>
+									<td align="center">[2.850, 3.150]</td>
+									<td align="center">[0.038, 0.042]</td>
+								</tr>
+								<tr>
+									<td align="left">\[ a_f\ \left[ \text{mm} \right] \]</td>
+									<td align="center">Gumbel</td>
+									<td align="center">[0.950, 1.050]</td>
+									<td align="center">[0.019, 0.021]</td>
+								</tr>
+								<tr>
+									<td align="left">\[ a/c \]</td>
+									<td align="center">Lognormal</td>
+									<td align="center">[0.380, 0.420]</td>
+									<td align="center">[0.152, 0.168]</td>
+								</tr>
+								<tr>
+									<td align="center">\[ d\ \left[ \text{mm} \right] \]</td>
+									<td align="center">Gamma</td>
+									<td align="center">[771.4, 852.6]</td>
+									<td align="center">[7.695, 8.505]</td>
+								</tr>
+								<tr>
+									<td align="left">\[ b\ \left[ \text{mm} \right] \]</td>
+									<td align="center">Gamma</td>
+									<td align="center">[30.02, 33.18] </td>
+									<td align="center">[3.040, 3.360]</td>
+								</tr>
+								<tr>
+									<td align="left">\[ h\ \left[ \text{mm} \right] \]</td>
+									<td align="center">&Gamma</td>
+									<td align="center">[7.980, 8.820] </td>
+									<td align="center">[0.665, 0.735]</td>
+								</tr>
+								<tr>
+									<td align="leftx">\[ \phi\ \left[ \text{deg} \right] \]</td>
+									<td align="center">Gamma	</td>
+									<td align="center">[33.25, 36.75] </td>
+									<td align="center">[1.900, 2.100]</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="biblio" style="font-size: 16px; text-align:left; position:absolute; bottom:-150px; left:80px">De Angelis, M., et al., 2016. <br> Forced Monte Carlo simulation strategy for the design of maintenance plans with multiple inspections <i>ASCE-ASME Journal of Risk and Uncertainty in Engineering Systems, Part A: Civil Engineering</i>;
+								<a href="https://doi.org/10.1061/AJRUA6.0000868"> doi.org/10.1061/AJRUA6.0000868 </a></p>
+					</section>
+
+					<section>
+						<img src="pics/maintenance_3.svg" alt="maintenance3">
+					</section>
+					<section>
+						<img src="pics/maintenance_4.svg" alt="maintenance4">
+					</section>
+					<section>
+						<img src="pics/maintenance_5.svg" alt="maintenance5">
+
+						<table class="left" style="font-size:18px; text-align: center; position: absolute;bottom:100px;left:200px">
+							<thead>
+								<tr style="border-style: none none solid none; border-width: 2px;">
+									<th style="text-align: center"> N </th>
+									<th style="text-align: center">\[ \text{min}\ C_M \]</th>
+									<th style="text-align: center">\[  t^{\text{insp}*}\ \left[ \text{years} \right] \]</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="left">5</td>
+									<td align="center">\[ 3.86\ 10^6 \]</td>
+									<td align="center">{7,  14, 20, 30, 34}</td>
+								</tr>
+								<tr>
+									<td align="left">7</td>
+									<td align="center">\[ 3.74\ 10^6 \]</td>
+									<td align="center">{4,  9, 14,  20,  27, 35, 42}</td>
+								</tr>
+								<tr>
+										<td align="left">9</td>
+									<td align="center">\[ 3.68\ 10^6 \]</td>
+									<td align="center"> {2, 7, 11, 14, 19, 24, 29, 36, 47} </td>
+								</tr>
+								<tr>
+									<td align="left">12</td>
+									<td align="center">\[ 3.82\ 10^6 \]</td>
+									<td align="center">{2, 4, 9, 11, 18, 22, 26, 32, 37, 45, 50}</td>
+								</tr>
+								<tr>
+									<td align="left">15</td>
+									<td align="center">\[ 3.83\ 10^6 \]</td>
+									<td align="center">{0.5, 4, 7, 9, 11, 14, 16, 19, 23, 25, 29, 34, 39, 46, 50}</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--
+							5		&$10^{-3}$				&$3.86\ 10^6$				&88.6						&$\left\{7,  14, 20, 30, 34 \right\}$\\
+7		&$10^{-3}$				&$3.74\ 10^6$				&62.0						&$\left\{4.5,  9, 14,  20,  27, 35, 42 \right\}$\\
+9		&$10^{-3}$				&$3.68\ 10^6$				&47.5						&$\left\{2, 7, 11, 14, 19, 24, 29, 36, 39 \right\}$\\
+12		&$10^{-3}$				&$3.82\ 10^6$				&37.9						&$\left\{1.5, 4.5, 9, 11, 18, 22, 26, 32, 37, 45, 50 \right\}$\\
+15		&$10^{-3}$				&$3.82\ 10^6$				&30.3						&$\left\{0.5, 4, 7, 9, 11, 14, 16, 19, 23, 25, 29, 34, 39, 46, 50 \right\}$
+						-->
+					</section>
+
+				</section>
+				<!-- ################################################################################################################################### -->

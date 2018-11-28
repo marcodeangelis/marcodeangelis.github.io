@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="960"
+   height="700"
+   viewBox="0 0 960.00001 700.00001"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="codes_universe.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-94.534236"
+     inkscape:cy="399.28576"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4175" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-352.36216)">
+    <rect
+       style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.44176708"
+       id="rect4218"
+       width="928.3302"
+       height="576.83698"
+       x="15.233507"
+       y="405.57657"
+       ry="81.215324" />
+    <rect
+       style="opacity:1;fill:#00ff90;fill-opacity:0.44176708;stroke:none;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.44176708"
+       id="rect4220"
+       width="769.73621"
+       height="452.54834"
+       x="135.44167"
+       y="496.51431"
+       ry="57.578693" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="163.42857"
+       y="553.21936"
+       id="text4151"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4153"
+         x="163.42857"
+         y="553.21936">Opensource</tspan><tspan
+         sodipodi:role="line"
+         x="163.42857"
+         y="603.21936"
+         id="tspan4155" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="234.28575"
+       y="627.505"
+       id="text4157"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4159"
+         x="234.28575"
+         y="627.505">Fortran</tspan><tspan
+         sodipodi:role="line"
+         x="234.28575"
+         y="677.505"
+         id="tspan4167">C</tspan><tspan
+         sodipodi:role="line"
+         x="234.28575"
+         y="727.505"
+         id="tspan4165">Matlab</tspan><tspan
+         sodipodi:role="line"
+         x="234.28575"
+         y="777.505"
+         id="tspan4163">Python</tspan><tspan
+         sodipodi:role="line"
+         x="234.28575"
+         y="827.505"
+         id="tspan4161">Java</tspan><tspan
+         sodipodi:role="line"
+         x="234.28575"
+         y="877.505"
+         id="tspan4169" /></text>
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 80.284271,484.42308 80.401567,538.48471 152,538.36216"
+       id="path4177"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 180,570.36216 0,40 0,52.85714 0,47.14286 0,52.85714 0,47.14286 -0.17857,23.35714"
+       id="path4179"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 180,610.36216 40,0"
+       id="path4181"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 180.35714,661.86216 40,0"
+       id="path4181-0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 180,709.50502 40,0"
+       id="path4181-4"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 180,763.14788 40,0"
+       id="path4181-5"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 179.64286,810.00502 40,0"
+       id="path4181-2"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 179.80715,833.66158 0,69.70053 186.37314,0"
+       id="path4216"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <rect
+       style="opacity:1;fill:#00ff56;fill-opacity:0.87148593;stroke:none;stroke-width:1.70000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.44176708"
+       id="rect4222"
+       width="526.28955"
+       height="56.568653"
+       x="354.64478"
+       y="872.29102"
+       ry="27.274118" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff2900;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="374.2002"
+       y="914.22003"
+       id="text4171"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4173"
+         x="374.2002"
+         y="914.22003">Mathematical expression</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="67.937637"
+       y="474.60724"
+       id="text4147"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4149"
+         x="67.937637"
+         y="474.60724">Black-box</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="642.35352"
+       y="561.16833"
+       id="text4147-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4149-7"
+         x="642.35352"
+         y="561.16833">Crystal-box</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="420.30469"
+       y="464.4534"
+       id="text4242"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4244"
+         x="420.30469"
+         y="464.4534"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.5px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic'">code's universe</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:14.70313644px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="416.12366"
+       y="613.07159"
+       id="text4163"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0623363,0.94132147)"><tspan
+         sodipodi:role="line"
+         id="tspan4166"
+         x="416.12366"
+         y="613.07159"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">PROGRAM  QuadraticEquation</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="623.70746"
+         id="tspan4168"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   IMPLICIT  NONE</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="634.34338"
+         id="tspan4170"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1" /><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="644.97925"
+         id="tspan4172"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   REAL  :: a, b, c</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="655.61511"
+         id="tspan4174"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   REAL  :: d</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="666.25104"
+         id="tspan4176"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   REAL  :: root1, root2</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="676.8869"
+         id="tspan4178"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1" /><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="687.52277"
+         id="tspan4180"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">!  read in the coefficients a, b and c</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="698.15863"
+         id="tspan4182"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1" /><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="708.79456"
+         id="tspan4184"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   READ(*,*)  a, b, c</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="719.43042"
+         id="tspan4186"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   WRITE(*,*) 'a = ', a</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="730.06628"
+         id="tspan4188"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   WRITE(*,*) 'b = ', b</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="740.70221"
+         id="tspan4190"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   WRITE(*,*) 'c = ', c</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="751.33807"
+         id="tspan4192"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   WRITE(*,*)</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="761.97394"
+         id="tspan4194"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1" /><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="772.60986"
+         id="tspan4196"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">!  compute the square root of discriminant d</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="783.24573"
+         id="tspan4198"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1" /><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="793.88159"
+         id="tspan4200"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   d = b*b - 4.0*a*c</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="804.51746"
+         id="tspan4202"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   IF (d &gt;= 0.0) THEN              ! is it solvable?</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="815.15338"
+         id="tspan4204"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">      d     = SQRT(d)</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="825.78925"
+         id="tspan4206"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">      root1 = (-b + d)/(2.0*a)     ! first root</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="836.42511"
+         id="tspan4208"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">      root2 = (-b - d)/(2.0*a)     ! second root</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="847.06104"
+         id="tspan4210"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">      WRITE(*,*)  'Roots are ', root1, ' and ', root2</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="857.6969"
+         id="tspan4212"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   ELSE                            ! complex roots</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="868.33276"
+         id="tspan4214"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">      WRITE(*,*)  'There is no real roots!'</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="878.96869"
+         id="tspan4216"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">      WRITE(*,*)  'Discriminant = ', d</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="889.60455"
+         id="tspan4218"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">   END IF</tspan><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="900.24042"
+         id="tspan4220"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1" /><tspan
+         sodipodi:role="line"
+         x="416.12366"
+         y="910.87628"
+         id="tspan4222"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.58388519px;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';fill:#000069;fill-opacity:0.98393573;stroke:none;stroke-opacity:1">END PROGRAM  QuadraticEquation</tspan></text>
+  </g>
+</svg>

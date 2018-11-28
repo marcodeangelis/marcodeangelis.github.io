@@ -1,0 +1,86 @@
+<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ########################################################## V & V ################################################################## -->
+				<section>
+					<!-- ########################################################## TITLE ################################################################## -->
+					<section>
+						<h3>V&V</h3>
+						<ul>
+							<li style="margin: 35px;"> Verification (checking the math and code)
+								<ul style="color:green; font-size: 30px;">
+									<li> 	Code testing
+									<li>	Interval analysis, probability bounds analysis
+									<li>	Units/dimension checking
+								</ul>
+								<li style="margin: 35px;">  Validation (checking against data)
+									<ul style="color:green; font-size: 30px;">
+									<li> 	Rarely actually have much data
+								</ul>
+						</ul>
+					</section>
+					<section>
+						<h3>Goals</h3>
+						<ul>
+							<li style="margin: 35px;"> Objectively measure the conformance of predictions with empirical data
+							<li style="margin: 35px;">  Use this measure to characterize the reliability of other predictions
+						</ul>
+					</section>
+					<section>
+					<h3>Validation metric</h3>
+						<ul>
+							<li style="margin: 35px;"> A measure of the mismatch between the observed data and the model’s predictions
+								<ul style="color:green; font-size: 30px;">
+									<li> 	Low value means a good match
+									<li>	High value means they disagree
+								</ul>
+								<li style="margin: 35px;">  Distance between prediction and data
+						</ul>
+					</section>
+					<section>
+					<h3>Desirable properties of such metric</h3>
+						<ul>
+							<li style="margin: 30px;"> Expressed in physical units
+							<li style="margin: 30px;"> Generalizes deterministic comparisons
+							<li style="margin: 30px;"> Reflects full distribution
+							<li style="margin: 30px;"> Not too sensitive to long tails
+							<li style="margin: 30px;"> Mathematical metric
+							<li style="margin: 30px;"> Unbounded (you can be really off)
+
+						</ul>
+					</section>
+					<section>
+						<h3>Area metric</h3>
+						<ul style="font-size: 32px;">
+							<li style="margin: 10px;"> "Distance" between two distributions
+							<li style="margin: 10px;"> Physical units
+							<li style="margin: 10px;"> Smallest mean absolute difference of deviates
+						</ul>
+						<p style="position: absolute; right:0px; top:250px; color:grey"> \[ min\ E \left| X_F - Y_n \right| \]</p>
+
+						<img src="pics/area_metric.svg", alt="areametric">
+					</section>
+
+					<section>
+						<h3>Epistemic uncertainty in predictions</h3>
+						<img src="pics/epistemic_validation_2.svg">
+					</section>
+
+					<section>
+						<h3>How should we compare intervals?</h3>
+						<img src="pics/epistemic_validation.svg", alt="validateintervals">
+					</section>
+					<section>
+						<h3>Validation for intervals </h3>
+						<ul style="font-size: 32px;">
+							<li style="margin: 10px;"> Validation measure is the <i>smallest</i> difference
+							<li style="margin: 10px;"> Overlapping intervals match perfectly
+							<li style="margin: 10px;"> Validity is distinct from precision
+						</ul>
+					</section>
+
+					<section>
+						<h3 style="position: relative; top:100px">Epistemic uncertainty in predictions and observations</h3>
+						<img style="position: relative; top:100px" src="pics/epistemic_validation_3.svg">
+					</section>
+
+				</section>
+				<!-- ################################################################################################################################### -->

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="220" width="420" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 420.00001 220.00001">
+ <defs id="defs4">
+  <marker id="TriangleOutL" refY="0" refX="0" orient="auto" overflow="visible">
+   <path id="path4297" d="m5.77 0-8.65 5v-10l8.65 5z" fill-rule="evenodd" transform="scale(.8)" stroke="#000000" stroke-width="1pt" fill="#000000"/>
+  </marker>
+  <marker id="TriangleInL" refY="0" refX="0" orient="auto" overflow="visible">
+   <path id="path4288" d="m5.77 0-8.65 5v-10l8.65 5z" fill-rule="evenodd" transform="scale(-.8)" stroke="#000000" stroke-width="1pt" fill="#000000"/>
+  </marker>
+ </defs>
+ <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" transform="translate(0 -832.36)">
+  <path id="path4147" d="m204 855.61v188.03" marker-start="url(#TriangleInL)" stroke="#000000" stroke-width=".74367px" fill="none"/>
+  <path id="path4149" marker-end="url(#TriangleOutL)" d="m32.859 955.79h353.6" stroke="#000000" stroke-width=".85575px" fill="none"/>
+  <path id="path4577" d="m280.07 949.63v11.875" stroke="#000000" stroke-width=".93541px" fill="none"/>
+  <path id="path4577-0" d="m356.32 949.67v11.875" stroke="#000000" stroke-width=".93541px" fill="none"/>
+  <path id="path4577-3" d="m127.39 949.94v11.875" stroke="#000000" stroke-width=".93541px" fill="none"/>
+  <path id="path4577-3-0" d="m50.786 949.85v11.875" stroke="#000000" stroke-width=".93541px" fill="none"/>
+  <text id="text4641" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="981.51697" x="348.35217" font-family="sans-serif" line-height="125%" fill="#000000"><tspan id="tspan4643" font-size="27.5px" y="981.51697" x="348.35217">2</tspan></text>
+  <path id="path4577-5" d="m197.98 879.45h11.875" stroke="#000000" stroke-width=".93541px" fill="none"/>
+  <path id="path4577-5-8" d="m198.06 1032.2h11.875" stroke="#000000" stroke-width=".93541px" fill="none"/>
+  <path id="path4677" d="m204 955.79-152.86-76.243 38.325 76.135-38.37 76.893z" fill-rule="evenodd" fill-opacity=".62112" stroke="#000000" stroke-width="1px" fill="#a0a0a0"/>
+  <path id="path4677-0" d="m204.1 955.79 152.86-76.243-38.325 76.135 38.37 76.893z" fill-rule="evenodd" fill-opacity=".62112" stroke="#000000" stroke-width="1px" fill="#a0a0a0"/>
+  <text id="text4641-7" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="888.65979" x="209.63791" font-family="sans-serif" line-height="125%" fill="#000000"><tspan id="tspan4643-8" font-size="27.5px" y="888.65979" x="209.63791">1</tspan></text>
+  <text id="text4727" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="972.66754" x="392.45248" font-family="sans-serif" line-height="125%" fill="#000000"><tspan id="tspan4729" font-size="20px" y="972.66754" x="392.45248">x<tspan id="tspan4731" style="baseline-shift:sub" font-size="65%">1</tspan></tspan></text>
+  <text id="text4727-0" style="word-spacing:0px;letter-spacing:0px" xml:space="preserve" font-size="40px" y="849.93292" x="206.81686" font-family="sans-serif" line-height="125%" fill="#000000"><tspan id="tspan4729-6" font-size="20px" y="849.93292" x="206.81686">x<tspan id="tspan4731-7" style="baseline-shift:sub" font-size="65%">2</tspan></tspan></text>
+  <rect id="rect5054" stroke-linejoin="round" stroke-opacity=".75776" fill-opacity=".16770" ry="0" height="153.01" width="305.61" stroke="#0000ff" stroke-linecap="round" y="879.26" x="50.788" stroke-width="2" fill="#0000ff"/>
+ </g>
+</svg>

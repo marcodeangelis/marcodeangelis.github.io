@@ -1,0 +1,64 @@
+<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ######################################################### EXAMPLE 1 ############################################################### -->
+				<section>
+
+					<section>
+						<h3> Large FEM </h3>
+						<h6>Example #1</h6>
+					</section>
+
+					<section>
+
+						<table class="left" style="font-size:18px; text-align: center">
+							<thead>
+								<tr style="border-style: none none solid none; border-width: 2px;">
+									<th style="text-align: center"> Uncertain <br> parameters </th>
+									<th style="text-align: center">Distribution</th>
+									<th style="text-align: center">Quantity</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="center">1</td>
+									<td align="center">N(0.1, 0.001)</td>
+									<td align="center">Column’s strength (GPa)</td>
+								</tr>
+								<tr>
+									<td align="center">2-193</td>
+									<td align="center">Unif(0.36, 0.44)</td>
+									<td align="center">Cross-section (m)</td>
+								</tr>
+								<tr>
+									<td align="center"> 194-212 </td>
+									<td align="center">LN(35.0, 12.25)</td>
+									<td align="center"> Young’s modulus (GPa)</td>
+								</tr>
+								<tr>
+									<td align="center">213 - 231 </td>
+									<td align="center">LN(2.5, 0.0625)</td>
+									<td align="center">Material’s density (kg/dm3	)</td>
+								</tr>
+								<tr>
+									<td align="center">232 - 244 </td>
+									<td align="center">LN(0.25, 0.000625)</td>
+									<td align="center">Poisson’s ratio</td>
+								</tr>
+							</tbody>
+						</table>
+						<img src="pics/largefem.svg" alt="largefem" style="width: 40%;float:right;">
+						<div style="position:fixed; bottom:80px; left:80px">
+							<p class="biblio" style="font-size: 16px; text-align:left;">De Angelis, M., et al., 2015. <br> Advanced line sampling for efficient robust reliability analysis. <i>Structural safety</i>;
+							<a href="https://doi.org/10.1016/j.strusafe.2014.10.002"> doi.org/10.1016/j.strusafe.2014.10.002 </a></p>
+						</div>
+					</section>
+
+					<section>
+						<img src="pics/largefem_results_1.svg" alt="largefem_res_1">
+					</section>
+
+					<section>
+						<img src="pics/largefem_results_2.svg" alt="largefem_res_2">
+					</section>
+
+				</section>
+				<!-- ################################################################################################################################### -->
