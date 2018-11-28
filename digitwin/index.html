@@ -65,7 +65,7 @@
 					<!--<h4>Feeding models with intervals and p-boxes</h4>-->
 
 					<p>
-						<font style="font-size:24px">Scott Ferson, Marco De Angelis, Nick Grey</font>
+						<font style="font-size:24px">Scott Ferson, Marco De Angelis, Nick Gray</font>
 						<br>
 						<font style="font-size:16px">Created by <a href="https://www.liverpool.ac.uk/risk-and-uncertainty/staff/marcodeangelis/">Marco De Angelis</a></font>
 					</p>
@@ -191,7 +191,7 @@
 							<li> genuine unpredictability due to input uncertainty
 							<li> cannot be reduced by a better analysis
 								<ul style="color:green">
-									<li style="font-size:24px; color:blue"> only by more information, data or assumptions
+									<li style="font-size:24px; color:grey"> only by more information, data or assumptions
 							</ul>
 						</ul>
 				</ul>
@@ -220,7 +220,7 @@
 				</div>
 				<div style="color:green; position: absolute; top:300px; left:50px; font-size: 35px">
 					\[ z = A \times \left( B + C \right) \]
-					\[ C + C = \left[ 0,\ 8 \right] \]
+					\[ B + C = \left[ 0,\ 8 \right] \]
 					\[ z = \left[ 0,\ 16 \right] \]
 				</div>
 				<div style="color:red; position: absolute; top:100px; right:200px; font-size: 35px" class="fragment" data-fragment-index="1">
@@ -302,8 +302,8 @@
 				<!-- ################################################## DIPENDENCE ############################################################# -->
 				<section>
 					<h3>Dependence problem</h3>
-					<div class="fragment current-visible" data-fragment-index="6" style="font-size:20px;position: relative;top:230px">
-						\[ [ max \left \{ F(x)+G(y)-1, 0 \right \},\ min \left \{F(x), G(y) \right \}] \]
+					<div class="fragment current-visible" data-fragment-index="6" style="font-size:20px;position: relative;top:250px">
+						\[ [ \sup_{z=x+y} \max \left \{ F(x)+G(y)-1, 0 \right \},\ \inf_{z=x+y} \min \left \{F(x), G(y) \right \}] \]
 					</div>
 					<div style="position:fixed; left: 320px; top:220px; font-size: 22px;">
 					\[ a \sim N(2,4) \]
@@ -375,7 +375,7 @@
 									<li>	Other operations (nonlinear ODEs, finite-element methods)
 								</ul>
 								<li style="margin: 25px"> 	Faster than Monte Carlo
-								<li style="margin: 25px">	Guaranteed to bound answer
+								<li style="margin: 25px">	Guaranteed to bound the answer
 								<li style="margin: 25px">	Optimal solutions often easy to compute
 						</ul>
 				</section>
@@ -524,36 +524,14 @@
 				<section>
 					<div style="font-size: 32px; text-align: right">
 					<blockquote  cite="https://sites.google.com/site/uncertaintysayings/">
-						&ldquo; "I've got 50,000 lines of code which have taken 5 years to develop. I haven’t got the time to rewrite it. Also I don’t really understand what 			statistical tools I am meant to use" &rdquo;
+						&ldquo; I've got 50,000 lines of code which have taken 5 years to develop. I haven’t got the time to rewrite it. Also I don’t really understand what 			statistical tools I am meant to use &rdquo;
 					</blockquote> <font style="font-size: 26px;">An analyst at a major company</font>
 					
 					<blockquote  cite="https://sites.google.com/site/uncertaintysayings/">
-						&ldquo; "Uncertainty analysis is too important to be ignored. It is better to compute with what we know that make untenable assumptions we don’t." &rdquo;
+						&ldquo; Uncertainty analysis is too important to be ignored. It is better to compute with what we know that make untenable assumptions we don’t. &rdquo;
 					</blockquote> <font style="font-size: 26px;">Anonymous</font>
 				</div>
 				</section>
-					<section>
-					<h3>Application</h3>
-						<ul>
-							<li style="margin: 45px;"> The quantity <font style="color: red">(a + b)^2 + c + b + a</font>  can be reduced to its optimal form  <font style="color: green">\[ (a + b + ½)^2 + c – ¼ \]</font>
-
-							<li style="margin: 45px;"> Use the reducing template  \[u + u^2 = (u + ½)^2 – ¼ \]  but first rearrange the order of the summed terms and let u be the quantity (a + b)
-
-						</ul>
-					</section>
-					<section>
-					<h3>Strategy</h3>
-						<ul>
-							<li style="margin: 25px;"> Parse the formula into a binary expression tree
-
-							<li style="margin: 25px;"> Apply each reducing template against every subexpression of the tree
-
-							<li style="margin: 25px;"> Count the remaining repeated uncertain parameters
-
-							<li style="margin: 25px;"> Repeat until the number is zero or no longer decreases
-
-						</ul>
-					</section>
 
 					<section>
 						<h3>UQ compiler (UQCOMP)</h3>
@@ -576,13 +554,38 @@
 				
 				<section>
 					<h3>
-						intricated diagram
+						intricate diagram
 					</h3>
 				</section>
 
 				<section>
 					<img src="pics/gui.png" alt="gui">
 				</section>
+
+				<section>
+					<h3>Application</h3>
+						<ul>
+							<li style="margin: 45px;"> The quantity <font style="color: red">(a + b)^2 + c + b + a</font>  can be reduced to its optimal form  <font style="color: green">\[ (a + b + ½)^2 + c – ¼ \]</font>
+
+							<li style="margin: 45px;"> Use the reducing template  \[u + u^2 = (u + ½)^2 – ¼ \]  but first rearrange the order of the summed terms and let u be the quantity (a + b)
+
+						</ul>
+					</section>
+					
+					<section>
+					<h3>Strategy</h3>
+						<ul>
+							<li style="margin: 25px;"> Parse the formula into a binary expression tree
+
+							<li style="margin: 25px;"> Apply each reducing template against every subexpression of the tree
+
+							<li style="margin: 25px;"> Count the remaining repeated uncertain parameters
+
+							<li style="margin: 25px;"> Repeat until the number is zero or no longer decreases
+
+						</ul>
+					</section>
+
 				</section>
 				<!-- ################################################################################################################################### -->
 
@@ -599,7 +602,7 @@
 						<li>Heavy-lifting in C and C++</li>
 						<ul>
 							<li style="margin: 5px; color: blue; font-size: 32px"> Interval matrix and vectors </li>
-							<li style="margin: 5px; color: blue; font-size: 32px"> Furier Transform </li>
+							<li style="margin: 5px; color: blue; font-size: 32px"> Fourier Transform </li>
 						</ul>
 						<li>Build on existing open-source libraries</li>
 					</ul>
@@ -608,23 +611,23 @@
 				<section>
 					<h3>Python API</h3>
 					<ul style="float: left">
-						<li style="font-size: 32px">Intuitive uncertainty definitions</li>
+						<li style="font-size: 32px">Flexible uncertainty definitions</li>
 					</ul>
 					<div style="float: left; width:700px; ">
 					<pre> <code class="python" style="background: #191970" data-trim contenteditable> 
-					A = interval("A",inf=-1,sup=1) # prints: A=[-1,1] 
-					A = interval("A",m=0,r=1) # prints: A=[-1,1] 
-					A = interval(-1,1) # prints: []3=[-1,1]
+					A = interval("A", inf=-1, sup=1) # prints: A=[-1,1] 
+					A = interval("A", mid=0, rad=1) # prints: A=[-1,1] 
+					A = interval(-1,1) # prints: [-1,1]
 					</pre> </code>
 					</div>
 					<ul style="float: left">
 						<li style="font-size: 32px"> Na&iuml;ve interval analysis {+, -, /, *, **}</li>
-						<li style="font-size: 32px"> Support for automatic differentiation</li>
-						<li style="font-size: 32px"> Decorators for immidiate access to </li>
+						<li style="font-size: 32px"> Support for automatic differentiation (e.g. Tensorflow)</li>
+						<li style="font-size: 32px"> Decorators for immediate access to </li>
 						<ul>
 							<li style="margin: 5px; color: blue; font-size: 32px"> interval contractors and inclusion functions</li>
 							<li style="margin: 5px; color: blue; font-size: 32px"> preconditioning</li>
-							<li style="margin: 5px; color: blue; font-size: 32px"> approximation (e.g. Bernstein expansions, Cauchy-deviate, etc.) </li>
+							<li style="margin: 5px; color: blue; font-size: 32px"> approximation (Bernstein expansions, Cauchy-deviate, ..) </li>
 						</ul>
 					</ul>
 				</section>
@@ -675,7 +678,7 @@
 					<h3>Random slicing</h3>
 						<ul>
 							<li style="margin: 25px;"> Can be used for black-boxes to make imprecise estimations
-							<li style="margin: 25px;"> Produces "samples" for the P-box
+							<li style="margin: 25px;"> Produces "samples" for the p-box
 							<li style="margin: 25px;"> Propagation of incertitude still needed
 								<ul style="color:green; font-size: 30px;">
 									<li> 	Accelerating strategies
