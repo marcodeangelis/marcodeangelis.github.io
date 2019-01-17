@@ -192,7 +192,7 @@
 							<ul style="color:green">
 								<li> limited sample size
 								<li> measurement error
-								<li> use of surragate data
+								<li> use of surrogate data
 							</ul>
 							<li> Reducible with empirical effort
 					</ul>
@@ -206,7 +206,7 @@
 							<ul style="color:green">
 								<li> spatial variation
 								<li> temporal fluctuations
-								<li> manufactoring/material differences
+								<li> manufacturing/material differences
 							</ul>
 							<li> Not reducible by empirical effort
 					</ul>
@@ -260,12 +260,12 @@
 
 					<img style="position:relative; top:-100px;" src="pics/example_dependence_1.svg" alt="ex_dep_1">
 
-					<img style="position:absolute; left:50px; bottom:230px;" class="fragment current-visible"  data-fragment-index="4" src="pics/example_dependence_4.svg" alt="ex_dep_4"/>
+					<img style="position:absolute; left:50px; bottom:250px;" class="fragment current-visible"  data-fragment-index="4" src="pics/example_dependence_4.svg" alt="ex_dep_4"/>
 
-					<img style="position:absolute; left:50px; bottom:230px;" class="fragment " data-fragment-index="5" src="pics/example_dependence_5.svg" alt="ex_dep_5"/>
+					<img style="position:absolute; left:50px; bottom:250px;" class="fragment " data-fragment-index="5" src="pics/example_dependence_5.svg" alt="ex_dep_5"/>
 
 					<div class="fragment current-visible" data-fragment-index="6" style="position:relative; bottom:180px; font-size:26px">
-						\[ [ max \left \{ F(x)+G(y)-1, 0 \right \},\ min \left \{F(x), G(y) \right \}] \]
+						\[ [ \sup_{z=x+y} \max \left \{ F(x)+G(y)-1, 0 \right \},\ \inf_{z=x+y} \min \left \{F(x), G(y) \right \}] \]
 					</div>
 						<!--# P-box:  ~ ( range=[-12.63163,30.63163], mean=9, var=[25,27.59831])
 						# P-box:  ~ ( range=[-12.63163,30.63163], mean=9, var=[0.07253322,94.80621]) -->
@@ -672,7 +672,7 @@
 									<li>	Low discrepancy sampling
 									<li>	Importance sampling
 								</ul>
-							<li style="margin: 25px;"> Dependency among Pboxes can be included
+							<li style="margin: 25px;"> Dependency among p-boxes can be included
 						</ul>
 					</section>
 
@@ -1167,7 +1167,7 @@
 						for  k in range(0, N):
 							rk = random([D])# Random number in [0,1)D
 							ck = tan(π*(rk-½))# Sample the Cauchy dist
-							zk = ck/||ck||# Normalise samples
+							zk = ck/||ck||# Normalize samples
 							xk = xm + zk# Map to physical space
 							gk = runBlackbox(xk)# run the black box for e.g. a single output
 							δk = ||ck||*(gk - gm)# Compute the error
