@@ -1,0 +1,665 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Urbasis</title>
+
+		<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="http://getbootstrap.com/examples/justified-nav/justified-nav.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/serif.css" id="theme">
+		<link rel="stylesheet" href="theme/urbasis.css" id="template">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.0/build/styles/default.min.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+				<!-- ################################################################################################################################### -->
+				<!-- #######################################################   FOOTER   ################################################################ -->
+				<!-- ################################################################################################################################### -->
+				<footer class="marco">
+						<div class="threefooterleft"><font style="position:fixed; bottom:2px; left:80px">Institute for Risk and Uncertainty</font></div>
+						<!--<div class="threefootercentre"><font id="oggi" style="position:fixed; bottom:2px; left:440px"></font> </div>-->
+						<div class="threefootercentre"><font style="position:fixed; bottom:2px; left:440px"> 15 Nov 2018 </font> </div>
+						<div class="threefooterright"><font style="position:fixed; bottom:2px; right:100px">University of Liverpool</font></div>
+				</footer>
+				<!-- ################################################################################################################################### -->
+				<a href="http://riskinstitute.uk"><img class="topleft" src="pics/logos/UoL_Color.svg" alt="UoL logo" style="width:35%"></a>
+				<a href="https://urbasis-eu.osug.fr/"><img class="topright" src="pics/logos/logoUrbasis.svg" alt="Urbasis-logo" style="width:20%"></a>
+
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- ######################################################### SUMMARY ################################################################# -->
+				<!--A paragraph with some text and a [link](http://hakim.se).-->
+
+					<section data-markdown>
+						<textarea data-template>
+						
+						<!--URBASIS-EU: <sub>New challenges for urban engineering seismology</sub>-->
+						URBASIS-EU | Kick-off meeting						
+
+						
+						Lyon St Exup&#233;ry, 15-16 November 2018
+
+						<br>
+						
+						### ULIV presentations
+								
+
+						* [ESR1.1][1]: <sub> Ground motion uncertainty in urban areas </sub>
+
+						* [ESR4.4][2]: <sub> Load characterisation with sparse information </sub>
+
+						[1]: #/1
+						[2]: #/2
+
+						</textarea>
+					</section>
+				<!-- ################################################################################################################################### -->
+
+
+				<!-- ################################################################################################################################### -->
+				<!-- #######################################################   FRONT SLIDE  ############################################################ -->
+				<!-- ################################################################################################################################### -->
+				<section>
+					<section>
+					<!--<a href="http://digitwin.ac.uk"><img class="bottomleft" src="pics/logos/logoDT1.svg" alt="DigiTwin logo"></a>
+					<a href="http://digitwin.ac.uk"><img class="bottomright" src="pics/logos/epsrc.svg" alt="EPSRC logo"></a>
+					<a href="http://riskinstitute.uk"><img class="logoUoL" src="pics/logos/UoL_Color.svg" alt="UoL logo"></a>
+					<a href="http://digitwin.ac.uk"><img class="logoDT" src="pics/logos/logoDT1.svg" alt="DigiTwin logo"></a>
+					<img class="logoEPSRC" src="pics/logos/epsrc.svg" alt="EPSRC logo">-->
+
+					<!--<p class="themes">-->
+						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
+						<!--<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/black.css'); return false;">Black </a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/white.css'); return false;">White</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/league.css'); return false;">League</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/sky.css'); return false;">Sky</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/beige.css'); return false;">Beige</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/simple.css'); return false;">Simple</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/serif.css'); return false;">Serif</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/blood.css'); return false;">Blood</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/night.css'); return false;">Night</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/moon.css'); return false;">Moon</a> |
+						<a href="#" onclick="document.getElementById('theme').setAttribute('href','../reveal/css/theme/solarized.css'); return false;">Solarized</a>
+					</p>-->
+
+					<h3>Ground motion uncertainty <br> in urban areas </h3>
+
+					<h4>Marco De Angelis</h4>
+
+					<p>
+						<font style="font-size:16px">Created by <a href="https://www.liverpool.ac.uk/risk-and-uncertainty/staff/marcodeangelis/">Marco De Angelis</a></font>
+					</p>
+					<!--<p style="font-size:20px"> <a href="https://marcodeangelis.github.io/"> https://marcodeangelis.github.io/ </a></p>-->
+					<p style="font-size:20px; position:absolute; left:0px; bottom:-75px"> <a href="https://urbasis-eu.osug.fr/"> https://urbasis-eu.osug.fr/ </a></p>
+					<p style="font-size:20px; position:absolute; left:0px; bottom:-100px"> <a href="https://riskinstitute.uk/researchprojects/urbasis/"> https://riskinstitute.uk/researchprojects/urbasis/ </a></p>
+				</section>
+
+				<section>
+					<ul>
+						<li> About the RP </li>
+						<br>
+						<li> PhD advert online </li>
+						<br>
+						<li> Liverpool Institute for Risk and Uncertainty <font style="font-size: 14px; color: grey"> Training + Software</font> </li>
+						
+					</ul>
+
+				</section>
+
+				<section>
+					<h4> Objectives</h4>
+					<ul style="font-size: 32px">
+						<li style="margin: 25px"> To investigate the effect of epistemic uncertainty for earthquake characterisation</li>
+						<li style="margin: 25px"> To develop models and tools for engineering applications based on site measurements</li>
+						<li style="margin: 25px"> To analyze recordings of large earthqukes in near-fields </li>
+						<li style="margin: 25px"> To develop robust methods for host-to-target conversions of <i>Ground-motion prediction equations</i> based on stochastic modelling</li>
+					</ul>
+				</section>
+
+				<section data-background="pics/seismometer2.jpg">
+					<h3>Seismographs</h3>
+					<div style="width:45%; float:left; font-size: 28px">
+					<ul>
+						<li> Chang seismoscope 132 BC </li>
+						<br>
+						<li> Analogical  </li>
+						<ul style="color: green">
+							<li>Mechanical</li>
+							<li>Optical <font style="color: yellow">Richter 1930</font></li>
+							<li>Electromagnetic</li>
+						</ul>
+						<br>
+						<li> Digital </li>
+					</ul>
+					<br><br>
+					<p style="color: grey">Filippo Cecchi 1875, pendolum</p>
+					</div>
+
+					<div style="width:45%; float:right" >
+						<br>
+						<img src="pics/analog_mech.svg" alt="mech">
+						<br>
+						\[ m\ddot{u} + c\dot{u} + ku = -m\ddot{u}_g \]
+						\[ \ddot{u} + 2 \xi \omega_0 \dot{u} + \omega_0^2 u = -\ddot{u}_g \]
+					</div>
+
+				</section>
+
+				<section>
+					<h3>World-wide standard seismograph network, WWSSN</h3>
+					<ul>
+						<li> Established 1961 <font style="color: yellow"> atomic test ban</font> </li>
+						<li> 150 modern seismic stations </li>
+						<li> Global interconnected network</li>
+					</ul>
+					<br><br>
+					<a href="https://ds.iris.edu/seismon/" data-preview-link>IRIS WEB</a>
+				</section>
+
+				<section>
+					<h3> International agencies seismic networks </h3>
+					<ul style="font-size: 32px">
+						<li><a href="https://www.iris.edu/hq/"><strong>IRIS</strong></a>: Incorporated research institution for seismology</li>
+						<li><a href="https://www.usgs.gov"><strong>USGS</strong></a>: U.S. geological survey</li>
+						<li><a href="https://isc.ac.uk"><strong>ISC</strong></a>: International seismological centre</li>
+						<li><a href="https://earthquake.usgs.gov/"><strong>NEIC</strong></a>: National earthquake information centre</li>
+						<li><a href="https://www.orfeus-eu.org/"><strong>ORFEUS</strong></a>: Observatories (...) for European seismology</li>
+						<li><a href="https://www.emsc-csem.org/#2"><strong>EMSC</strong></a>: European Mediterranean seismological centre</li>
+					</ul>
+				</section>
+
+				<section>
+					<div style="width:45%; float:left">
+					<h4>Epistemic uncertainty</h2>
+					<ul style="font-size: 28px">
+						<li> Arises from incomplete knowledge
+						<li> <strong>Incertitude</strong> arises from
+							<ul style="color:green">
+								<li> limited sample size
+								<li> measurement error
+								<li> surrogate data
+							</ul>
+						<li> Reducible by empirical effort
+						<li> <font style="color: blue">Ex.: Attenuation model, seismic source, magnitude</font>
+					</ul>
+					</div>
+					<div style="width:45%; float:right">
+					<h4>Aleatory uncertainty</h2>
+					<ul style="font-size: 28px">
+						<li> Arises from natural stochasticity
+						<li> Variability arises from
+							<ul style="color:green">
+								<li> spatial variation
+								<li> temporal fluctuations
+								<li> manufacturing/material differences
+							</ul>
+						<li> Not reducible by empirical effort
+						<li> <font style="color: blue">Ex.: Two identical accelerograms</font>
+					</ul>
+					</div>
+				</section>
+
+				<section data-background="pics/raspberryshake_shade.jpg">
+					<h3>Data acquisition</h3>
+					<div style="font-size: 28px; width:40%; float:left">
+						<br>
+						<ul>
+							<li> Stream data in real time </li>
+							<br>
+							<li> In-built sensorsGetAccuracy(self) </li>
+							<br>
+							<li> Read geolocation of device </li>
+							<br>
+							<li> Secure transfer protocol </li>
+						</ul>
+					</div>
+					<div style="font-size: 24px; width:60%; float:right">
+							<pre><code class="python" style="background: #191970" data-trim contenteditable>
+								#-*-coding:utf8;-*-
+								#qpy:3
+								#qpy:console
+
+								print("This code records accelerations from your android")
+
+								import android 
+								import time 
+								#import matplotlib.pyplot as plt
+
+								droid = android.Android() 
+								dt = 100 #100ms between sensing 
+								endTime = 10000 #sample for 3000ms 
+
+								timeSensed=0 
+								droid.startSensingTimed(2,dt) 
+								while timeSensed <= endTime: 
+								    #print(droid.sensorsReadAccelerometer().result) 
+								    x=droid.sensorsReadAccelerometer().result[0]
+								    y=droid.sensorsReadAccelerometer().result[1]
+								    z=droid.sensorsReadAccelerometer().result[2]
+								    print(z)
+								    time.sleep(dt/1000.0) 
+								    timeSensed+=dt
+								    
+								droid.stopSensing()
+
+							</code></pre>
+						</div>	
+				</section>
+
+				<section>				
+
+						<div style="float:left; width: 50%">
+							<br>
+							<h3>Demo</h3>	
+						</div>
+						<div style="font-size: 16px; width:40%; float:right; position: relative;right:150px">
+							<pre><code class="python" style="background: #191970" data-trim contenteditable>
+								import csv
+								with open('data.csv') as csvfile:
+								    reader = csv.reader(csvfile, delimiter=',')
+								    z = []
+								    for row in reader:
+								        z.append(float(row[0]))
+        
+								import matplotlib.pyplot as plt
+								plt.figure(figsize=(12,6))
+								plt.title("Vertical acceleration")
+								plt.xlabel("time steps")
+								plt.ylabel("z[m/s2]")
+								plt.plot(z)
+								plt.show()
+							</code></pre>
+						</div>	
+					<div style="width: 100%; overflow: hidden;">
+					<div style="width:85%; float: left;">
+						<iframe src="https://trinket.io/embed/python3/51b87c9fd3" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+					</div>
+					<div style="width:15%; font-size: 10px; float: right;">
+						<pre><code class="python" style="background: #191970" data-trim contenteditable>
+								6.8278656
+								7.0475159999999999
+								6.686096
+								6.4494476000000001
+								6.5010529999999997
+								6.7910919999999999
+								6.8520510000000003
+								6.8699493
+								7.4901122999999998
+								7.3333130000000004
+								6.8527829999999996
+								6.6544189999999999
+								6.3092345999999999
+								6.1778409999999999
+								6.1332396999999998
+								4.8860780000000004
+								16.122237999999999
+								7.2493439999999998
+								2.2017821999999998
+								-5.9061279999999998
+								1.0516509999999999
+								4.259735
+								-7.1590423999999997
+								5.7651978000000002
+								13.177047999999999
+								7.2752840000000001
+								6.5751650000000001
+								8.1139679999999998
+								10.155272999999999
+								4.7158965999999998
+								8.5197599999999998
+								3.1900482000000001
+								10.787872
+								5.6940920000000004
+								2.0254821999999999
+								4.9109496999999998
+								2.3337707999999999
+								6.0192566000000003
+								11.393616
+								15.487213000000001
+								11.306305
+								5.3553009999999999
+								9.7752075000000005
+								9.8904110000000003
+								11.22644
+								6.7145232999999998
+								7.365799
+								6.9216156
+								6.3589169999999999
+								6.3173522999999996
+								6.6725919999999999
+								7.3934480000000002
+								6.4988099999999998
+								6.8426055999999997
+								7.3701780000000001
+								7.6192627000000002
+								7.5938569999999999
+								6.9359435999999999
+								7.3183594000000003
+								9.5214230000000004
+								8.0496669999999995
+								7.5037839999999996
+								6.6532745000000002
+								4.2282867
+								8.4560999999999993
+								9.8515320000000006
+								8.6029210000000003
+								6.6306304999999996
+								5.5654450000000004
+								4.376709
+								26.144745
+								0.68516540000000004
+								5.9163819999999996
+								5.9722594999999998
+								-0.11067200000000001
+								1.8184509
+								2.3247985999999998
+								19.617691000000001
+								21.517105000000001
+								6.8494109999999999
+								5.1018524000000003
+								3.9626923000000001
+								4.7449493
+								5.7466429999999997
+								5.7646790000000001
+								6.0793914999999998
+								5.7736815999999997
+								10.656082
+								5.1253814999999996
+								4.9213867000000002
+								4.8287199999999997
+								4.9548186999999997
+								8.9699709999999993
+								10.758438
+								6.7756499999999997
+								6.0845184000000003
+								6.2740020000000003
+								6.1630095999999996
+								6.8003080000000002
+								11.243392999999999
+
+							</code></pre>
+					</div>
+				</div>
+				</section>
+
+				<section>
+					<div  style="width: 50%;float: left">
+					<table style="font-size: 32px;">
+						<thead>
+							<tr>
+								<th>Hedged numerical <br>  expression</th>
+								<th>Interpretation</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>\[ \text{mathematical}\ x \]</td>
+								<td>\[ x \]</td>
+							</tr>
+							<tr>
+								<td>\[ \text{exactly}\ x \]</td>
+								<td>\[ x \pm 10^{-(d+1)} \]</td>
+							</tr>
+							<tr>
+								<td>\[ \text{x} \]</td>
+								<td>\[ x \pm 0.5 \times 10^{-d} \]</td>
+							</tr>
+							<tr>
+								<td>\[ \text{about}\ x \]</td>
+								<td>\[ x \pm 2 \times 10^{-d} \]</td>
+							</tr>
+							<tr>
+								<td>\[ \text{around}\ x \]</td>
+								<td>\[ x \pm 10 \times 10^{-d} \]</td>
+							</tr>
+							<tr>
+								<td>\[ \text{count}\ x \]</td>
+								<td>\[ x \pm \sqrt{x} \]</td>
+							</tr>
+							<tr>
+								<td>\[ \text{between}\ x\ \text{and}\ y \]</td>
+								<td>\[ \left[x, y \right] \]</td>
+							</tr>
+						</tbody>
+					</table>
+					<p style="font-size: 12px;text-align: left">Ferson, S., O'Rawe, J., Antonenko, A., Siegrist, J., Mickley, J., Luhmann, C.C., Sentz, K. and Finkel, A.M., 2015. Natural language of uncertainty: numeric hedge words. <i>International Journal of Approximate Reasoning</i>, 57, pp.19-39.</p>
+					</div>
+					<div style="width:20%; font-size: 28px; float: right; position: relative; right: 100px">
+						<br>
+						<br>
+						<pre><code class="python" style="background: #191970" data-trim contenteditable>
+								[[-0.190,-0.188],
+								[-0.250,-0.249],
+								[-0.273,-0.272],
+								[-0.270,-0.269],
+								[-0.209,-0.208],
+								[-0.262,-0.262],
+								[-0.208,-0.206],
+								[1.795,1.796],
+								[-2.472,-2.470],
+								[-0.751,-0.749],
+								[-0.263,-0.262],
+								[-0.831,-0.830],
+								[-0.069,-0.068],
+								[-0.595,-0.594],
+								[0.224,0.225],
+								[1.616,1.617],
+								[1.055,1.056],
+								[-1.856,-1.855],
+								[-0.621,-0.620],
+								[1.294,1.295],
+								[-0.300,-0.298],
+								[0.267,0.269],
+								[-2.038,-2.037],
+								[0.175,0.176],
+								[-1.866,-1.860],
+								[2.316,2.317],
+								[0.521,0.522],
+								[3.438,3.439],
+								[-0.505,-0.504]]
+							</code></pre>
+					</div>
+				</section>
+
+				<section>
+					<a href="https://www.liverpool.ac.uk/risk-and-uncertainty-cdt/studentships/"> <img src="pics/projectAdvert.png"></img> </a>
+				</section>
+
+				<section>
+					<h3>Institute for Risk and Uncertainty</h3>
+					<iframe width="560" height="315"  data-src="https://www.youtube.com/embed/LC20GVbbaNg?autoplay=1"></iframe>
+				</section>
+				<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/LC20GVbbaNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+				<!-- #########################################################  END  ################################################################### -->
+				<!--<section>
+					<h1> END </h1>
+				</section>-->
+				<!-- ################################################################################################################################### -->
+			</section>
+				<!--<a href="http://riskinstitute.uk"><img class="logoUoL_s" src="pics/logos/UoL_Color.svg" alt="UoL logo"></a>
+				<a href="http://digitwin.ac.uk"><img class="logoDT_s" src="pics/logos/logoDT1.svg" alt="DigiTwin logo"></a>
+				<img class="logoEPSRC_s" src="pics/logos/epsrc.svg" alt="EPSRC logo">-->
+
+				<!-- ################################################################################################################################### -->
+
+				<!-- ################################################################################################################################### -->
+				<!-- #######################################################   FRONT SLIDE  ############################################################ -->
+				<!-- ################################################################################################################################### -->
+				<section>
+
+					<section>
+					<h3>ESR 4.4 Load characterisation with <br> vague and sparse information</h3>
+                        
+                    <h4>Liam Comerford</h4>
+
+					<h4>Presented by <a href="https://www.liverpool.ac.uk/engineering/staff/michael-beer/">Michael Beer</a>, <a href="https://www.liverpool.ac.uk/engineering/staff/edoardo-patelli/">Edoardo Patelli</a></h4>
+
+					<!--<p style="font-size:20px"> <a href="https://marcodeangelis.github.io/"> https://marcodeangelis.github.io/ </a></p>-->
+					<p style="font-size:20px; position:absolute; left:0px; bottom:-75px"> <a href="https://urbasis-eu.osug.fr/"> https://urbasis-eu.osug.fr/ </a></p>
+					<p style="font-size:20px; position:absolute; left:0px; bottom:-100px"> <a href="https://riskinstitute.uk/researchprojects/urbasis/"> https://riskinstitute.uk/researchprojects/urbasis/ </a></p>
+				</section>
+
+
+
+
+				<!-- #####################################################                  ############################################################ -->
+
+
+				<!-- #####################################################                  ############################################################ -->
+				<section>
+					<img src="pics/liam/slide_2.svg" alt="slide_2">
+				</section>
+
+				<!-- #####################################################                  ############################################################ -->
+				<section>
+					<img src="pics/liam/slide_3.svg" alt="slide_3">
+				</section>
+
+				<!-- #####################################################                  ############################################################ -->
+				<section>
+					<img src="pics/liam/slide_4.svg" alt="slide_4">
+				</section>
+
+								<section>
+					<img src="pics/liam/slide_1.svg" alt="slide_1">
+				</section>
+
+								<section data-markdown>
+						<textarea data-template>
+						
+						#### Objectives
+
+						* Deal with non-evenly sampled data, gaps, dependencies and sparse data
+						* Build robust reconstruction process based on machine learning
+						* Efficient simulation approach to deal with epistemic and aleatory uncertainty
+
+						#### Secondment
+
+						* 6 months UGA, Philippe
+						* 3 months GEOTER, David Baumont
+
+						</textarea>
+					</section>
+
+					<!-- #########################################################  END  ################################################################### -->
+					<section>
+						<h1> END </h1>
+					</section>
+				</section>
+				<!-- ################################################################################################################################### -->
+
+
+
+				<!-- #########################################################  SLIDE  ################################################################# -->
+				<!-- #####################################################UNCERTAINTY QUOTES############################################################ -->
+				<section>
+				<div style="font-size: 32px; text-align: right">
+					<blockquote  cite="https://sites.google.com/site/uncertaintysayings/">
+						&ldquo;Uncertainties appear everywhere! … When using a mathematical model, careful attention must be given to uncertainties in the model.&rdquo;
+					</blockquote> <font style="font-size: 26px;">Richard Feynman</font>
+				</div>
+
+				<div style="font-size: 32px; text-align: right">
+					<blockquote cite="https://sites.google.com/site/uncertaintysayings/">
+						&ldquo;Uncertainty quantification is the missing piece of the puzzle in large scale computations.&rdquo;
+					</blockquote> <font style="font-size: 26px;">Tim Barth</font>
+				</div>
+
+				<div style="font-size: 32px; text-align: right">
+					<blockquote cite="https://sites.google.com/site/uncertaintysayings/">
+						&ldquo;We have to make the best model we possibly can, and then not trust it.&rdquo;
+					</blockquote> <font style="font-size: 26px;">Robert Costanza</font>
+				</div>
+				</section>
+
+
+				<!-- ################################################################################################################################### -->
+
+					</div> <!--End of slides-->
+				</div><!--End of reveal container-->
+
+					<script src="../reveal/lib/js/head.min.js"></script>
+					<script src="../reveal/js/reveal.js"></script>
+					<script src="https://d3js.org/d3.v4.min.js"></script>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+					<script>
+						// More info about config & dependencies:
+						// - https://github.com/hakimel/reveal.js#configuration
+						// - https://github.com/hakimel/reveal.js#dependencies
+						Reveal.initialize({
+							dependencies: [
+								{ src: 'https://d3js.org/d3.v4.min.js' },
+								{ src: '../reveal/node_modules/reveal.js-d3js/d3js.js' },
+								{ src: '../reveal/plugin/markdown/marked.js' },
+								{ src: '../reveal/plugin/notes/notes.js', async: true },
+								{ src: '../reveal/plugin/markdown/markdown.js' },
+								{ src: '../reveal/plugin/math/math.js', async: true },
+								{ src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+							],
+							keyboard: {
+								49: function() {Reveal.slide( 0 )}, // go to the next slide when the ENTER key is pressed
+								50: function() {Reveal.slide( 1 )},
+								51: function() {Reveal.slide( 2 )},
+								52: function() {Reveal.slide( 3 )},
+								53: function() {Reveal.slide( 4 )},
+								54: function() {Reveal.slide( 5 )},
+								55: function() {Reveal.slide( 6 )},
+								56: function() {Reveal.slide( 7 )},
+								57: function() {Reveal.slide( 8 )},
+								58: function() {Reveal.slide( 9 )},
+								59: function() {Reveal.slide( 10 )},
+								//27: function() {}, // do something custom when ESC is pressed
+								//32: null // don't do anything when SPACE is pressed (i.e. disable a reveal.js default binding)
+								},
+							history: true,
+						});
+
+						Reveal.configure({
+							slideNumber: 'c/t',
+							logo: true,
+							transition: 'convex',
+						});
+					</script>
+
+				<script type="text/javascript">
+					var d = new Date();
+					var displayDate = d.toDateString();
+					document.getElementById("oggi").innerHTML = displayDate;
+				</script>
+
+				</body>
+</html>
+
+<!--<footer class="top">
+	<a href="#/1">Go to summary</a>
+</footer>-->
+<!-- #########################################################  SLIDE  ################################################################# -->
+<!--	<section class="fig-container"
+		data-fig-id="fig-line-series"
+		data-file="line-chart.html"
+		data-transitions="1">
+<h2 style="color: white">d3.js plugin for reveal.js</h2>
+</section>-->
+<!-- ################################################################################################################################### { src: 'reveal/plugin/zoom-js/zoom.js', async: true },-->
