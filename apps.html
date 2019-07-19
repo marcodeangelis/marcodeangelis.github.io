@@ -1,186 +1,60 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
         <link href="" rel="icon" type="image/x-icon">
 		<title>Marco's site</title>
 		<meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-        
-
-		<style>
-
-		#navbar {
-		  overflow: hidden;
-		  width: 50%;
-		  background-color: #F0F0F0;
-		}
-
-		#navbar a {
-		  float: left;
-		  display: block;
-		  color: #3C3C3C;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		  font-size: 17px;
-		}
-
-		#navbar a:hover {
-		  background-color: #ddd;
-		  color: green;
-		}
-
-		#navbar a.active {
-		  background-color: #166B9C;
-		  color: white;
-		}
-
-		.content {
-		  padding: 16px;
-		}
-
-		.sticky {
-		  position: fixed;
-		  top: 0;
-		  width: 100%;
-		}
-
-		.sticky + .content {
-		  padding-top: 60px;
-		}
-
-		header {
-			width:100%; 
-			background-color: #365568; 
-			padding: 1px;
-			margin: 0;
-			color: white
-		}
-
-		footer {
- 		background-color: none;
-  		padding: 5px 1px;
-  		text-align: center;
- 		color: gray;
-		}
-
-		/* Create two equal columns that floats next to each other */
-		.columnL {
-		  float: left;
-		  width: 50%;
-		  padding: 20px;
-		 /* height: 300px;  Should be removed. Only for demonstration */
-		}
-		.columnR {
-		  float: left;
-		  width: 30%;
-		  padding: 20px;
-		  text-align: center;
-		 /* height: 300px;  Should be removed. Only for demonstration */
-		}
-
-		/* Clear floats after the columns */
-		.row:after {
-		  content: "";
-		  display: table;
-		  clear: both;
-		}
-
-
-		</style>
-
+        <link rel="stylesheet" href="marco.css">
 	</head>
-	
-
 	<body>
 
-                &nbsp <font size="1">You are currently on this site</font> <font face="courier" size="1"><a href="https://marcodeangelis.github.io">https://marcodeangelis.github.io</a></font>
+	<!--<div class="mobile-container">-->
+	<!--<p>https://marcodeangelis.github.io</p>-->
 
-		<hr>
-	
+		<!--&nbsp <font size="1">You are currently on this site</font> <font face="courier" size="1"><a href="https://marcodeangelis.github.io">https://marcodeangelis.github.io</a></font> <hr>-->
+
 		<!--<header>
 			<h2> &nbsp Welcome to my site!</h2>
    		</header>-->
 	
-		<div class="row">
-			<div id="navbar">
-			  	<a href="index.html">About</a>
-			  	<a href="biblio_flask_2019.html">Research</a>
-			  	<a href="talks.html">Talks</a>
-			 	<a href="opportunities.html">Opportunities</a>
-			 	<a href="#service">Service</a>
-			  	<a class="active" href="apps.html">Apps</a>
-			  	<a href="#contact">Contact</a>
-			</div>
-		</div>
+		<div class="container" id="myNavbar"></div>
+
+		<div class="container">
         
 
         <br>
         <div class="row">
-        <div style="width:50%; float:left; background-color: #F0F0F0">
-			<h3 style="color: gray"> Web-based data visualisation</h3>
         	<h4><a href="http://riskinstitute.uk/gca/beta">A little dynamic application to show predictive probabilities on patient history taking</a></h4>
         	<p>Created and developed by myself</p>
        
        		<br>
         	<h4><a href="http://emerg.liv.ac.uk/buckling/">Fun way to teach mechanical instability with web-based labs</a></h4>
         	<p>Developed by myself and Liam Comerford, see <a href="https://doi.org/10.1080/03043797.2017.1293617">referred paper</a>.</p>
-        </div>
-    </div>
+		</div>
 
-
-
-
-
-
-	<footer style="display: block; width: 100%">
 		<hr>
-        <a href="https://scholar.google.co.uk/citations?user=3SlJpucAAAAJ&hl=en"><i class="ai ai-google-scholar" style="font-size:48px; color:slategray"></i></a> 
-        &nbsp
-		<a href="https://twitter.com/linusdea"><i class="fa fa-twitter-square" style="font-size:48px;color:slategray"></i></a>
-    	&nbsp 
-        <a href="skype:mepyskda?call"><i class="fa fa-skype" style="font-size:48px;color:slategray"></i></a>
-        &nbsp
-        <a href="https://www.researchgate.net/profile/Marco_De_Angelis6"><i class="ai ai-researchgate" style="font-size:48px; color:slategray"></i></a> 
-        &nbsp
-        <a href="https://orcid.org/0000-0001-8851-023X"><i class="ai ai-orcid" style="font-size:48px; color:slategray"></i></a> 
-        &nbsp
-       <!--<a href="https://gangarone.slack.com/"><i class="fa fa-slack" style="font-size:48px;color:slategray"></i></a>-->
-        <a href="https://github.com/marcodeangelis"><i class="fa fa-github" style="font-size:48px;color:slategray"></i></a> 
-        &nbsp
-        <a href="https://gitlab.com/marcodeangelis/"><i class="fa fa-gitlab" style="font-size:48px;color:slategray"></i></a> 
-        &nbsp
-        <a href="https://www.linkedin.com/in/marco-de-angelis-186a2b3b/"><i class="fa fa-linkedin-square" style="font-size:48px; color:slategray"></i></a> 
-        &nbsp
-        <a href="https://liverpool.academia.edu/MAngelis"><i class="ai ai-academia" style="font-size:48px; color:slategray"></i></a> 
-        &nbsp
-        <a href="mailto:marco.de-angelis@liverpool.ac.uk"><i class="fa fa-envelope" style="font-size:48px; color:slategray"></i></a> 
-        <br>
-		<p><font face="courier", size="2">Email: marco[&darr;]de-angelis[&yen;]liverpool[&darr;]ac[&darr;]uk</font></p>
-		<!--<p style=""><a>https://marcodeangelis.github.io</a></p>-->
-  		<p style="font-size: 6pt;">Copyright &copy Marco de Angelis </p>
-	</footer> 
 
+		<footer style="display: block; width: 100%" id="myFooter"></footer>
 
+	</div>
 
+	<script src="equal4allpages.js"></script>
 
-	<script>
-		window.onscroll = function() {myFunction()};
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-		var navbar = document.getElementById("navbar");
-		var sticky = navbar.offsetTop;
-
-		function myFunction() {
-		  if (window.pageYOffset >= sticky) {
-		    navbar.classList.add("sticky")
-		  } else {
-		    navbar.classList.remove("sticky");
-		  }
-		}
-	</script>
+	<script type="text/javascript">
+      $(document).ready(function () {
+            $('.apps').addClass('active');
+        });
+    </script>
 
 	</body>
 </html>
