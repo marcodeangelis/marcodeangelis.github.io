@@ -22,7 +22,7 @@ document.getElementById("myFooter").innerHTML =
 +'<br>'
 +'<p><font face="courier", size="2">Email: marco[&darr;]de-angelis[&yen;]liverpool[&darr;]ac[&darr;]uk</font></p>'
 //<!--<p style=""><a>https://marcodeangelis.github.io</a></p>-->
-+'<p style="font-size: 8pt;">Copyright 2019 &copy Marco de Angelis </p>';
++'<p style="font-size: 8pt;">Copyright 2019 &copy Designed and created by Marco de Angelis. All rights reserved. </p>';
 
 // "<p id='copyright'>Copyright &copy; " + new Date().getFullYear() + " You. All"
 // + " rights reserved.</p>"
