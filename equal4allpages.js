@@ -51,7 +51,7 @@ document.getElementById("myNavbar").innerHTML =
 +'<a class="research" href="biblio_flask_2019.html">Research</a>'
 +'<a class="talks" href="talks.html">Talks</a>'
 +'<a class="service" href="service.html">Service</a>'
-+'<a class="apps" href="apps.html">Apps</a>'
++'<a class="apps" href="apps.html">Teaching</a>'
 +'<a class="contact" href="contact.html">Contact</a>'
 +'<a class="oppo" href="opportunities.html">Opportunities</a>'
 +'</div>'//<!-- /.navbar-collapse -->
