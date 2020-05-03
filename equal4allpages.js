@@ -1,4 +1,4 @@
-var email = 'mailto:'+r('silegna-ed.ocram')+'@liverpool.ac.uk';
+var email = 'mailto:'+r('silegna-ed.ocram')+'@liverpool.ac.uk'; //r('ocram')+r('ed.')+r('silegna-')
 var scholar_link = 'https://scholar.google.co.uk/citations?user=3SlJpucAAAAJ&hl=en';
 var twitter_link= 'https://twitter.com/linusdea';
 var researchgate_link = 'https://www.researchgate.net/profile/Marco_De_Angelis6';
@@ -10,7 +10,7 @@ var linkedin_link = 'https://www.linkedin.com/in/marco-de-angelis-186a2b3b/';
 
 var dot = '<img src="pics/dot.svg" alt="email_dot">';
 var at = '<img src="pics/at.svg" alt="email_at">';
-//r('ocram')+r('ed.')+r('silegna-')
+
 
 function r(s){
   const a = s.split('');
