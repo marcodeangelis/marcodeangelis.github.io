@@ -1,26 +1,48 @@
+var email = 'mailto:'+r('silegna-ed.ocram')+'@liverpool.ac.uk';
+var scholar_link = 'https://scholar.google.co.uk/citations?user=3SlJpucAAAAJ&hl=en';
+var twitter_link= 'https://twitter.com/linusdea';
+var researchgate_link = 'https://www.researchgate.net/profile/Marco_De_Angelis6';
+var orchid_link = 'https://orcid.org/0000-0001-8851-023X';
+var github_link = 'https://github.com/marcodeangelis';
+var gitlab_link = 'https://gitlab.com/marcodeangelis/';
+var linkedin_link = 'https://www.linkedin.com/in/marco-de-angelis-186a2b3b/';
+
+
+var dot = '<img src="pics/dot.svg" alt="email_dot">';
+var at = '<img src="pics/at.svg" alt="email_at">';
+//r('ocram')+r('ed.')+r('silegna-')
+
+function r(s){
+  const a = s.split('');
+  const ar = a.reverse();
+  var ars='';
+  for (var i=0; i<ar.length; i++){ars+=ar[i]}
+  return ars
+}
+
 document.getElementById("myFooter").innerHTML =
-'<a href="mailto:marco.de-angelis@liverpool.ac.uk"><i class="fa fa-envelope" style="font-size:48px; color:slategray"></i></a>' 
+'<a href='+email+'><i class="fa fa-envelope" style="font-size:48px; color:slategray"></i></a>'
 +' &nbsp'
-+'<a href="https://scholar.google.co.uk/citations?user=3SlJpucAAAAJ&hl=en"><i class="ai ai-google-scholar" style="font-size:48px; color:slategray"></i></a> '
++'<a href='+scholar_link+'><i class="ai ai-google-scholar" style="font-size:48px; color:slategray"></i></a> '
 +' &nbsp'
-+'<a href="https://twitter.com/linusdea"><i class="fa fa-twitter-square" style="font-size:48px;color:slategray"></i></a>'
-+' &nbsp' 
++'<a href='+twitter_link+'><i class="fa fa-twitter-square" style="font-size:48px;color:slategray"></i></a>'
++' &nbsp'
 //'<a href="skype:mepyskda?call"><i class="fa fa-skype" style="font-size:48px;color:slategray"></i></a>'
 //' &nbsp'
-+'<a href="https://www.researchgate.net/profile/Marco_De_Angelis6"><i class="ai ai-researchgate" style="font-size:48px; color:slategray"></i></a>'
++'<a href='+researchgate_link+'><i class="ai ai-researchgate" style="font-size:48px; color:slategray"></i></a>'
 +' &nbsp'
-+'<a href="https://orcid.org/0000-0001-8851-023X"><i class="ai ai-orcid" style="font-size:48px; color:slategray"></i></a>' 
++'<a href='+orchid_link+'><i class="ai ai-orcid" style="font-size:48px; color:slategray"></i></a>'
 +' &nbsp'
 //'<a href="https://gangarone.slack.com/"><i class="fa fa-slack" style="font-size:48px;color:slategray"></i></a>'
-+'<a href="https://github.com/marcodeangelis"><i class="fa fa-github" style="font-size:48px;color:slategray"></i></a>'
++'<a href='+github_link+'><i class="fa fa-github" style="font-size:48px;color:slategray"></i></a>'
 +' &nbsp'
-+'<a href="https://gitlab.com/marcodeangelis/"><i class="fa fa-gitlab" style="font-size:48px;color:slategray"></i></a>'
++'<a href='+gitlab_link+'><i class="fa fa-gitlab" style="font-size:48px;color:slategray"></i></a>'
 +' &nbsp'
-+'<a href="https://www.linkedin.com/in/marco-de-angelis-186a2b3b/"><i class="fa fa-linkedin-square" style="font-size:48px; color:slategray"></i></a>'
++'<a href='+linkedin_link+'><i class="fa fa-linkedin-square" style="font-size:48px; color:slategray"></i></a>'
 +' &nbsp'
-//'<a href="https://liverpool.academia.edu/MAngelis"><i class="ai ai-academia" style="font-size:48px; color:slategray"></i></a>&nbsp' 
+//'<a href="https://liverpool.academia.edu/MAngelis"><i class="ai ai-academia" style="font-size:48px; color:slategray"></i></a>&nbsp'
 +'<br>'
-+'<p><font face="courier", size="2">Email: marco[&darr;]de-angelis[&yen;]liverpool[&darr;]ac[&darr;]uk</font></p>'
++'<p><font face="courier", size="2">Email: marco'+dot+'de-angelis'+at+'liverpool'+dot+'ac'+dot+'uk</font></p>'
 //<!--<p style=""><a>https://marcodeangelis.github.io</a></p>-->
 +'<p style="font-size: 8pt;">Copyright 2019 &copy Designed and created by Marco de Angelis. All rights reserved. </p>';
 
