@@ -21,15 +21,11 @@ function r(s){
 }
 
 document.getElementById("myFooter").innerHTML =
-'<a href='+email+'><i class="fa fa-envelope" style="font-size:48px; color:slategray"></i></a>'
-+' &nbsp'
-+'<a href='+scholar_link+'><i class="ai ai-google-scholar" style="font-size:48px; color:slategray"></i></a> '
-+' &nbsp'
-+'<a href='+orchid_link+'><i class="ai ai-orcid" style="font-size:48px; color:slategray"></i></a>'
+//'<a href='+email+'><i class="fa fa-envelope" style="font-size:48px; color:slategray"></i></a>'
+//+' &nbsp'
+'<a href='+scholar_link+'><i class="ai ai-google-scholar" style="font-size:48px; color:slategray"></i></a> '
 +' &nbsp'
 +'<a href='+github_link+'><i class="fa fa-github" style="font-size:48px;color:slategray"></i></a>'
-+' &nbsp'
-+'<a href='+twitter_link+'><i class="fa fa-twitter-square" style="font-size:48px;color:slategray"></i></a>'
 +' &nbsp'
 //'<a href="skype:mepyskda?call"><i class="fa fa-skype" style="font-size:48px;color:slategray"></i></a>'
 //' &nbsp'
@@ -40,19 +36,21 @@ document.getElementById("myFooter").innerHTML =
 //+' &nbsp'
 +'<a href='+linkedin_link+'><i class="fa fa-linkedin-square" style="font-size:48px; color:slategray"></i></a>'
 +' &nbsp'
++'<a href='+orchid_link+'><i class="ai ai-orcid" style="font-size:48px; color:slategray"></i></a>'
++' &nbsp'
++'<a href='+twitter_link+'><i class="fa fa-twitter-square" style="font-size:48px;color:slategray"></i></a>'
++' &nbsp'
 //'<a href="https://liverpool.academia.edu/MAngelis"><i class="ai ai-academia" style="font-size:48px; color:slategray"></i></a>&nbsp'
 +'<br>'
 +'<p><font face="courier", size="2">Email: marco'+dot+'de-angelis'+at+'liverpool'+dot+'ac'+dot+'uk</font></p>'
 //<!--<p style=""><a>https://marcodeangelis.github.io</a></p>-->
-+'<p style="font-size: 8pt;">Copyright 2019 &copy Designed and created by Marco de Angelis. All rights reserved. </p>';
++'<p style="font-size: 8pt;">Copyright 2019 &copy Designed and created by myself. </p>';
 
 // "<p id='copyright'>Copyright &copy; " + new Date().getFullYear() + " You. All"
 // + " rights reserved.</p>"
 // + "<p id='credits'>Layout by You</p>"
 // + "<p id='contact'><a href='mailto:you@you.com'>Contact Us</a> / "
 // + "<a href='mailto:you@you.com'>Report a problem.</a></p>";
-
-
 
 
 document.getElementById("myNavbar").innerHTML =
@@ -70,16 +68,20 @@ document.getElementById("myNavbar").innerHTML =
 //<!-- Collect the nav links, forms, and other content for toggling -->
 +'<div class="collapse navbar-collapse" id="navbar">'
 +'<a class="home" href="index.html">About</a>'
-+'<a class="research" href="biblio_flask_2019.html">Research</a>'
-+'<a class="talks" href="talks.html">Talks</a>'
+//+'<a class="research" href="biblio_flask_2019.html">Research</a>'
+//+'<a class="research" href="'+scholar_link+'">Research</a>'
+//+'<a class="talks" href="talks.html">Talks</a>'
 +'<a class="service" href="service.html">Service</a>'
-+'<a class="apps" href="apps.html">Teaching</a>'
+//+'<a class="apps" href="apps.html">Teaching</a>'
 +'<a class="contact" href="contact.html">Contact</a>'
-+'<a class="oppo" href="opportunities.html">Opportunities</a>'
+//+'<a class="oppo" href="opportunities.html">Opportunities</a>'
 +'</div>'//<!-- /.navbar-collapse -->
 +'</div>'//<!-- /.container-fluid -->
 +'</nav>';
 
+
+
+document.getElementById("myEmail").innerHTML = '<font face="courier", size="4">marco'+dot+'de-angelis'+at+'liverpool'+dot+'ac'+dot+'uk</font>';
 
 // Add active class to the current button (highlight it)
 // var header = document.getElementById("navbar");
