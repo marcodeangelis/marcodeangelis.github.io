@@ -44,7 +44,7 @@ document.getElementById("myFooter").innerHTML =
 +'<br>'
 +'<p><font face="courier", size="2">Email: marco'+dot+'de-angelis'+at+'liverpool'+dot+'ac'+dot+'uk</font></p>'
 //<!--<p style=""><a>https://marcodeangelis.github.io</a></p>-->
-+'<p style="font-size: 8pt;">Copyright 2019 &copy Designed and created by myself. </p>';
++'<p style="font-size: 8pt;">Copyright 2019 &copy Marco De Angelis updated 2021. </p>';
 
 // "<p id='copyright'>Copyright &copy; " + new Date().getFullYear() + " You. All"
 // + " rights reserved.</p>"

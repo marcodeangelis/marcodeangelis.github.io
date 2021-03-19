@@ -1,10 +1,20 @@
 .mobile-container {
   max-width: 480px;
   margin: auto;
+  padding: 10px 10px
   background-color: #555;
   height: 500px;
   color: white;
   border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .navbar-header {
+    background-color: white;
+  }
+  nav.navbar {
+    border: 0px;
+  }
 }
 
 #navbar {
@@ -34,28 +44,21 @@
   color: white;
 }
 
-.content {
-  padding: 16px;
+#container {
+	width: 730px;
+	margin: 0 auto 0 auto;	
+	padding: 24px 0px 24px 0px;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+/*
+#container2{
+    float: left;
+	width: 701px;
+	padding: 0px 15px;
+	background: url('images/contentbg730.gif') top left repeat-y;
+	margin-bottom: 24px;
 }
-
-.sticky + .content {
-  padding-top: 60px;
-}
-
-@media (max-width: 800px) {
-  .navbar-header {
-    background-color: white;
-  }
-  nav.navbar {
-    border: 0px;
-  }
-}
+*/
 
 header {
 	width:100%; 
@@ -77,14 +80,12 @@ footer {
   float: left;
   width: 60%;
   padding: 20px;
- /* height: 300px;  Should be removed. Only for demonstration */
 }
 .columnR {
   float: left;
   width: 40%;
   padding: 20px;
   text-align: center;
- /* height: 300px;  Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -94,6 +95,7 @@ footer {
   clear: both;
 }
 
+/*
 .tooltip {
     position: relative;
     display: inline-block;
@@ -109,11 +111,30 @@ footer {
 	border-radius: 6px;
 	padding: 5px 0;
 
-	/* Position the tooltip */
+	 Position the tooltip 
 	position: absolute;
 	z-index: 1;
  }
 
  .tooltip:hover .tooltiptext {
    visibility: visible;
- }
+ }*/
+
+
+/*
+.content {
+  padding: 16px;
+}
+*/
+
+/*
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+*/
