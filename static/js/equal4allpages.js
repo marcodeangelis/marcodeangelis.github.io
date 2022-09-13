@@ -1,4 +1,7 @@
-var email = 'mailto:'+r('silegna-ed.ocram')+'@liverpool.ac.uk'; //r('ocram')+r('ed.')+r('silegna-')
+//var email = 'mailto:'+r('silegna-ed.ocram')+'@liverpool.ac.uk'; //r('ocram')+r('ed.')+r('silegna-')
+var mailto = 'mailto:'+r('silegna-ed.ocram')+'@strath.ac.uk'; 
+var emailname = r('silegna-ed.ocram');
+var emailaffi = 'strath.ac.uk';
 var scholar_link = 'https://scholar.google.co.uk/citations?user=3SlJpucAAAAJ&hl=en';
 var twitter_link= 'https://twitter.com/linusdea';
 var researchgate_link = 'https://www.researchgate.net/profile/Marco_De_Angelis6';
@@ -11,6 +14,8 @@ var linkedin_link = 'https://www.linkedin.com/in/marco-de-angelis-186a2b3b/';
 var dot = '<img src="static/img/dot.svg" alt="email_dot">';
 var at = '<img src="static/img/at.svg" alt="email_at">';
 
+var email = emailname+'@'+emailaffi;
+var email_= emailname+ at+emailaffi;
 
 function r(s){
   const a = s.split('');
@@ -42,9 +47,10 @@ document.getElementById("myFooter").innerHTML =
 +' &nbsp'
 //'<a href="https://liverpool.academia.edu/MAngelis"><i class="ai ai-academia" style="font-size:48px; color:slategray"></i></a>&nbsp'
 +'<br>'
-+'<p><font face="courier", size="2">Email: marco'+dot+'de-angelis'+at+'liverpool'+dot+'ac'+dot+'uk</font></p>'
+//+'<p><font face="courier", size="2">Email: marco'+dot+'de-angelis'+at+'liverpool'+dot+'ac'+dot+'uk</font></p>'
++'<p> <font face="courier", size="2">Email:'+email_+'</font></p>'
 //<!--<p style=""><a>https://marcodeangelis.github.io</a></p>-->
-+'<p style="font-size: 8pt;">Copyright 2019 &copy Marco De Angelis updated 2022. </p>';
++'<p style="font-size: 8pt;">Copyright 2019 &copy Marco de Angelis updated 2022. </p>';
 
 // "<p id='copyright'>Copyright &copy; " + new Date().getFullYear() + " You. All"
 // + " rights reserved.</p>"
@@ -81,7 +87,8 @@ document.getElementById("myNavbar").innerHTML =
 
 
 
-document.getElementById("myEmail").innerHTML = '<font face="courier", size="4">marco'+dot+'de-angelis'+at+'liverpool'+dot+'ac'+dot+'uk</font>';
+document.getElementById("myEmail").innerHTML = '<p> <font face="courier", size="2">Email:'+email_+'</font></p>';
+//'<font face="courier", size="4">marco'+dot+'de-angelis'+at+'liverpool'+dot+'ac'+dot+'uk</font>';
 
 // Add active class to the current button (highlight it)
 // var header = document.getElementById("navbar");
