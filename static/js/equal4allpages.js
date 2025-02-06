@@ -50,7 +50,7 @@ document.getElementById("myFooter").innerHTML =
 //+'<p><font face="courier", size="2">Email: marco'+dot+'de-angelis'+at+'liverpool'+dot+'ac'+dot+'uk</font></p>'
 +'<p> <font face="courier", size="2">Email:'+email_+'</font></p>'
 //<!--<p style=""><a>https://marcodeangelis.github.io</a></p>-->
-+'<p style="font-size: 8pt;">Copyright 2019 &copy Marco de Angelis updated 2023. </p>';
++'<p style="font-size: 8pt;">Copyright 2019 &copy Marco de Angelis updated 2025. </p>';
 
 // "<p id='copyright'>Copyright &copy; " + new Date().getFullYear() + " You. All"
 // + " rights reserved.</p>"
