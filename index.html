@@ -1,97 +1,239 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144201758-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marco de Angelis</title>
+  <meta name="description" content="Marco de Angelis, Lecturer in Engineering at the University of Strathclyde. Computing with imprecision and formal verification with computer arithmetic.">
+  <meta name="author" content="Marco de Angelis">
+  <link rel="canonical" href="https://marcodeangelis.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FBFBFA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111316" media="(prefers-color-scheme: dark)">
 
-		  gtag('config', 'UA-144201758-1');
-		</script> -->
-<!--        <link href="" rel="icon" type="image/x-icon">-->
-		<title>Marco's site</title>
-		<meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-        <link rel="stylesheet" href="static/css/marco.css">
-	</head>
-	<body>
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Marco de Angelis">
+  <meta property="og:description" content="Lecturer in Engineering, University of Strathclyde. Computing with imprecision and formal verification.">
+  <meta property="og:url" content="https://marcodeangelis.github.io/">
+  <meta property="og:image" content="https://marcodeangelis.github.io/assets/og.jpg">
+  <meta property="profile:first_name" content="Marco">
+  <meta property="profile:last_name" content="de Angelis">
+  <meta name="twitter:card" content="summary">
 
-		<div class="container">
-		<div class="row">
-			<div class="columnL">
-				<h2>Marco de Angelis</h2>
-				<p style="color: gray">Lecturer in Engineering, University of Strathclyde</p>
-				
-				<p>I am a Lecturer at the Centre for Intelligent Infrastructure within the Department of Civil and Environmental Engineering of the University of Strathclyde. I am interested in computing with imprecision and in formal verification with computer arithmetics. With imprecise computation we can automatically propagate the uncertainty for formal model verification and make rigorous inferences with scarce empirical data for model calibration and validation. These methods are very useful to build trust in cyber-physical systems. </p>
+  <link rel="preload" href="assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
 
-				<p>I obtained a PhD in risk and uncertainty in 2016 from the University of Liverpool. I obtained a Bachelor and Master of Engineering Science both cum laude from the University of Rome, Roma Tre. 
-					After the PhD, I was research associate and academic manager at the centre for doctoral training in risk and uncertainty of the University of Liverpool for about two years. 
-					In 2018, I was named researcher in the awarded EPSRC-UKRI programme grant on digital twins for improved dynamic design. 
-					In 2020, I was confirmed senior research associate on the same grant. In 2022, I joined Strathclyde as a full academic.</p>
+  <!-- Apply a saved theme before first paint, so there's no flash -->
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
 
-				<p>I live in Glasgow with my partner and beautiful baby daughter. I speak Italian, English and Spanish. I love walking, hiking and being my family and friends.</p>
-				<!--I am a researcher interested in formal verification with computer arithmetics.
-				I think that Mathematics is the greatest gift to our intelligence to make sense of the universe. 
-				I believe the next humanism renaissance will be Life-centric, not just Human-centric. Nurturing Life in all its various forms is the foundation upon which our global civilisation should be reinvented. 
-				I live in Glasgow with my partner and beautiful baby daughter. I speak Italian, Spanish, and English. I love walking, hiking, and spending time with friends and family.-->
+  <style>
+    /* IBM Plex, Latin subset, self-hosted (SIL OFL 1.1, see assets/fonts/OFL.txt) */
+    @font-face { font-family: "Plex Sans"; font-weight: 400; font-display: swap;
+      src: url("assets/fonts/plex-sans-400.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2013-2014, U+2018-201E, U+2020-2022, U+2026, U+20AC, U+2122; }
+    @font-face { font-family: "Plex Sans"; font-weight: 600; font-display: swap;
+      src: url("assets/fonts/plex-sans-600.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2013-2014, U+2018-201E, U+2020-2022, U+2026, U+20AC, U+2122; }
+    @font-face { font-family: "Plex Mono"; font-weight: 400; font-display: swap;
+      src: url("assets/fonts/plex-mono-400.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+2013-2014, U+2018-201E, U+2020-2022, U+2026, U+20AC, U+2122; }
 
-				<!--My main research interest is assessing and improving the efficiency of computations done with imprecisely specified numbers. 
-				A number can be specified as an interval, a pair of moments, a probability distribution, an imprecisely specified distribution, and many more. 
-				There are numerous advantages that follow from being able to explicitly compute with imprecision. 
-				First, we can automatically propagate the uncertainty for model verification. 
-				Second, we can make rigorous inference with scarce empirical data for model calibration and validation. 
-				I apply this research for the enhancement of trust in digital twins for structural health monitoring. -->
-		<br>
-		<h4><a href="./deangeliscv_2025.pdf">CV</a></h4>
-		<p style="color:gray;font-size: smaller;">updated January 2025</p>
-		<br>
-        <h4>Publications</h4>
-    	<p>Jump to <a href="https://pureportal.strath.ac.uk/en/persons/marco-de-angelis"> my pureportal </a> to see my scholar activity or to see <a href="https://pureportal.strath.ac.uk/en/persons/marco-de-angelis/publications/"> my updated list of publications</a>. </p>
-        
-		<!-- Download them in <a href="./rtf20221215.pdf" target="_blank"> pdf</a> format. -->
-		<h5>More online scholar activity</h5>
-			<p style="margin-left: 15px;"> Citations and h-index <a href="https://scholar.google.co.uk/citations?user=3SlJpucAAAAJ&hl=en"><i class="ai ai-google-scholar" style="font-size:24px; color:slategray"></i>Google Scholar</a>.</p>
-			<p style="margin-left: 15px;"> Published code <a href="https://github.com/marcodeangelis"> <i class="fa fa-github" style="font-size:18px;color:slategray"></i>Github</a>. </p>
-			<p style="margin-left: 15px;"> Accepted manuscripts and preprints <a href="https://www.researchgate.net/profile/Marco_De_Angelis6"><i class="ai ai-researchgate" style="font-size:22px; color:slategray"></i>Research Gate</a>*.</p>
-			<p>* <font style="color:gray;font-size: smaller;">If the fulltext appears as <i>private</i>, chances are it is open-access. So, just look for the <i>doi</i> to access the published version. Otherwise, just drop me a message in <i class="ai ai-researchgate" style="font-size:22px; color:slategray"></i>.</font></p>
-			<!-- <p> A short version of my CV is at <a href="https://www.linkedin.com/in/marco-de-angelis-186a2b3b/"><i class="fa fa-linkedin-square" style="font-size:18px; color:slategray"></i>Linkedin.</a></p> -->
-			<!-- <p> I am told the  <a href='https://orcid.org/0000-0001-8851-023X'> <i class="ai ai-orcid" style="font-size:18px; color:slategray"></i> Orcid</a> uniquely identifies me as a researcher.</p> -->
-			<!-- <p> Sporadically I <a href="https://twitter.com/linusdea"> <i class="fa fa-twitter" style="font-size:18px;color:slategray"></i> tweet</a> or retweet mainly about science.  -->
+    :root {
+      --bg: #FBFBFA; --ink: #1A1C20; --muted: #5C6169; --rule: #E2E3E5; --accent: #0B5CAD;
+      --sans: "Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --mono: "Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      /* Wikipedia-style external-link mark: a box with an arrow leaving it */
+      --ext: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='black' stroke-width='1.2'%3E%3Cpath d='M5 2.5H2.5v7h7V7'/%3E%3Cpath d='M7 1.5h3.5V5M10.5 1.5 5.5 6.5'/%3E%3C/svg%3E");
+    }
+    /* Dark follows the system unless the visitor picked a theme with the toggle */
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) { --bg: #111316; --ink: #E7E8EA; --muted: #9BA1A9; --rule: #2A2E34; --accent: #7EB3F2; color-scheme: dark; }
+    }
+    :root[data-theme="dark"] { --bg: #111316; --ink: #E7E8EA; --muted: #9BA1A9; --rule: #2A2E34; --accent: #7EB3F2; color-scheme: dark; }
+    :root[data-theme="light"] { color-scheme: light; }
 
-		<br>
-		<h4>Socials</h4>
-			<p>I have just recently joined <a href="https://substack.com/@etabeta25">Substack</a> to replace my defunct Twitter.</p>
-		</div>
-		
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body {
+      margin: 0; min-height: 100vh; min-height: 100svh;
+      display: grid; place-items: center;
+      padding: 72px 16px;
+      background: var(--bg); color: var(--ink);
+      font: 400 16px/1.6 var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    main { width: 100%; max-width: 560px; display: grid; gap: 40px; }
 
-	    	<div class="columnR">
-	        	<img src="pics/headshot_marco.jpg" alt="headshot" width="150" height="180">
-	    	</div>
+    header { display: flex; align-items: center; gap: 20px; }
+    header img { width: 88px; height: 88px; border-radius: 12px; object-fit: cover; flex: none; display: block; }
+    h1 { margin: 0; font-size: 30px; line-height: 1.2; font-weight: 600; letter-spacing: -0.015em; }
+    .role { margin: 4px 0 0; font-size: 15px; line-height: 1.4; color: var(--muted); }
+
+    .about p { margin: 0; }
+    .about p + p { margin-top: 12px; }
+    .lede { font-size: 17px; line-height: 1.65; }
+    .aside { font-size: 15px; color: var(--muted); }
+
+    nav { border-top: 1px solid var(--rule); }
+    nav dl { margin: 0; }
+    .row { display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 14px 0; border-bottom: 1px solid var(--rule); line-height: 24px; }
+    .row dt { flex: 0 0 96px; font: 13px/24px var(--mono); color: var(--muted); }
+    .row dd { flex: 1 1 280px; margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 20px; }
+    .meta { font: 12px var(--mono); color: var(--muted); }
+
+    a {
+      color: var(--accent);
+      text-decoration: underline 1px var(--rule);
+      text-underline-offset: 3px;
+      transition: color .15s, text-decoration-color .15s;
+    }
+    a:hover { color: var(--ink); text-decoration-color: currentColor; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+    /* Any link that leaves this site gets the mark automatically */
+    a[href^="http"]:not([href^="https://marcodeangelis.github.io"])::after,
+    .ext-key::before {
+      content: "";
+      display: inline-block; width: 11px; height: 11px; margin-left: 4px;
+      background: currentColor;
+      -webkit-mask: var(--ext) center / contain no-repeat;
+              mask: var(--ext) center / contain no-repeat;
+    }
+    /* Screen readers hear "(external site)" where alt text for generated content is supported */
+    a[href^="http"]:not([href^="https://marcodeangelis.github.io"])::after { content: "" / " (external site)"; }
+    .ext-key::before { margin: 0 6px 0 0; vertical-align: -1px; }
+
+    .theme-toggle {
+      position: absolute; top: 12px; right: 12px;
+      width: 44px; height: 44px; padding: 0;
+      display: grid; place-items: center;
+      background: none; border: 1px solid transparent; border-radius: 10px;
+      color: var(--muted); cursor: pointer;
+      transition: color .15s, border-color .15s;
+    }
+    .theme-toggle:hover { color: var(--ink); border-color: var(--rule); }
+    .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .theme-toggle svg { width: 20px; height: 20px; }
+    /* Show the icon for the theme you'd switch TO */
+    .theme-toggle .moon { display: block; } .theme-toggle .sun { display: none; }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .theme-toggle .moon { display: none; }
+      :root:not([data-theme="light"]) .theme-toggle .sun { display: block; }
+    }
+    :root[data-theme="dark"] .theme-toggle .moon { display: none; }
+    :root[data-theme="dark"] .theme-toggle .sun { display: block; }
+
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font: 12px/1.5 var(--mono); color: var(--muted); }
+    .privacy { flex-basis: 100%; margin: 0; }
+
+    @media (max-width: 480px) {
+      body { place-items: start center; padding: 56px 20px 32px; }
+      main { gap: 32px; }
+      header { flex-direction: column; align-items: flex-start; gap: 16px; }
+      header img { width: 72px; height: 72px; border-radius: 10px; }
+      h1 { font-size: 26px; }
+      .lede { font-size: 16px; line-height: 1.6; }
+      .aside { font-size: 14px; }
+      .row { flex-direction: column; gap: 2px; padding: 12px 0; }
+      .row dt { flex: none; font-size: 12px; line-height: 20px; }
+      .row dd { flex: none; gap: 4px 18px; line-height: 26px; }
+      footer { flex-direction: column; gap: 4px; }
+      .privacy { flex-basis: auto; margin-top: 8px; }
+    }
+    @media (prefers-reduced-motion: reduce) { a, .theme-toggle { transition: none; } }
+    @media print {
+      :root { --bg: #fff; --ink: #000; --muted: #444; --rule: #ccc; --accent: #000; }
+      .theme-toggle { display: none; }
+      body { display: block; padding: 0; }
+      a::after { content: " <" attr(href) ">" !important; background: none !important; -webkit-mask: none !important; mask: none !important; width: auto; height: auto; font: 10px var(--mono); color: var(--muted); }
+      a[href^="mailto:"]::after, .ext-key { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" type="button" aria-label="Switch to dark theme" hidden>
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+  </button>
+
+  <main>
+    <header>
+      <picture>
+        <source srcset="assets/headshot.webp" type="image/webp">
+        <img src="assets/headshot.jpg" alt="Portrait of Marco de Angelis" width="88" height="88">
+      </picture>
+      <div>
+        <h1>Marco de Angelis</h1>
+        <p class="role">Lecturer in Engineering · University of Strathclyde</p>
+      </div>
+    </header>
+
+    <section class="about" aria-label="About">
+      <p class="lede">I work on computing with imprecision and formal verification with computer arithmetic: propagating uncertainty through models so we can draw rigorous inferences from scarce data, and build trust in cyber-physical systems.</p>
+      <p class="aside">Centre for Intelligent Infrastructure, Glasgow. I speak Italian, English and Spanish.</p>
+    </section>
+
+    <nav aria-label="Elsewhere">
+      <dl>
+        <div class="row">
+          <dt>cv</dt>
+          <dd><a href="deangeliscv_2025.pdf" type="application/pdf">Curriculum vitae</a><span class="meta">PDF · 223 KB · Jan 2025</span></dd>
         </div>
+        <div class="row">
+          <dt>research</dt>
+          <dd>
+            <a href="https://pureportal.strath.ac.uk/en/persons/marco-de-angelis/publications/">Publications</a>
+            <a href="https://scholar.google.co.uk/citations?user=3SlJpucAAAAJ&amp;hl=en">Google Scholar</a>
+            <a href="https://orcid.org/0000-0001-8851-023X" rel="me">ORCID</a>
+            <a href="https://www.researchgate.net/profile/Marco_De_Angelis6">ResearchGate</a>
+          </dd>
+        </div>
+        <div class="row">
+          <dt>code</dt>
+          <dd><a href="https://github.com/marcodeangelis" rel="me">GitHub</a></dd>
+        </div>
+        <div class="row">
+          <dt>contact</dt>
+          <dd>
+            <a href="mailto:marco.de-angelis@strath.ac.uk">marco.de-angelis@strath.ac.uk</a>
+            <a href="https://www.linkedin.com/in/marco-de-angelis-186a2b3b/" rel="me">LinkedIn</a>
+          </dd>
+        </div>
+      </dl>
+    </nav>
 
-		<hr>
+    <footer>
+      <span>© 2019–2026 Marco de Angelis</span>
+      <span class="ext-key">leaves this site</span>
+      <p class="privacy">No cookies, analytics or trackers. Hosted by GitHub Pages (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>).</p>
+    </footer>
+  </main>
 
-		<footer style="display: block; width: 100%" id="myFooter"></footer>
-	   
-	</div>
-
-	<script src="static/js/equal4allpages.js"></script>
-
-	<script src="https://code.jquery.com/jquery-3.2.1.js"
-	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-	crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-	<script type="text/javascript">
-	$(document).ready(function () {
-        $('.home').addClass('active');
-    });
-	</script>
-
-	</body>
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.querySelector(".theme-toggle");
+      var sys = window.matchMedia("(prefers-color-scheme: dark)");
+      function current() { return root.dataset.theme || (sys.matches ? "dark" : "light"); }
+      function sync() {
+        var next = current() === "dark" ? "light" : "dark";
+        btn.setAttribute("aria-label", "Switch to " + next + " theme");
+        btn.title = "Switch to " + next + " theme";
+        var bg = getComputedStyle(root).getPropertyValue("--bg").trim();
+        document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) { m.content = bg; });
+      }
+      btn.addEventListener("click", function () {
+        var next = current() === "dark" ? "light" : "dark";
+        root.dataset.theme = next;
+        try { localStorage.setItem("theme", next); } catch (e) {}
+        sync();
+      });
+      sys.addEventListener("change", sync);
+      btn.hidden = false; /* without JavaScript the page simply follows the system */
+      sync();
+    })();
+  </script>
+</body>
 </html>
