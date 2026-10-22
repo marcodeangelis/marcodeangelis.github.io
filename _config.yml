@@ -1,0 +1,11 @@
+# GitHub Pages builds this site with Jekyll.
+# index.html has no front matter, so Jekyll copies it as it is.
+# Any .md file you add (e.g. teaching.md) is turned into a page at /teaching.html.
+
+title: Marco de Angelis
+url: https://marcodeangelis.github.io
+
+# Repo notes that shouldn't become pages on the site
+exclude:
+  - README.md
+  - MAINTAINING.md
