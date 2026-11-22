@@ -10,7 +10,8 @@ Centre for Intelligent Infrastructure, Glasgow.
 
 ## CV
 
-- [Curriculum vitae](deangeliscv_2025.pdf) (PDF)
+- [Curriculum vitae](md_cv_2pg_1126.pdf) (PDF)
+- [Publications full list](md_pub_full.pdf) (PDF)
 
 ## Research
 
